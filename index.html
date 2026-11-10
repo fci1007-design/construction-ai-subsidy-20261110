@@ -1,0 +1,1889 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="營造建築 AI 平台：補助申請、功能範圍與合作條件討論">
+  <link rel="icon" href="data:,">
+  <title>營造建築 AI 平台：補助申請、功能範圍與合作條件討論</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "PingFang TC",
+        "Microsoft JhengHei", sans-serif;
+      color: #1d2939;
+      background: #f2f5f8;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 20;
+      top: 8px;
+      left: 8px;
+      padding: 10px 14px;
+      transform: translateY(-160%);
+      border-radius: 8px;
+      color: #fff;
+      background: #123b68;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .page-layout {
+      display: grid;
+      grid-template-columns: minmax(220px, 280px) minmax(0, 920px);
+      justify-content: center;
+      align-items: start;
+      gap: clamp(20px, 3vw, 44px);
+      width: min(100%, 1500px);
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .page-outline {
+      position: sticky;
+      top: 18px;
+      z-index: 5;
+      max-height: calc(100vh - 36px);
+    }
+
+    .page-outline details {
+      display: flex;
+      flex-direction: column;
+      max-height: inherit;
+      overflow: hidden;
+      border: 1px solid #cbd5df;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 8px 24px rgb(22 39 61 / 6%);
+    }
+
+    .page-outline summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 58px;
+      padding: 12px 17px;
+      color: #15375b;
+      font-size: 18px;
+      font-weight: 750;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .page-outline summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .page-outline summary::after {
+      width: 9px;
+      height: 9px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(45deg);
+      transition: transform 140ms ease;
+      content: "";
+    }
+
+    .page-outline details:not([open]) summary::after {
+      transform: rotate(-45deg);
+    }
+
+    .page-outline nav {
+      overflow-y: auto;
+      padding: 2px 10px 12px;
+      overscroll-behavior: contain;
+    }
+
+    .toc ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .toc ul ul {
+      padding-left: 12px;
+    }
+
+    .toc li {
+      margin: 2px 0;
+    }
+
+    .toc a {
+      display: block;
+      min-height: 40px;
+      padding: 7px 9px;
+      border-radius: 7px;
+      color: #34445a;
+      font-size: 16px;
+      line-height: 1.55;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .toc a:hover,
+    .toc a:focus-visible {
+      outline: 2px solid #3b6ea8;
+      outline-offset: 1px;
+      color: #123b68;
+      background: #edf4fb;
+    }
+
+    .toc a[aria-current="location"] {
+      border-left: 3px solid #2463a6;
+      color: #123b68;
+      background: #e8f1fa;
+      font-weight: 700;
+    }
+
+    .document {
+      min-width: 0;
+    }
+
+    .markdown-body {
+      min-width: 0;
+      padding: clamp(22px, 4vw, 64px);
+      border: 1px solid #d9e0e8;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 12px 36px rgb(22 39 61 / 6%);
+      font-size: 18px;
+      line-height: 1.85;
+      overflow-wrap: anywhere;
+    }
+
+    .markdown-body :is(h1, h2, h3, h4, h5, h6, [id]) {
+      scroll-margin-top: 5rem;
+    }
+
+    .markdown-body h1 {
+      margin: 0 0 1.2em;
+      color: #142b43;
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      line-height: 1.32;
+    }
+
+    .markdown-body h2 {
+      margin-top: 2.5em;
+      padding-top: 0.75em;
+      border-top: 1px solid #dce3eb;
+      color: #15375b;
+      font-size: 1.55em;
+      line-height: 1.45;
+    }
+
+    .markdown-body h3 {
+      margin-top: 1.9em;
+      color: #1c4268;
+      font-size: 1.25em;
+      line-height: 1.5;
+    }
+
+    .markdown-body h4,
+    .markdown-body h5,
+    .markdown-body h6 {
+      margin-top: 1.6em;
+      color: #264b70;
+      font-size: 1.08em;
+      line-height: 1.5;
+    }
+
+    .markdown-body a {
+      color: #155da0;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    .markdown-body a:hover {
+      color: #0c3f72;
+    }
+
+    .markdown-body p,
+    .markdown-body ul,
+    .markdown-body ol,
+    .markdown-body blockquote {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+    .markdown-body ul,
+    .markdown-body ol {
+      padding-left: 1.55em;
+    }
+
+    .markdown-body li + li {
+      margin-top: 0.3em;
+    }
+
+    .markdown-body blockquote {
+      padding: 0.4em 1em;
+      border-left: 4px solid #557ba4;
+      color: #42546a;
+      background: #f5f8fb;
+    }
+
+    .markdown-body hr {
+      margin: 2em 0;
+      border: 0;
+      border-top: 1px solid #dce3eb;
+    }
+
+    .markdown-body table {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+      border-collapse: collapse;
+      border-spacing: 0;
+      font-size: 0.92em;
+      overscroll-behavior-x: contain;
+    }
+
+    .markdown-body th,
+    .markdown-body td {
+      min-width: 7rem;
+      padding: 0.65em 0.8em;
+      border: 1px solid #cbd5df;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .markdown-body th {
+      color: #183b5e;
+      background: #edf2f7;
+    }
+
+    .markdown-body code {
+      padding: 0.1em 0.32em;
+      border-radius: 4px;
+      background: #f1f4f7;
+      overflow-wrap: anywhere;
+    }
+
+    .markdown-body pre {
+      max-width: 100%;
+      padding: 1em;
+      overflow: auto;
+      border-radius: 10px;
+      background: #f1f4f7;
+    }
+
+    .markdown-body pre code {
+      padding: 0;
+      background: transparent;
+    }
+
+    .markdown-body img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .markdown-body input[type="checkbox"] {
+      width: 1.15em;
+      height: 1.15em;
+      margin: 0 0.4em 0 0;
+      accent-color: #235d93;
+      vertical-align: -0.12em;
+    }
+
+    @media (max-width: 900px) {
+      .page-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        padding: 12px;
+      }
+
+      .page-outline {
+        top: 0;
+        max-height: 65vh;
+        max-height: 65dvh;
+      }
+
+      .page-outline details[open] {
+        max-height: 65vh;
+        max-height: 65dvh;
+      }
+
+      .markdown-body {
+        padding: clamp(20px, 5vw, 32px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-layout {
+        padding: 8px;
+      }
+
+      .markdown-body {
+        border-radius: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page-layout {
+        display: block;
+        width: 100%;
+        padding: 0;
+      }
+
+      .page-outline,
+      .skip-link {
+        display: none;
+      }
+
+      .markdown-body {
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#document">略過大綱並前往正文</a>
+  <div class="page-layout">
+    <aside class="page-outline" aria-label="文件導覽">
+      <details id="outline-details" open>
+        <summary>文件大綱</summary>
+        <nav id="document-outline" aria-label="文件大綱">
+          <div class="toc">
+<ul>
+<li><a href="#_1">閱讀版｜主題摘要</a><ul>
+<li><a href="#1">1. 政府補助申請與籌備</a><ul>
+<li><a href="#_2">後續事項（會中提議，個別負責人及確切日期待確認）</a></li>
+</ul>
+</li>
+<li><a href="#2-ai">2. AI平台功能與企業知識管理</a><ul>
+<li><a href="#_3">後續事項（會中提議／待評估）</a></li>
+</ul>
+</li>
+<li><a href="#3-bim">3. 建築、室內設計與BIM工具產品化</a><ul>
+<li><a href="#_4">後續事項（納入產品前的待確認方向）</a></li>
+</ul>
+</li>
+<li><a href="#4">4. 合作架構、商業模式與成果權利</a><ul>
+<li><a href="#_5">後續事項（會中提出續談，尚未指定完成期限）</a></li>
+</ul>
+</li>
+<li><a href="#5">5. 尚待釐清事項</a></li>
+</ul>
+</li>
+<li><a href="#_6">一、重點摘要與決策儀表板</a><ul>
+<li><a href="#_7">決策儀表板</a></li>
+</ul>
+</li>
+<li><a href="#_8">二、詳細整理</a><ul>
+<li><a href="#_9">會議脈絡綜覽</a></li>
+<li><a href="#_10">參與者、歸屬與術語限制</a></li>
+<li><a href="#t1">T1｜補助是推進工具，功能與驗收範圍必須先聚焦</a></li>
+<li><a href="#t2agent">T2｜專案Agent、知識庫與資料權限必須一起理解</a></li>
+<li><a href="#t3">T3｜建築專業方法能提供產品素材，但能力階段不能混寫</a></li>
+<li><a href="#t4">T4｜出資、顧問與成果權利是尚未解決的合作核心</a></li>
+<li><a href="#t5b2b-saas">T5｜B2B SaaS、專業知識與通路的商業假說</a></li>
+<li><a href="#t6">T6｜缺工、造價與個人機器人創業構想</a></li>
+<li><a href="#_11">背景、旁支與保留價值</a></li>
+<li><a href="#_12">計畫候選、成熟度與素材卡</a><ul>
+<li><a href="#pc-20261110-01">PC-20261110-01｜逐欄素材</a></li>
+<li><a href="#pc-20261110-02">PC-20261110-02｜逐欄素材</a></li>
+</ul>
+</li>
+<li><a href="#_13">重要數字與證據</a></li>
+<li><a href="#_14">風險及計畫前需核對事項</a></li>
+<li><a href="#pass-2">定向回查（Pass 2）</a></li>
+<li><a href="#pass-3">來源覆蓋審計（Pass 3）</a></li>
+<li><a href="#pass-4">事實校對範圍（Pass 4）</a></li>
+</ul>
+</li>
+<li><a href="#_15">三、行動決議</a><ul>
+<li><a href="#_16">正式交辦與已確認決議</a></li>
+<li><a href="#_17">條件式行動</a></li>
+<li><a href="#ai_1">AI整理建議</a></li>
+</ul>
+</li>
+<li><a href="#_18">四、原始逐字稿</a><ul>
+<li><a href="#s01">S01｜開場錄音工具閒談</a></li>
+<li><a href="#s02">S02｜補助規模、截止與執行目標</a></li>
+<li><a href="#s03">S03｜擬議合作分工</a></li>
+<li><a href="#s04">S04｜痛點、流程整合與範圍聚焦</a></li>
+<li><a href="#s05bim">S05｜既有BIM案例與外部合作自述</a></li>
+<li><a href="#s06agent">S06｜專案管理Agent與儀表板</a></li>
+<li><a href="#s07app">S07｜現有APP、知識庫與權限疑慮</a></li>
+<li><a href="#s08kpib2b">S08｜申請時機、KPI與B2B方向</a></li>
+<li><a href="#s09bim">S09｜設計工作流程自述與BIM測試</a></li>
+<li><a href="#s10">S10｜個人技能轉為軟體產品的理由</a></li>
+<li><a href="#s11">S11｜蔬菜、送菜與公司既有業務閒談</a></li>
+<li><a href="#s12">S12｜可規模化服務與缺工造價經驗</a></li>
+<li><a href="#s13">S13｜營造機器人及個人新創方向</a></li>
+<li><a href="#s14ai">S14｜人口、AI競爭與社會事件旁支</a></li>
+<li><a href="#s15">S15｜素材、顧問會議、聘用與提報</a></li>
+<li><a href="#s16">S16｜人事預算與設備折舊取捨</a></li>
+<li><a href="#s17ai">S17｜個人AI訂閱與使用經驗</a></li>
+<li><a href="#s18">S18｜場域驗證及員工投保討論</a></li>
+<li><a href="#s19agent">S19｜採購法專業Agent提議</a></li>
+<li><a href="#s20">S20｜撰寫、核銷與成功費用</a></li>
+<li><a href="#s21">S21｜算力預抓額度</a></li>
+<li><a href="#s22">S22｜資安驗證及費用科目</a></li>
+<li><a href="#s23">S23｜成果權利選項與法務服務</a></li>
+<li><a href="#s24">S24｜補助目標與核定折減風險</a></li>
+<li><a href="#s25">S25｜合作意向、成果分配及個人經歷</a></li>
+<li><a href="#s26">S26｜商業模式與競爭壁壘提問</a></li>
+<li><a href="#s27">S27｜知識封裝與持續更新主張</a></li>
+<li><a href="#s28">S28｜產學、學校及數位行銷方向</a></li>
+<li><a href="#s29">S29｜人脈資源自述與樂觀判斷</a></li>
+<li><a href="#s30">S30｜合作、出資與功能的後續確認</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+        </nav>
+      </details>
+    </aside>
+    <main id="document" class="document" tabindex="-1">
+      <article class="markdown-body">
+        <h1 id="ai">營造建築 AI 平台：補助申請、功能範圍與合作條件討論</h1>
+<!-- topic-summary:start -->
+<p><a id="topic-summary"></a></p>
+<h2 id="_1">閱讀版｜主題摘要</h2>
+<p>日期：2026-11-10（依來源檔名）。先讀以下主題掌握討論與後續；需要完整數字、不同觀點、計畫素材、核對依據及逐字稿，可跳至<a href="#full-record">完整會議紀錄</a>。</p>
+<p>本摘要與下方紀錄來自同一來源。人名及公司名有轉寫歧異，以下使用角色稱呼；補助條件依會中說法呈現。完整細節全部保留在後方。</p>
+<h3 id="1">1. 政府補助申請與籌備</h3>
+<p>會中討論結合營造、建築與AI開發能力申請政府補助，透過企業場域把技術轉成可使用、可銷售的服務。提出的申請目標為總經費1,800萬元，其中補助900萬元、自籌900萬元；合作企業及實際投入方式仍要確認。</p>
+<p>依會中說明，申請截止為12月7日，核定後預計執行至翌年10月15日，實際開發期約八個月。有限工期下，應優先收斂一、兩個切入領域；成效需能說明導入前後的工時、效率或應用價值，目前尚未訂定具體KPI數值。</p>
+<p>經費討論以研發人力及軟體服務為主。AI Token曾預抓270萬元，屬需求尚未確定的估算。設備、資安檢測、認證、專利及法務等費用能否列入，要依正式須知及顧問確認。顧問服務提出成功後收取一成的方式，以補助900萬元計為90萬元，服務範圍及契約條件尚待協商。</p>
+<h4 id="_2">後續事項（會中提議，個別負責人及確切日期待確認）</h4>
+<ul>
+<li><input class="task-checkbox" type="checkbox" disabled aria-label="待辦事項"> 盤點現有技術、場域及企業需求，提供撰寫顧問作為計畫素材。</li>
+<li><input class="task-checkbox" type="checkbox" disabled aria-label="待辦事項"> 提議本週安排線上會議，確認顧問需要的資料與協作方式。</li>
+<li><input class="task-checkbox" type="checkbox" disabled aria-label="待辦事項"> 聚焦開發功能與驗證範圍，並釐清預算科目及聘用條件。</li>
+</ul>
+<p>依據：<a href="#s02">S02</a>、<a href="#s04">S04</a>、<a href="#s15">S15</a>、<a href="#s16">S16</a>、<a href="#s20">S20</a>、<a href="#s21">S21</a>。</p>
+<h3 id="2-ai">2. AI平台功能與企業知識管理</h3>
+<p>企業端希望改善文件、契約判讀、專案掌握及跨單位協作耗費人力的問題。平台構想包含專案管理AI Agent、視覺化Dashboard及企業知識庫，使主管較容易掌握進度、查詢問題，並將資深人員經驗留存在組織。</p>
+<p>主要候選功能包括：</p>
+<ul>
+<li><strong>專案資訊查詢：</strong> 透過手機或儀表板查詢進度與問題，支援週期性的工作檢討。</li>
+<li><strong>知識保存與交接：</strong> 整理公司文件及實務Know-how，協助新人學習並減少知識流失。</li>
+<li><strong>專業協作：</strong> 評估契約、財務、繪圖及採購等領域，其中採購法及實務知識可作為專業Agent的候選內容。</li>
+<li><strong>權限控管：</strong> 回應跨專案資料與離職員工持續存取的疑慮，確認適當的存取範圍及停權方式。</li>
+</ul>
+<p>既有APP與AI如何整合、哪些功能先做，以及相關資料能否取得和使用，均尚未定案。上述功能是討論選項，沒有全部納入正式開發範圍。</p>
+<h4 id="_3">後續事項（會中提議／待評估）</h4>
+<ul>
+<li><input class="task-checkbox" type="checkbox" disabled aria-label="待辦事項"> 共同確認優先解決的工作問題及核心功能。</li>
+<li><input class="task-checkbox" type="checkbox" disabled aria-label="待辦事項"> 續談資料使用與權限需求，釐清既有APP和新平台的關係。</li>
+</ul>
+<p>依據：<a href="#s06">S06</a>、<a href="#s07">S07</a>、<a href="#s19">S19</a>。</p>
+<h3 id="3-bim">3. 建築、室內設計與BIM工具產品化</h3>
+<p>建築專業者分享其AI設計流程：由平面與3D模型出發，確認模型及尺寸後，串接施工圖、數量、報價、渲染與動畫等成果，並表示部分室內設計工作可在一晚產出約50～60頁圖面。這是個人流程的自述，模型正確是重要前提。</p>
+<p>BIM生成建照送審圖、數量表及基地評估等項目仍有測試或未來開發的部分。產品化方向是把專業者個人的操作經驗轉成他人也能使用的標準化軟體，突破單人服務的時間限制，再評估面向營造、建設與設計業者的B2B SaaS服務。</p>
+<h4 id="_4">後續事項（納入產品前的待確認方向）</h4>
+<ul>
+<li><input class="task-checkbox" type="checkbox" disabled aria-label="待辦事項"> 確認哪些現有流程可提供本案使用，以及哪些功能仍需測試。</li>
+<li><input class="task-checkbox" type="checkbox" disabled aria-label="待辦事項"> 將選定功能的範圍與成果要求納入後續功能討論。</li>
+</ul>
+<p>依據：<a href="#s09">S09</a>、<a href="#s10">S10</a>、<a href="#s12">S12</a>。</p>
+<h3 id="4">4. 合作架構、商業模式與成果權利</h3>
+<p>初步構想由AI開發方、企業場域與建築專業者共同投入，讓專業知識和實際工作需求形成可持續使用的服務。潛在客群包含建設公司、營造廠、事務所及室內設計業者；推廣可評估產學合作、企業內訓、既有人脈及數位行銷。相關MOU與內訓線索仍在接洽，尚非確認訂單。</p>
+<p>產品價值被認為來自專業Know-how封裝與持續更新，但定價、服務內容及客戶願付程度仍待驗證。各方的出資比例、金流、投入資源與成果權利也尚未談定；共同持有、由新創持有或採授權方式均是選項。</p>
+<p>缺工及造價經驗另帶出營造機器人與個人AI顧問創業方向，包含噴塗、砌作及環氧樹脂等工項，目前仍屬個人構想，未列為本案共同投資或開發承諾。</p>
+<h4 id="_5">後續事項（會中提出續談，尚未指定完成期限）</h4>
+<ul>
+<li><input class="task-checkbox" type="checkbox" disabled aria-label="待辦事項"> 與合作各方續談出資、合作方式及實際投入。</li>
+<li><input class="task-checkbox" type="checkbox" disabled aria-label="待辦事項"> 討論成果權利與授權安排，再確認與產品化的關係。</li>
+<li><input class="task-checkbox" type="checkbox" disabled aria-label="待辦事項"> 功能討論與合作協商並行，持續補充計畫撰寫素材。</li>
+</ul>
+<p>依據：<a href="#s13">S13</a>、<a href="#s23">S23</a>、<a href="#s25">S25</a>、<a href="#s26">S26</a>、<a href="#s27">S27</a>、<a href="#s28">S28</a>、<a href="#s30">S30</a>。</p>
+<h3 id="5">5. 尚待釐清事項</h3>
+<ol>
+<li>正式申請計畫、資格、截止與執行條件，以及各費用科目的適用範圍。</li>
+<li>優先功能、資料來源、場域驗證及量化KPI，避免功能構想超出工期與資源。</li>
+<li>各方投入、配合款與現金流，以及顧問費用及服務邊界。</li>
+<li>成果所有權、授權與後續商業化安排。</li>
+<li>參與角色、聘用方式、提報分工及下一次會議時間。</li>
+</ol>
+<p><a href="#full-record">往下閱讀完整會議紀錄</a></p>
+<!-- topic-summary:end -->
+<p><a id="full-record"></a></p>
+<ul>
+<li>會議紀錄 ID：MR-20261110-61faa324</li>
+<li>會議日期：2026-11-10（依來源檔名前綴推定，原稿未獨立載明）</li>
+<li>文件結構版本：meeting-record/v1</li>
+<li>索引主題：營造建築AI、企業知識庫、Agent、SaaS、研發補助、合作出資、智慧財產、機器人</li>
+<li>原始來源檔：20261110.txt</li>
+<li>來源區段：整份文字，字元範圍 [0, 14683)；依討論轉折建立 S01～S30 內容錨點，非音訊時間。</li>
+<li>原始檔 SHA-256：<code>9bc7b195355f81ce29e55fa428a93bd5037e877c95a2ebc488308fd320f6e77f</code></li>
+<li>來源內容指紋／SHA-256：<code>61faa3246a47c8496038217cc39dac074472f88395cad88e5d406c688698e7f9</code>（依既有正規化工具計算）</li>
+<li>內容型重複檢查結果：缺檔重建。本輪現有64份 Markdown 比對未找到相同來源內容；先前交接曾記載本指紋的成果，但所指成果檔不存在，因此重新產出，不覆寫既有會議。自動拆分工具的低信度結果已經全文人工判讀為一場連續討論，未以檔名或自動相似度作唯一判準。</li>
+<li>整理方式：主題整合；planning_mode=auto。無音檔、無原始時間戳及可靠說話者標籤，故不補造時間軸或逐段姓名；被提及的人不等於已確認出席者。</li>
+<li>整理說明：全文14,683字元，30/30區段已引用或分類（26區段進入主題；4區段為背景／旁支）。第四層完整保留文字；詳見覆蓋表。重要數字已回查原稿，法規、公開價格與個人能力未作外部驗證。</li>
+</ul>
+<h2 id="_6">一、重點摘要與決策儀表板</h2>
+<p><strong>一句話結論：</strong> 會中討論以補助推動營造建築 AI 平台與後續 SaaS 服務，但優先功能、各方出資、成果權利及正式申請條件尚待確認，不能視為已成立的投資或開發承諾。</p>
+<ul>
+<li><strong>申請目標與時間壓力：</strong> 會中提出補助900萬元、自籌900萬元、總經費1,800萬元的目標，並稱12/7截止、翌年10/15結束；這些是口述目標與時程，尚非核定預算或官方資格查核結果。〔條件式方案／明確提及；T1、A〕<a href="#s02">S02</a>、<a href="#s24">S24</a></li>
+<li><strong>先選要解決的企業流程：</strong> 從文件、契約、跨單位協作切入，構想包含專案Agent、Dashboard及知識庫；有人提醒工期與成本有限，宜集中一、兩個領域，尚未確定最小開發範圍。〔方案提議／跨段整合；T1＋T2、A〕<a href="#s04">S04</a>、<a href="#s06">S06</a>、<a href="#s07">S07</a></li>
+<li><strong>把個人方法轉成產品仍有落差：</strong> 建築專業者自述可串接設計、圖面、數量與報價，前提是模型及尺寸正確；BIM相關功能仍有測試項目，個人展示能力不能直接視為本團隊已完成產品。〔現況陳述／跨段整合；T3、A〕<a href="#s09">S09</a>、<a href="#s10">S10</a></li>
+<li><strong>合作條件尚未談定：</strong> 企業合作主體、專業者聘任、投入比例、現金流與權利安排都要再談；共同持有、新創持有或授權均為選項。成功費一成是介紹的合作條件，未見本案簽約。〔方案提議／跨段整合；T4、A〕<a href="#s15">S15</a>、<a href="#s20">S20</a>、<a href="#s23">S23</a>、<a href="#s30">S30</a></li>
+<li><strong>商業化要回答可複製性：</strong> 構想面向建設、營造、事務所及設計業者，以知識封裝與持續更新區隔競爭，搭配產學與數位行銷；通路、人脈及洽談中的MOU不等於已有客戶或訂單。〔個人主張／跨段整合；T5、A〕<a href="#s26">S26</a>、<a href="#s27">S27</a>、<a href="#s28">S28</a></li>
+<li><strong>缺工與機器人另案保留：</strong> 工地造價經驗帶出機器人施工及個人新創方向，但尚無共同開發、投資或採購決議，不併入本案1,800萬元範圍。〔方案提議／跨段整合；T6、B〕<a href="#s12">S12</a>、<a href="#s13">S13</a></li>
+<li><strong>接下來仍是確認階段：</strong> 會中提議盤點素材、安排本週線上顧問會議，並續談功能與出資。沒有可可靠對應姓名、固定期限且已接受的逐項交辦；本週也不能換寫成11/15硬期限。〔條件式方案／跨段整合；T1＋T4、A〕<a href="#s15">S15</a>、<a href="#s30">S30</a></li>
+</ul>
+<h3 id="_7">決策儀表板</h3>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>目前狀態</th>
+<th>不能先當成確定的事項</th>
+<th>依據</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推動方向</td>
+<td>討論補助與企業AI產品化；方案提議</td>
+<td>已通過投資、已啟動全功能開發</td>
+<td><a href="#s04">S04</a>、<a href="#s30">S30</a></td>
+</tr>
+<tr>
+<td>正式決議</td>
+<td>未辨識出可獨立確認的拍板項目</td>
+<td>全體接受共同出資或共同專利</td>
+<td><a href="#s23">S23</a>、<a href="#s30">S30</a></td>
+</tr>
+<tr>
+<td>費用及出資</td>
+<td>目標與估算已提出，分攤待確認</td>
+<td>補助全額核定、自籌款不用支付</td>
+<td><a href="#s02">S02</a>、<a href="#s16">S16</a>、<a href="#s24">S24</a></td>
+</tr>
+<tr>
+<td>功能及KPI</td>
+<td>多個候選，尚待聚焦與定義</td>
+<td>各項都納入範圍、已有量化驗收承諾</td>
+<td><a href="#s04">S04</a>、<a href="#s08">S08</a></td>
+</tr>
+<tr>
+<td>下一次協作</td>
+<td>本週線上會議的提議</td>
+<td>已排定日期、已指定全部責任人</td>
+<td><a href="#s15">S15</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_8">二、詳細整理</h2>
+<h3 id="_9">會議脈絡綜覽</h3>
+<p>討論以短期補助申請為入口，實際要回答的是如何把建築、營造中的個人專業與分散流程，轉成企業願意使用的AI服務。企業端提出文件、契約、專案掌握與知識留存需求，專業端則提供設計自動化經驗，希望突破一人服務的工時限制。因此話題逐步從「AI能做什麼」轉向「先做哪幾個功能、如何驗證、由誰出資及持有成果」。補助截止與有限工期促使範圍必須收斂，但樂觀的資金說法、顧問與人事編列，以及產學通路仍有待查條件。結尾是準備素材並續談合作的方向，尚未形成完整的責任、權利及預算協議。缺工、造價與機器人則補充產業需求背景，並未因此成為同一申請案的承諾。</p>
+<h3 id="_10">參與者、歸屬與術語限制</h3>
+<p>原稿是一段無分人的長文字，無法可靠建立出席名冊。文中出現林總、方伯／方博、呂董／於董、Michael／Michel、Shan／Shar／Shon等稱呼，以及學姐、學弟與多所學校。以下以「會中提出」「企業端需求」「建築專業者自述」呈現語意角色，不把角色硬對應為特定姓名。「總勝建設」及不同寫法、「研發科技」等公司名也須向當事人核對；分類放在妍發不代表已確認公司登記名稱。<a href="#s03">S03</a>、<a href="#s05">S05</a>、<a href="#s15">S15</a>、<a href="#s28">S28</a></p>
+<p>依上下文將病／BIN、rad／rig、deshbal、SARS等分別暫讀為BIM、RAG、Dashboard、SaaS，僅作閱讀輔助；專名仍需再核對。涉及國防大學、文化大學、中華科技大學／中華大學，以及外部工程公司與上海合作線索，保留為講者資源自述，未確認機構承諾。</p>
+<h3 id="t1">T1｜補助是推進工具，功能與驗收範圍必須先聚焦</h3>
+<p><strong>重要度A；內容性質：條件式方案、方案提議；證據狀態：跨段整合。</strong></p>
+<p>提出者以最高900萬元、約50%補助為申請目標，推得總經費1,800萬元；另稱需兩家以上企業，截止12/7、翌年10/15結案，扣除審查約有八個月。過往300萬元案與核定未被刪減的經驗，是支持「可以試著申請」的個人案例，並不能保證新案同額通過。文中約1億元是對整體補助資源的假設舉例，不能併成本案經費。<a href="#s02">S02</a>、<a href="#s08">S08</a>、<a href="#s24">S24</a></p>
+<p>需求不是另外做一個展示AI的介面，而是改善公司現有流程：文件、合約判讀、不同單位資料與ERP或既有工具如何串接。會中有人逐項展開契約、財務、採購等可能領域，也有人提醒預算和時間有限，應先從一、兩個領域做出可交付成果。這是範圍寬廣與實際可做程度之間的取捨；原稿未見最終選定哪兩項，亦未見正式否決某項功能。<a href="#s04">S04</a>、<a href="#s19">S19</a></p>
+<p>驗收方向被談到的包括實際導入、可銷售成果、節省工時與效率／適用程度，但沒有確定的基準值、目標值、計量期間或驗收公式。採購法專業Agent也只是候選：希望把專家的判斷轉成可詢問工具，其知識授權、法規更新與正確率尚未說清楚。<a href="#s08">S08</a>、<a href="#s19">S19</a></p>
+<p><strong>因果與目前結果：</strong> 問題是短工期下需求過多；觀點一方希望整合更多專業，另一方要求縮小範圍；結論仍待確認，成立前提是正式須知、企業需求及可交付能力相符。對應後續A01、A02、A04，不視為已核定開發清單。</p>
+<h3 id="t2agent">T2｜專案Agent、知識庫與資料權限必須一起理解</h3>
+<p><strong>重要度A；內容性質：現況陳述、方案提議；證據狀態：跨段整合。</strong></p>
+<p>專案管理構想是讓主管透過手機或Dashboard掌握專案狀態，查詢問題、待辦及週期性的工作回報，減少逐人追問。既有APP被描述為已有資訊或操作入口，但尚不能等同AI服務；新增Agent需要能取得適當資料、理解查詢並產生有用回應，而非只更換前端名稱。<a href="#s06">S06</a>、<a href="#s07">S07</a></p>
+<p>知識庫的價值在把員工經驗及業務文件留在組織，協助新人理解過往做法，並讓使用者問得到公司自己的內容。RAG是候選技術方向，但原稿沒有交代資料清整、檢索準確度或上線成效，不能寫成已建成可用知識平台。既有案量、外部案例僅為口述需求背景。<a href="#s05">S05</a>、<a href="#s07">S07</a></p>
+<p>有人直接提出離職後仍可能使用APP或金鑰的疑慮，另談到依角色／層級限制存取。重點是公司資料與離職停權；現有權限細節、手機綁定、金鑰撤銷及實際部署均未被驗證。<strong>AI整理建議AI03</strong>才將這些疑慮擴成資料權限與離職流程需求，不把延伸清單當成既有系統能力。<a href="#s07">S07</a></p>
+<p><strong>因果與目前結果：</strong> 問題是資訊分散與知識流失；未提及明確的反對立場，但出現共享便利與存取風險的兩面考量；結論是候選方案，未定案；成立前提為資料可用及授權可控。功能優先順序對應A04，安全需求延伸對應AI03。</p>
+<h3 id="t3">T3｜建築專業方法能提供產品素材，但能力階段不能混寫</h3>
+<p><strong>重要度A；內容性質：現況陳述、個人主張、方案提議；證據狀態：明確提及／跨段整合。</strong></p>
+<p>建築專業者自述，從平面與3D／風格出發，先確認模型和尺寸，再產出約五、六十頁圖面，搭配數量、報價、渲染及動畫，有機會一個晚上完成一段設計工作。這段敘述的價值是串接流程與檢核關卡，而非只有速度；模型不正確就不能直接信任後續圖面或估算。原稿未提供實測成果，本紀錄也未驗證此能力。<a href="#s09">S09</a></p>
+<p>另一方面，BIM相關的建照圖、數量表等仍有測試或未來開發語氣，基地評估也不是已交付模組。必須分開「講者目前使用的方法」「仍在試驗的功能」「希望放進企業產品的項目」，不能把三者合成已驗收完成的平台。個人教學與外部案例可提供素材及試用線索，但不自動成為本案資產。<a href="#s05">S05</a>、<a href="#s09">S09</a></p>
+<p>產品化理由是單人一天只有24小時，若每個客戶都由本人操作便難以擴張，因此希望把Know-how封裝進軟體，讓他人能持續使用。未提及已完成團隊交接、文件化程度或每名客戶的服務成本；方法能否穩定複製仍要確認。<a href="#s10">S10</a>、<a href="#s12">S12</a>、<a href="#s27">S27</a></p>
+<p><strong>因果與目前結果：</strong> 問題是個人能力受工時限制；個別服務與軟體化是可辨識的路徑差異，未提及正式反對或擇一決議；目前僅提出產品化方向。成立前提是模型正確、流程可重現、權利可使用並能定義驗收；對應A04、A05，量測清單屬AI01。</p>
+<h3 id="t4">T4｜出資、顧問與成果權利是尚未解決的合作核心</h3>
+<p><strong>重要度A；內容性質：方案提議、條件式方案；證據狀態：跨段整合。</strong></p>
+<p>合作架構談到企業申請主體與建築專業者擔任顧問，並討論核定後聘任、是否需投保及能否作外部顧問等可能方式。這些都受到申請資格與人事認列限制，原稿不是正式資格文件。提報人選及專業答詢角色也僅是建議；約15分鐘簡報、30分鐘內整體審查，是會中對流程的描述，並非已收到通知。<a href="#s03">S03</a>、<a href="#s15">S15</a>、<a href="#s18">S18</a></p>
+<p>在人事與設備上，有人認為本來就要支出研發人力，可透過補助分擔，並稱行政、會計不適合列入。設備以一年執行對五年折舊的假設案例解釋為何不鼓勵採買，不能換寫成設備一律禁止補助。資安硬體後來仍被提出要詢問；算力／Token預抓15%、270萬元也只是估算，不代表一定要花滿或一定需要GPU。<a href="#s16">S16</a>、<a href="#s18">S18</a>、<a href="#s21">S21</a>、<a href="#s22">S22</a></p>
+<p>有人介紹撰寫團隊事前不收費、成功後一成，例舉900萬元對應90萬元。撰寫、核銷、結案、法務是否包含在同一價格、如何計費及誰承擔，尚未形成契約。ISO 27001被談作可能的資安驗證方向，專利、展會、差旅、法務也被提出；不據此斷言ISO 27001必為本案法定要件，或有證書即可取得政府採購資格。<a href="#s20">S20</a>、<a href="#s22">S22</a>、<a href="#s23">S23</a></p>
+<p>成果權利方面，討論過共同持有、由新創持有及授權等安排，並有人追問投入比例與合作商模。結尾仍說合作與出資要繼續談，功能討論可並行，並非當場選定共同專利或各方持股。樂觀的「不用出多少現金」說法，與開頭自籌900萬元目標之間有需釐清的現金流差異，不能擅自消除。<a href="#s16">S16</a>、<a href="#s23">S23</a>、<a href="#s25">S25</a>、<a href="#s29">S29</a>、<a href="#s30">S30</a></p>
+<p><strong>因果與目前結果：</strong> 補助機會促成合作，但投入與受益關係不清；樂觀分攤成本與追問實際出資／權利的立場都應保留。尚無終局結論，前提是各方同意與正式條件可行。對應A02、A03、A05～A07；現金流拆分建議為AI02。</p>
+<h3 id="t5b2b-saas">T5｜B2B SaaS、專業知識與通路的商業假說</h3>
+<p><strong>重要度A；內容性質：個人主張、方案提議；證據狀態：跨段整合。</strong></p>
+<p>平台預想服務建設公司、營造廠、建築事務所及室內設計業者，以企業可持續使用的服務形成收入。會中有人直接問商業模式及別人為什麼不容易複製；回應是將專家Know-how封裝成系統，並持續更新，使客戶不用每次重新自行組裝工具。這提供差異化假說，但缺少定價、收費單位、客戶驗證、維護成本及續用率資料，還不是經驗證的商模。<a href="#s08">S08</a>、<a href="#s26">S26</a>、<a href="#s27">S27</a></p>
+<p>通路構想包含學校、產學、企業內訓與數位行銷。某工程公司MOU及2027年度內訓被說明為接洽中，不寫成已簽約；與學校或企業人士熟識，僅代表可進一步詢問的線索。專利也只是保護選項，不保證阻止競爭者或自然帶來訂單。<a href="#s05">S05</a>、<a href="#s22">S22</a>、<a href="#s28">S28</a>、<a href="#s29">S29</a></p>
+<p><strong>因果與目前結果：</strong> 產品要擴大服務就需要可收費的差異；提問者質疑壁壘，回應者提出知識與更新價值；尚未有客戶端驗證結論。成立前提為知識使用權、可重現效益與實際付費意願。相關資料列入PC-20261110-01，不另創正式銷售交辦。</p>
+<h3 id="t6">T6｜缺工、造價與個人機器人創業構想</h3>
+<p><strong>重要度B；內容性質：現況陳述、個人主張、方案提議；證據狀態：明確提及／待確認。</strong></p>
+<p>會中以工地造價與水電報價經驗說明缺工及成本壓力。原稿年份、面積單位和18萬、28、34～34.5、42等數字混雜，其中包含猜測與轉述。8,500萬元、1,000單位雖可算出8.5萬元／單位，卻不能倒寫成講者清楚確認的每坪單價；因此只保留案例動機，不計算正式漲幅或產業均價。<a href="#s12">S12</a></p>
+<p>一位講者提出翌年成立顧問／機器人相關公司的方向，工項包含噴塗、砌作、環氧樹脂等，強調台灣工地情境及在地適用性。兩種角色（師傅、操作手）、三臺機器與24小時運轉是構想說法，沒有完整班表、成本或產能驗證。機器狗、無人機等則更偏未來方向；外牆及境外技術的風險被談及，但未形成法規可行性結論。<a href="#s13">S13</a></p>
+<p><strong>因果與目前結果：</strong> 問題是人工短缺及成本；人工作業與機械替代是方案差異，但沒有正式比較或選定。結論屬個人方向，成立前提是工項、設備、工地條件及商業可行性確認。以PC-20261110-02獨立留存，不列為共同投資或本案開發承諾。</p>
+<h3 id="_11">背景、旁支與保留價值</h3>
+<p>開場錄音工具交流屬寒暄，不產生採購決議。<a href="#s01">S01</a> 蔬菜與原公司業務可說明參與者背景：談到150公克包裝、約60～70元的記憶價格，150元是提問而非確認售價；「明天送」有口頭意向，但對象、講者與確切日期未能確定，不建立本案正式交辦。<a href="#s11">S11</a></p>
+<p>人口、政治、AI時事與所謂數百名銀行從業者受影響等內容，是觀點或回憶，未經查證，不能用作正式市場資料；其中AI變動快的感受可理解申請急迫性，卻不是可靠的投資年限。<a href="#s14">S14</a> 個人AI工具月費、不同美元方案及產品名稱有轉寫混淆，只保留為使用經驗，不據此估算本案算力。<a href="#s17">S17</a></p>
+<p>學界／軍中經歷、聚會桌數與排名等逸事，僅說明講者自述的人脈背景，不等於學校或企業已同意合作、已提供資源或背書。<a href="#s25">S25</a>、<a href="#s29">S29</a></p>
+<h3 id="_12">計畫候選、成熟度與素材卡</h3>
+<p>以下是會議素材提取，不是核定計畫。兩案來源均為MR-20261110-61faa324／20261110.txt；原話錨點與來源區段逐欄列出。跨會議延續狀態：待確認；前次候選編號：未提及；本次變化類型：待確認（本輪首次建卡，不據此斷言商業構想首次出現）。</p>
+<table>
+<thead>
+<tr>
+<th>候選編號</th>
+<th>對應主題與來源</th>
+<th>成熟度</th>
+<th>判斷依據與可寫範圍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PC-20261110-01</td>
+<td>T1～T5；S02～S10、S15～S30相關段</td>
+<td>M2</td>
+<td>有需求、客群、方案選項及預抓經費；無確認KPI基準、投入及權利協議，資源尚未查證。可寫概念、需求與備選，不可當可直接送件的完整計畫。</td>
+</tr>
+<tr>
+<td>PC-20261110-02</td>
+<td>T6；S12～S13</td>
+<td>M1</td>
+<td>有痛點、個人服務方向與設備線索；無共同範圍、量化驗收、可驗證預算、責任時程同意或利害關係人批准。可留構想備忘。</td>
+</tr>
+</tbody>
+</table>
+<p>兩案均未達可驗證執行／批准階段；AI補齊欄位不提高成熟度，正式KPI、負責人、時程同意程度及決策者批准均待確認或未提及。</p>
+<h4 id="pc-20261110-01">PC-20261110-01｜逐欄素材</h4>
+<table>
+<thead>
+<tr>
+<th>素材欄位</th>
+<th>提取內容</th>
+<th>證據狀態</th>
+<th>可否直接寫入計畫</th>
+<th>對應來源</th>
+<th>資料缺口狀態</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>候選識別／類型</td>
+<td>PC-20261110-01；營造建築AI平台研發與B2B產品化</td>
+<td>跨段整合</td>
+<td>可作概念索引，非正式案名</td>
+<td><a href="#s04">S04</a>、<a href="#s08">S08</a>、<a href="#s30">S30</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>問題與背景</td>
+<td>文件、契約、跨單位協作及資訊分散，被認為耗費人力</td>
+<td>明確提及</td>
+<td>可引用為會中提出的需求</td>
+<td><a href="#s04">S04</a>、<a href="#s07">S07</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>問題原因</td>
+<td>流程與知識散落在人員及既有系統；個人操作難擴大服務</td>
+<td>跨段整合</td>
+<td>可作待驗證問題假說</td>
+<td><a href="#s07">S07</a>、<a href="#s10">S10</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>目標對象</td>
+<td>建設公司、營造廠、事務所及室內設計業者</td>
+<td>明確提及</td>
+<td>可作候選客群</td>
+<td><a href="#s08">S08</a>、<a href="#s09">S09</a>、<a href="#s26">S26</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>目標與價值</td>
+<td>將AI導入企業流程，節省時間、提升效率並形成可銷售服務</td>
+<td>明確提及</td>
+<td>可作概念目標，不作已驗證效益</td>
+<td><a href="#s04">S04</a>、<a href="#s08">S08</a>、<a href="#s10">S10</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>方案候選</td>
+<td>專案Agent／Dashboard、知識庫、設計出圖、契約／財務／採購專業等</td>
+<td>跨段整合</td>
+<td>可列功能選項；不可全部寫為已承諾開發</td>
+<td><a href="#s04">S04</a>、<a href="#s06">S06</a>、<a href="#s07">S07</a>、<a href="#s09">S09</a>、<a href="#s19">S19</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>工作項目</td>
+<td>盤點資料、釐清功能、對接顧問與研發、場域驗證</td>
+<td>跨段整合</td>
+<td>可列待確認工作方向</td>
+<td><a href="#s15">S15</a>、<a href="#s18">S18</a>、<a href="#s30">S30</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>範圍與排除</td>
+<td>建議聚焦一至兩個切入領域；不鼓勵設備採購，不等於所有硬體一律不可編</td>
+<td>跨段整合</td>
+<td>可作範圍取捨依據，仍待正式確認</td>
+<td><a href="#s04">S04</a>、<a href="#s16">S16</a>、<a href="#s22">S22</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>預期成果</td>
+<td>可讓企業使用、能對外銷售的AI軟體／SaaS及落地驗證</td>
+<td>明確提及</td>
+<td>可作候選成果</td>
+<td><a href="#s02">S02</a>、<a href="#s08">S08</a>、<a href="#s10">S10</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>KPI線索</td>
+<td>工時、效率、應用及銷售方向已談；數值、基準與驗收方式未定</td>
+<td>跨段整合</td>
+<td>僅線索，不可寫成正式KPI</td>
+<td><a href="#s02">S02</a>、<a href="#s08">S08</a></td>
+<td>未提及</td>
+</tr>
+<tr>
+<td>時程線索</td>
+<td>口述12/7申請、翌年10/15結束、約8個月；本週顧問會議暫擬</td>
+<td>明確提及</td>
+<td>需正式公告、起算日及各方確認</td>
+<td><a href="#s02">S02</a>、<a href="#s15">S15</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>人力與角色</td>
+<td>技術方、場域方、建築專業者的擬議互補；提報與顧問聘用有前提</td>
+<td>跨段整合</td>
+<td>可寫擬議角色，不可寫成已簽約分工</td>
+<td><a href="#s03">S03</a>、<a href="#s15">S15</a>、<a href="#s18">S18</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>資源與可用證據</td>
+<td>個人工作流自述、既有APP、採購專家及學界／業界接觸線索</td>
+<td>跨段整合</td>
+<td>需取得展示、資料與合作確認</td>
+<td><a href="#s05">S05</a>、<a href="#s07">S07</a>、<a href="#s09">S09</a>、<a href="#s19">S19</a>、<a href="#s28">S28</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>預算與出資</td>
+<td>目標總經費1,800萬元、補助／自籌各900萬元；配合款比例未定</td>
+<td>跨段整合</td>
+<td>僅口述目標；不可當核定預算或資金承諾</td>
+<td><a href="#s02">S02</a>、<a href="#s24">S24</a>、<a href="#s30">S30</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>費用線索</td>
+<td>算力270萬元為預抓；顧問一成及各科目資格需確認</td>
+<td>跨段整合</td>
+<td>可列待核對清單</td>
+<td><a href="#s20">S20</a>、<a href="#s21">S21</a>、<a href="#s22">S22</a>、<a href="#s23">S23</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>前提與依賴</td>
+<td>同意合作、功能定義、出資及官方資格確認；出圖另有模型正確前提</td>
+<td>跨段整合</td>
+<td>可保留條件，不補成已滿足</td>
+<td><a href="#s02">S02</a>、<a href="#s09">S09</a>、<a href="#s30">S30</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>風險與替代方案</td>
+<td>範圍太大、資料外洩、核定金額不如目標；權利有多種安排</td>
+<td>明確提及</td>
+<td>可作會中風險／備選</td>
+<td><a href="#s04">S04</a>、<a href="#s07">S07</a>、<a href="#s23">S23</a>、<a href="#s24">S24</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>正式權利承諾</td>
+<td>共享、由新創持有、授權等均為選項，未選定</td>
+<td>明確提及</td>
+<td>不可直接寫成共同持有協議</td>
+<td><a href="#s23">S23</a>、<a href="#s25">S25</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>跨會議關聯</td>
+<td>11/03-2與11/05有相關構想；本稿未明指候選編號與同案關係</td>
+<td>跨段整合</td>
+<td>延續狀態待確認，前次候選編號未提及</td>
+<td>相關紀錄比對＋<a href="#s01">S01</a>、<a href="#s30">S30</a></td>
+<td>未提及</td>
+</tr>
+<tr>
+<td>成熟度與可寫範圍</td>
+<td>M2：可寫問題、客群、方案選項與待核資源；不能成為可送件完整計畫</td>
+<td>跨段整合</td>
+<td>需人工確認；不能以欄位齊全升級</td>
+<td>本表來源及<a href="#s30">S30</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>下一步規劃建議</td>
+<td>可建立功能／驗收與現金流對照，補正式來源</td>
+<td>AI補充</td>
+<td>僅AI建議，不是會議交辦</td>
+<td><a href="#s04">S04</a>、<a href="#s08">S08</a>、<a href="#s30">S30</a></td>
+<td>AI補充</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pc-20261110-02">PC-20261110-02｜逐欄素材</h4>
+<table>
+<thead>
+<tr>
+<th>素材欄位</th>
+<th>提取內容</th>
+<th>證據狀態</th>
+<th>可否直接寫入計畫</th>
+<th>對應來源</th>
+<th>資料缺口狀態</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>候選識別／類型</td>
+<td>PC-20261110-02；營造AI顧問新創與機器人服務構想</td>
+<td>跨段整合</td>
+<td>僅構想索引</td>
+<td><a href="#s13">S13</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>問題與背景</td>
+<td>講者以缺工、成本及趕工需求說明自動化方向</td>
+<td>明確提及</td>
+<td>保留為講者判斷與個案線索</td>
+<td><a href="#s12">S12</a>、<a href="#s13">S13</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>問題原因</td>
+<td>人力供給與現場施工效率被認為不足；未提供統計</td>
+<td>跨段整合</td>
+<td>待驗證問題假說</td>
+<td><a href="#s12">S12</a>、<a href="#s13">S13</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>目標對象</td>
+<td>營造業、建築業及可能採用施工自動化者</td>
+<td>明確提及</td>
+<td>可作候選服務對象</td>
+<td><a href="#s13">S13</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>目標與價值</td>
+<td>結合顧問、AI產品與營造機器人，提高作業效率</td>
+<td>明確提及</td>
+<td>概念目標，不是已量測成效</td>
+<td><a href="#s13">S13</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>方案候選</td>
+<td>泥作、噴漆、Epoxy等機器人；另提巡檢應用</td>
+<td>明確提及</td>
+<td>可列候選，不可當實際供貨清單</td>
+<td><a href="#s13">S13</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>工作項目</td>
+<td>只談個人未來成立新公司及引介資源，未形成共同執行工作包</td>
+<td>跨段整合</td>
+<td>不可寫成雙方已同意專案</td>
+<td><a href="#s13">S13</a></td>
+<td>未提及</td>
+</tr>
+<tr>
+<td>執行範圍</td>
+<td>工地管理限制、不同工項適用性不同；具體服務界線未定</td>
+<td>明確提及</td>
+<td>可記限制，需補範圍</td>
+<td><a href="#s13">S13</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>預期成果</td>
+<td>顧問與自動化服務方向；交付物及數量未定</td>
+<td>跨段整合</td>
+<td>不可補造正式交付項</td>
+<td><a href="#s13">S13</a></td>
+<td>未提及</td>
+</tr>
+<tr>
+<td>KPI與驗收</td>
+<td>未提具體基準、產能承諾與驗收方法</td>
+<td>跨段整合</td>
+<td>不可直接寫正式KPI</td>
+<td>整份來源，重點<a href="#s13">S13</a></td>
+<td>未提及</td>
+</tr>
+<tr>
+<td>時程</td>
+<td>講者表示明年成立新創，非本案核定排程</td>
+<td>明確提及</td>
+<td>僅個人計畫線索</td>
+<td><a href="#s13">S13</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>人力與合作角色</td>
+<td>提及台大學弟與研發集團接觸；師傅／操作手的配置說法</td>
+<td>明確提及</td>
+<td>需驗證身分、合作及人力規劃</td>
+<td><a href="#s13">S13</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>資源與證據</td>
+<td>聲稱已有機器人導入台灣；未附訂單、展示或測試資料</td>
+<td>跨段整合</td>
+<td>只能記為自述資源線索</td>
+<td><a href="#s13">S13</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>預算與出資</td>
+<td>未提供本構想預算或出資者；不能套用主案1,800萬元</td>
+<td>跨段整合</td>
+<td>不可補造預算</td>
+<td>整份來源，重點<a href="#s13">S13</a></td>
+<td>未提及</td>
+</tr>
+<tr>
+<td>前提與依賴</td>
+<td>工地管理、工項適用性、技術與資源確認</td>
+<td>跨段整合</td>
+<td>候選條件，未證實可量產</td>
+<td><a href="#s13">S13</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>風險與替代</td>
+<td>機器人不適用所有工項；國內工地情境仍有限制</td>
+<td>明確提及</td>
+<td>可留會中提醒</td>
+<td><a href="#s13">S13</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>正式權利與合作承諾</td>
+<td>未形成與本次其他參與者的公司、投資或供貨協議</td>
+<td>跨段整合</td>
+<td>不可寫成共同成立／投資承諾</td>
+<td>整份來源，重點<a href="#s13">S13</a></td>
+<td>未提及</td>
+</tr>
+<tr>
+<td>跨會議關聯</td>
+<td>未指明前次候選或沿用專案；延續狀態待確認</td>
+<td>跨段整合</td>
+<td>前次候選編號未提及</td>
+<td>整份來源，重點<a href="#s13">S13</a></td>
+<td>未提及</td>
+</tr>
+<tr>
+<td>成熟度與可寫範圍</td>
+<td>M1：可留痛點、服務方向與資源線索；尚無共同範圍／KPI／預算</td>
+<td>跨段整合</td>
+<td>只能形成構想備忘，不能成為正式計畫</td>
+<td><a href="#s12">S12</a>、<a href="#s13">S13</a></td>
+<td>待確認</td>
+</tr>
+<tr>
+<td>下一步規劃建議</td>
+<td>若個人決定推動，再獨立確認市場需求、技術證據與商業條件</td>
+<td>AI補充</td>
+<td>僅條件式AI建議，非會議交辦</td>
+<td><a href="#s13">S13</a></td>
+<td>AI補充</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_13">重要數字與證據</h3>
+<p>「已核對原稿」代表文字能對回來源，不代表制度、案例、能力或市價已驗證。數字保留原主體與條件，不跨案例加總。</p>
+<table>
+<thead>
+<tr>
+<th>編號</th>
+<th>項目</th>
+<th>主體／範圍</th>
+<th>逐字稿原話</th>
+<th>整理值／單位</th>
+<th>數值性質</th>
+<th>核對狀態</th>
+<th>是否可用於決策</th>
+<th>依據</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N01</td>
+<td>補助／自籌／總經費</td>
+<td>本案申請目標；非核定額</td>
+<td>900、50%、900、1800；後文明說900萬</td>
+<td>補助900萬元＋自籌900萬元＝1,800萬元</td>
+<td>目標／跨段整理</td>
+<td>已核對（原稿及加總）</td>
+<td>尚不可作核定預算</td>
+<td><a href="#s02">S02</a>、<a href="#s24">S24</a></td>
+</tr>
+<tr>
+<td>N02</td>
+<td>聯合申請企業家數</td>
+<td>會中轉述之申請條件</td>
+<td>兩家以上的企業</td>
+<td>至少2家；是否適用本案待查正式須知</td>
+<td>會中制度說法</td>
+<td>已核對原話；制度需再核對</td>
+<td>不可直接作資格判定</td>
+<td><a href="#s02">S02</a></td>
+</tr>
+<tr>
+<td>N03</td>
+<td>申請截止</td>
+<td>本次擬申請計畫</td>
+<td>12月7號、剩不到一個月</td>
+<td>12/7；年份依檔名前綴推定2026，正式日期待核</td>
+<td>口述截止／推定年份</td>
+<td>已核對原話；正式公告需再核對</td>
+<td>以官方公告為準</td>
+<td><a href="#s02">S02</a>、<a href="#s08">S08</a></td>
+</tr>
+<tr>
+<td>N04</td>
+<td>執行終點與工期</td>
+<td>核定後執行；起算日未明</td>
+<td>明年的10月15號、大概八個月</td>
+<td>翌年10/15、約8個月；不推算已核定起日</td>
+<td>預估／條件式</td>
+<td>已核對原話；排程需再核對</td>
+<td>不可作已核定工期</td>
+<td><a href="#s02">S02</a></td>
+</tr>
+<tr>
+<td>N05</td>
+<td>過往補助案例</td>
+<td>講者所稱寶隆／保龍之他案</td>
+<td>300萬、也是一個月、沒有被扣</td>
+<td>300萬元為他案自述，不是本案核定先例</td>
+<td>經驗案例／公司名待核</td>
+<td>已核對原稿；未驗證案例</td>
+<td>不能保證本案同額或全額核定</td>
+<td><a href="#s02">S02</a></td>
+</tr>
+<tr>
+<td>N06</td>
+<td>算力／Token費用</td>
+<td>本案預抓；比例分母依總經費驗算</td>
+<td>可以編到15%270萬、都是預抓</td>
+<td>1,800萬元×15%＝270萬元；實際需求尚未確定</td>
+<td>估算；是否法定上限待查</td>
+<td>已核對原話及算式；可編規則需再核對</td>
+<td>不可當已核定支出</td>
+<td><a href="#s21">S21</a></td>
+</tr>
+<tr>
+<td>N07</td>
+<td>顧問成功費</td>
+<td>講者介紹之合作團隊；以拿到補助為前提</td>
+<td>事前不收錢、成功後一成；900萬、90萬</td>
+<td>900萬元×10%＝90萬元；實際基礎、稅額與服務範圍待確認</td>
+<td>報價方向／成功前提</td>
+<td>已核對原話及算式；契約需再核對</td>
+<td>不是已簽約付款義務</td>
+<td><a href="#s20">S20</a></td>
+</tr>
+<tr>
+<td>N08</td>
+<td>市場顧問費比較</td>
+<td>講者的行情比較，非本案報價</td>
+<td>一般…兩層到三層</td>
+<td>疑指二至三成；僅保留比較說法</td>
+<td>個人經驗／轉寫疑義</td>
+<td>需再核對</td>
+<td>不可據此宣稱市場統一行情</td>
+<td><a href="#s20">S20</a></td>
+</tr>
+<tr>
+<td>N09</td>
+<td>設備補貼示例</td>
+<td>用於說明不鼓勵購買設備的理由</td>
+<td>一年、五年；500萬、100萬、400</td>
+<td>500萬元設備、假設只計一年約100萬元，餘400萬元；非實際採購</td>
+<td>假設試算／折舊說法</td>
+<td>已核對原話；制度及會計口徑需再核對</td>
+<td>不可當本案正式折舊或補助規則</td>
+<td><a href="#s16">S16</a></td>
+</tr>
+<tr>
+<td>N10</td>
+<td>審查提報時間</td>
+<td>講者描述可能流程</td>
+<td>半個小時內、15分鐘</td>
+<td>整體約30分鐘內、提報約15分鐘</td>
+<td>經驗／預估</td>
+<td>已核對原話；本案程序需再核對</td>
+<td>供準備參考</td>
+<td><a href="#s15">S15</a></td>
+</tr>
+<tr>
+<td>N11</td>
+<td>設計圖面及完成時間</td>
+<td>建築專業者自述其室內設計流程</td>
+<td>五六十頁、一個晚上</td>
+<td>約50～60頁、約一晚；以模型與尺寸檢查正確為前提</td>
+<td>個人能力自述；非實測交付</td>
+<td>已核對原話；成果品質需再核對</td>
+<td>不可當團隊交付承諾</td>
+<td><a href="#s09">S09</a></td>
+</tr>
+<tr>
+<td>N12</td>
+<td>案例／既有專案數</td>
+<td>不同人的外部案例與現況舉例</td>
+<td>20個／二十幾個；現在案子就70</td>
+<td>約20餘個外部案例與約70案現況各有其對象，不合併計數</td>
+<td>舉例／口述現況</td>
+<td>已核對原話；實際統計需再核對</td>
+<td>不能當經查核的市場或在手案量</td>
+<td><a href="#s05">S05</a>、<a href="#s07">S07</a></td>
+</tr>
+<tr>
+<td>N13</td>
+<td>外部內訓合作</td>
+<td>建築專業者對外部工程公司的自述</td>
+<td>正在…簽MOU、2027年…一整年度</td>
+<td>2027年度內訓構想／接洽，未見已簽文件</td>
+<td>資源線索／尚在接洽</td>
+<td>已核對原話；公司名及簽約狀態需再核對</td>
+<td>不是本團隊已確定訂單</td>
+<td><a href="#s05">S05</a></td>
+</tr>
+<tr>
+<td>N14</td>
+<td>營造造價案例</td>
+<td>單一基地經驗與對市場的轉述</td>
+<td>111／113／114年；18萬、28、34萬、三四萬五0、42、100米／100平</td>
+<td>保留18、28、約34～34.5及42的口述差異；年份、坪數、單價單位與工程條件需核</td>
+<td>案例、猜測與報價混雜</td>
+<td>需再核對</td>
+<td>不可作正式估價或比較漲幅</td>
+<td><a href="#s12">S12</a></td>
+</tr>
+<tr>
+<td>N15</td>
+<td>水電分包案例</td>
+<td>講者轉述；單位與中間數值辨識不穩</td>
+<td>三萬8500；八萬公…；1000平、8500萬</td>
+<td>原文有38,500及8,500萬元／1,000單位；若相除為8.5萬元／單位（AI換算），不能倒寫成清楚原話</td>
+<td>口述案例／AI換算另標</td>
+<td>需再核對；算術關係已核對</td>
+<td>不可當8.5萬元／坪的確認報價</td>
+<td><a href="#s12">S12</a></td>
+</tr>
+<tr>
+<td>N16</td>
+<td>蔬菜售價閒談</td>
+<td>其他業務背景，不屬本案預算</td>
+<td>150公克、60還是70；150百50</td>
+<td>150g、約60～70元為記憶估價；150元出現在提問，不當成交價</td>
+<td>旁支／記憶值</td>
+<td>需再核對</td>
+<td>不作正式價目或本案預算</td>
+<td><a href="#s11">S11</a></td>
+</tr>
+<tr>
+<td>N17</td>
+<td>個人AI訂閱支出</td>
+<td>不同人的使用經驗；幣別／月費口述混雜</td>
+<td>3000、6000、200美、20枚；3003000、600000</td>
+<td>約3千／6千元及200／20美元的說法分開，未確認產品與方案；保留亂碼不硬解</td>
+<td>個人使用經驗／ASR疑義</td>
+<td>需再核對</td>
+<td>不能當現行公開定價或本案Token需求</td>
+<td><a href="#s17">S17</a></td>
+</tr>
+<tr>
+<td>N18</td>
+<td>機器人作業配置</td>
+<td>個人未來業務構想／能力說法</td>
+<td>兩個人、操作手、師傅；三臺、24小時</td>
+<td>每組約2種角色，另提出3臺與24小時輪班；不反推完整班表或人力成本</td>
+<td>方向性自述</td>
+<td>已核對原話；實務能力需再核對</td>
+<td>不是已驗證產能</td>
+<td><a href="#s13">S13</a></td>
+</tr>
+<tr>
+<td>N19</td>
+<td>人口與AI趨勢旁支</td>
+<td>與本案無直接決議關係的回憶／時事看法</td>
+<td>42萬、4萬、400多個人</td>
+<td>數字屬未查證的回憶／社會事件談話，不建立人口、資安事故事實</td>
+<td>旁支／未核實</td>
+<td>需再核對</td>
+<td>不可用於本案正式論證</td>
+<td><a href="#s14">S14</a></td>
+</tr>
+<tr>
+<td>N20</td>
+<td>人脈／個人經歷數字</td>
+<td>講者對學界及軍中經驗的描述</td>
+<td>30桌、60桌、60大壽、0.5%；六年、17顆星星</td>
+<td>桌數與排名為轉述或估計；不等於已取得客戶、背書或聲望驗證</td>
+<td>資源背景／逸事</td>
+<td>需再核對</td>
+<td>不可當已承諾通路或權威認證</td>
+<td><a href="#s25">S25</a>、<a href="#s29">S29</a></td>
+</tr>
+<tr>
+<td>N21</td>
+<td>AI發展與個人工時說法</td>
+<td>解釋產品化與時機的口述</td>
+<td>紅紅三年、一天就24小時</td>
+<td>前者是時機判斷；後者用於說明單人服務難規模化，不是產能測試</td>
+<td>觀點／理由</td>
+<td>已核對原話；不作市場年限考證</td>
+<td>只保留論述用途</td>
+<td><a href="#s04">S04</a>、<a href="#s10">S10</a></td>
+</tr>
+<tr>
+<td>N22</td>
+<td>其他不可穩定解讀片段</td>
+<td>轉寫品質限制</td>
+<td>1890、9改0、130年抵達／110年正式時空</td>
+<td>保持原文，未逕行整理成金額、年份或事件</td>
+<td>ASR疑義</td>
+<td>需再核對</td>
+<td>不可使用</td>
+<td><a href="#s12">S12</a>、<a href="#s20">S20</a>、<a href="#s24">S24</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_14">風險及計畫前需核對事項</h3>
+<table>
+<thead>
+<tr>
+<th>類別</th>
+<th>事項</th>
+<th>性質及處理</th>
+<th>依據</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>逐字稿限制</td>
+<td>無分人、無時間，專名及部分數字轉寫不穩</td>
+<td>待確認；以原文錨點保留，不補聲音或姓名</td>
+<td>全稿，尤S03、S12、S17</td>
+</tr>
+<tr>
+<td>會中提出</td>
+<td>工期、功能過廣、離職存取、核定額可能不如目標</td>
+<td>明確提及；需確認範圍及應對</td>
+<td><a href="#s04">S04</a>、<a href="#s07">S07</a>、<a href="#s24">S24</a></td>
+</tr>
+<tr>
+<td>AI補充</td>
+<td>估算與實際現金流混用、專業內容使用權、對外能力承諾失真</td>
+<td>AI整理建議／AI補充；對應AI01～AI03，不升格會議決議</td>
+<td><a href="#s09">S09</a>、<a href="#s16">S16</a>、<a href="#s19">S19</a>、<a href="#s23">S23</a></td>
+</tr>
+<tr>
+<td>計畫前核對</td>
+<td>正式計畫名稱、須知、企業資格、截止及核銷科目</td>
+<td>待確認；目前只有會中制度說法，不能作送件資格判定</td>
+<td><a href="#s02">S02</a>、<a href="#s16">S16</a>、<a href="#s18">S18</a>、<a href="#s22">S22</a></td>
+</tr>
+<tr>
+<td>計畫前核對</td>
+<td>出資／付款基礎、顧問服務範圍、權利、MOU與能力證據</td>
+<td>待確認；應取得當事人／文件支持後使用</td>
+<td><a href="#s05">S05</a>、<a href="#s20">S20</a>、<a href="#s23">S23</a>、<a href="#s30">S30</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pass-2">定向回查（Pass 2）</h3>
+<table>
+<thead>
+<tr>
+<th>題目</th>
+<th>回查結論</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1 交辦與承諾</td>
+<td>盤點素材、暫擬顧問會議、續談功能及出資；未有可靠姓名對應。另有明天送菜的旁支承諾，主體／日期不明，不列主案派工。</td>
+<td><a href="#s11">S11</a>、<a href="#s15">S15</a>、<a href="#s30">S30</a></td>
+</tr>
+<tr>
+<td>Q2 全部數字</td>
+<td>見N01～N22；分開本案、他案、假設、旁支及辨識異常。未把1億元當另一版本案預算。</td>
+<td><a href="#s02">S02</a>、<a href="#s05">S05</a>、<a href="#s07">S07</a>、<a href="#s08">S08</a>、<a href="#s09">S09</a>、<a href="#s10">S10</a>、<a href="#s11">S11</a>、<a href="#s12">S12</a>、<a href="#s13">S13</a>、<a href="#s14">S14</a>、<a href="#s15">S15</a>、<a href="#s16">S16</a>、<a href="#s17">S17</a>、<a href="#s20">S20</a>、<a href="#s21">S21</a>、<a href="#s24">S24</a>、<a href="#s25">S25</a>、<a href="#s29">S29</a></td>
+</tr>
+<tr>
+<td>Q3 否決／擱置</td>
+<td>不主張範圍鋪太廣，不鼓勵購買設備；多種功能及權利方式未選定，沒有找到可確認的正式否決清單。</td>
+<td><a href="#s04">S04</a>、<a href="#s16">S16</a>、<a href="#s23">S23</a>、<a href="#s30">S30</a></td>
+</tr>
+<tr>
+<td>Q4 前提</td>
+<td>同意合作才啟動、核定後聘用、模型及尺寸正確後出圖、顧問費成功後收取；核定可低於目標。</td>
+<td><a href="#s02">S02</a>、<a href="#s09">S09</a>、<a href="#s15">S15</a>、<a href="#s20">S20</a>、<a href="#s24">S24</a></td>
+</tr>
+<tr>
+<td>Q5 專名</td>
+<td>見身分／術語核對段；稱呼出現不等於確定與會名冊。</td>
+<td><a href="#s03">S03</a>、<a href="#s05">S05</a>、<a href="#s07">S07</a>、<a href="#s13">S13</a>、<a href="#s15">S15</a>、<a href="#s19">S19</a>、<a href="#s25">S25</a>、<a href="#s28">S28</a>、<a href="#s29">S29</a>、<a href="#s30">S30</a></td>
+</tr>
+<tr>
+<td>Q6 下次節點</td>
+<td>本週顧問會議為暫擬，幾天內再聯繫；沒有下次會議確定日期。</td>
+<td><a href="#s15">S15</a>、<a href="#s25">S25</a>、<a href="#s30">S30</a></td>
+</tr>
+<tr>
+<td>Q7 分歧與推回</td>
+<td>現有APP可用但未結合AI；有人追問離職者仍可登入及金流／護城河，回應仍屬方案而非已解決；出資和權利延後。</td>
+<td><a href="#s07">S07</a>、<a href="#s15">S15</a>、<a href="#s23">S23</a>、<a href="#s26">S26</a>、<a href="#s30">S30</a></td>
+</tr>
+<tr>
+<td>Q8 目的／機制／理由</td>
+<td>企業流程痛點、個人能力難規模化、平台產品化、知識保存與持續更新，見T1～T5。</td>
+<td><a href="#s04">S04</a>、<a href="#s06">S06</a>、<a href="#s07">S07</a>、<a href="#s09">S09</a>、<a href="#s10">S10</a>、<a href="#s26">S26</a>、<a href="#s27">S27</a></td>
+</tr>
+<tr>
+<td>Q9 能力／資源／限制</td>
+<td>室內設計是個人自述、BIM正在測試，學校／業界接觸不是已承諾通路；範圍與現場限制保留。</td>
+<td><a href="#s05">S05</a>、<a href="#s09">S09</a>、<a href="#s13">S13</a>、<a href="#s28">S28</a>、<a href="#s29">S29</a></td>
+</tr>
+<tr>
+<td>Q10 未決／不同強度後續</td>
+<td>功能、出資、IP、實際費用、官方資格及驗收待確認；行動表區分條件式與AI建議，不以常識指定承辦人。</td>
+<td><a href="#s04">S04</a>、<a href="#s15">S15</a>、<a href="#s18">S18</a>、<a href="#s20">S20</a>、<a href="#s22">S22</a>、<a href="#s23">S23</a>、<a href="#s30">S30</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pass-3">來源覆蓋審計（Pass 3）</h3>
+<table>
+<thead>
+<tr>
+<th>區段</th>
+<th>來源內容</th>
+<th>分類</th>
+<th>去向／分類理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#s01">S01</a></td>
+<td>開場錄音工具閒談</td>
+<td>背景／旁支</td>
+<td>開場錄音工具寒暄；不屬申請或產品決策</td>
+</tr>
+<tr>
+<td><a href="#s02">S02</a></td>
+<td>補助規模、截止與執行目標</td>
+<td>主題引用</td>
+<td>T1、T4、N01～N05</td>
+</tr>
+<tr>
+<td><a href="#s03">S03</a></td>
+<td>擬議合作分工</td>
+<td>主題引用</td>
+<td>T4</td>
+</tr>
+<tr>
+<td><a href="#s04">S04</a></td>
+<td>痛點、流程整合與範圍聚焦</td>
+<td>主題引用</td>
+<td>T1～T3</td>
+</tr>
+<tr>
+<td><a href="#s05">S05</a></td>
+<td>既有BIM案例與外部合作自述</td>
+<td>主題引用</td>
+<td>T5</td>
+</tr>
+<tr>
+<td><a href="#s06">S06</a></td>
+<td>專案管理Agent與儀表板</td>
+<td>主題引用</td>
+<td>T2</td>
+</tr>
+<tr>
+<td><a href="#s07">S07</a></td>
+<td>現有APP、知識庫與權限疑慮</td>
+<td>主題引用</td>
+<td>T2、T5</td>
+</tr>
+<tr>
+<td><a href="#s08">S08</a></td>
+<td>申請時機、KPI與B2B方向</td>
+<td>主題引用</td>
+<td>T1、T5</td>
+</tr>
+<tr>
+<td><a href="#s09">S09</a></td>
+<td>設計工作流程自述與BIM測試</td>
+<td>主題引用</td>
+<td>T3</td>
+</tr>
+<tr>
+<td><a href="#s10">S10</a></td>
+<td>個人技能轉為軟體產品的理由</td>
+<td>主題引用</td>
+<td>T3</td>
+</tr>
+<tr>
+<td><a href="#s11">S11</a></td>
+<td>蔬菜、送菜與公司既有業務閒談</td>
+<td>背景／旁支</td>
+<td>蔬菜售價及送菜旁支，保留在背景與N16，非主案承諾</td>
+</tr>
+<tr>
+<td><a href="#s12">S12</a></td>
+<td>可規模化服務與缺工造價經驗</td>
+<td>主題引用</td>
+<td>T3、T6</td>
+</tr>
+<tr>
+<td><a href="#s13">S13</a></td>
+<td>營造機器人及個人新創方向</td>
+<td>主題引用</td>
+<td>T6、PC02</td>
+</tr>
+<tr>
+<td><a href="#s14">S14</a></td>
+<td>人口、AI競爭與社會事件旁支</td>
+<td>背景／旁支</td>
+<td>人口／國際AI／社會事件等未查證談話；領域經驗觀點另在T5引用</td>
+</tr>
+<tr>
+<td><a href="#s15">S15</a></td>
+<td>素材、顧問會議、聘用與提報</td>
+<td>主題引用</td>
+<td>T1、T4、行動</td>
+</tr>
+<tr>
+<td><a href="#s16">S16</a></td>
+<td>人事預算與設備折舊取捨</td>
+<td>主題引用</td>
+<td>T1、T4</td>
+</tr>
+<tr>
+<td><a href="#s17">S17</a></td>
+<td>個人AI訂閱與使用經驗</td>
+<td>背景／旁支</td>
+<td>個人訂閱經驗與辨識不穩價格；N17留核對線索，不作本案Token需求</td>
+</tr>
+<tr>
+<td><a href="#s18">S18</a></td>
+<td>場域驗證及員工投保討論</td>
+<td>主題引用</td>
+<td>T1、T4</td>
+</tr>
+<tr>
+<td><a href="#s19">S19</a></td>
+<td>採購法專業Agent提議</td>
+<td>主題引用</td>
+<td>T2</td>
+</tr>
+<tr>
+<td><a href="#s20">S20</a></td>
+<td>撰寫、核銷與成功費用</td>
+<td>主題引用</td>
+<td>T4</td>
+</tr>
+<tr>
+<td><a href="#s21">S21</a></td>
+<td>算力預抓額度</td>
+<td>主題引用</td>
+<td>T1</td>
+</tr>
+<tr>
+<td><a href="#s22">S22</a></td>
+<td>資安驗證及費用科目</td>
+<td>主題引用</td>
+<td>T2、T4</td>
+</tr>
+<tr>
+<td><a href="#s23">S23</a></td>
+<td>成果權利選項與法務服務</td>
+<td>主題引用</td>
+<td>T4</td>
+</tr>
+<tr>
+<td><a href="#s24">S24</a></td>
+<td>補助目標與核定折減風險</td>
+<td>主題引用</td>
+<td>T1</td>
+</tr>
+<tr>
+<td><a href="#s25">S25</a></td>
+<td>合作意向、成果分配及個人經歷</td>
+<td>主題引用</td>
+<td>T4、背景</td>
+</tr>
+<tr>
+<td><a href="#s26">S26</a></td>
+<td>商業模式與競爭壁壘提問</td>
+<td>主題引用</td>
+<td>T5</td>
+</tr>
+<tr>
+<td><a href="#s27">S27</a></td>
+<td>知識封裝與持續更新主張</td>
+<td>主題引用</td>
+<td>T3、T5</td>
+</tr>
+<tr>
+<td><a href="#s28">S28</a></td>
+<td>產學、學校及數位行銷方向</td>
+<td>主題引用</td>
+<td>T5</td>
+</tr>
+<tr>
+<td><a href="#s29">S29</a></td>
+<td>人脈資源自述與樂觀判斷</td>
+<td>主題引用</td>
+<td>T5、背景</td>
+</tr>
+<tr>
+<td><a href="#s30">S30</a></td>
+<td>合作、出資與功能的後續確認</td>
+<td>主題引用</td>
+<td>T4、行動</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pass-4">事實校對範圍（Pass 4）</h3>
+<p>重要硬事實已回查S01～S30：核對補助／自籌及成功費算式，區分本案與過往案例、個人與團隊能力、接洽與已簽、候選與決議。人名、制度、造價、訂閱及能力自述未能外部證實者均保留待確認或需再核對。未執行音訊辨識、官方須知查核或第三方成果驗收；本文件的「已核對」不涵蓋這些項目。</p>
+<h2 id="_15">三、行動決議</h2>
+<h3 id="_16">正式交辦與已確認決議</h3>
+<p>原稿無可靠的逐段身分對照，且結尾仍要談出資及功能；未辨識出可確認「特定姓名已接受、內容明確、期限確定」的正式交辦，也未將提議補為決議。相對時間保留原話，不推算硬期限。</p>
+<h3 id="_17">條件式行動</h3>
+<table>
+<thead>
+<tr>
+<th>編號</th>
+<th>類型</th>
+<th>事項</th>
+<th>責任者</th>
+<th>時程</th>
+<th>前提</th>
+<th>內容性質／證據</th>
+<th>狀態</th>
+<th>依據</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A01</td>
+<td>條件式行動</td>
+<td>若合作申請推進，盤點各方素材並交顧問釐清所需資料</td>
+<td>參與各方（原話「大家」；個別分工待指定）</td>
+<td>本週安排會議為提議，確定日期未指定</td>
+<td>若各方同意啟動，顧問須先說明資料需求</td>
+<td>條件式方案／明確提及</td>
+<td>待確認</td>
+<td><a href="#s15">S15</a>、<a href="#s30">S30</a></td>
+</tr>
+<tr>
+<td>A02</td>
+<td>條件式行動</td>
+<td>與撰寫顧問安排線上會議，確認需求與協作方式</td>
+<td>待指定（原話「我」未能可靠對應姓名）</td>
+<td>原稿說「看是這禮拜／可能這禮拜」；非11/15硬期限</td>
+<td>合作意願及可用時間確認後</td>
+<td>方案提議／明確提及</td>
+<td>待確認</td>
+<td><a href="#s15">S15</a></td>
+</tr>
+<tr>
+<td>A03</td>
+<td>條件式行動</td>
+<td>與呂董一方續談合作方式及出資比例</td>
+<td>待指定；涉及呂董及合作各方，不代表呂董已受派</td>
+<td>未指定；原稿稱這幾天會聯繫</td>
+<td>是否合作與各方實際投入待確認</td>
+<td>條件式方案／明確提及</td>
+<td>待確認</td>
+<td><a href="#s16">S16</a>、<a href="#s30">S30</a></td>
+</tr>
+<tr>
+<td>A04</td>
+<td>條件式行動</td>
+<td>釐清優先功能與驗證範圍，再供計畫撰寫</td>
+<td>待指定；由相關專業者共同討論，未確認正式owner</td>
+<td>未指定</td>
+<td>功能討論與出資協商並進，勿先承諾所有構想</td>
+<td>條件式方案／跨段整合</td>
+<td>待確認</td>
+<td><a href="#s04">S04</a>、<a href="#s19">S19</a>、<a href="#s30">S30</a></td>
+</tr>
+<tr>
+<td>A05</td>
+<td>條件式行動</td>
+<td>續談共同持有、新創持有或授權等成果權利方式</td>
+<td>待指定；合作各方</td>
+<td>未指定</td>
+<td>先確認合作意願；本次尚未選定權利方案</td>
+<td>條件式方案／明確提及</td>
+<td>待確認</td>
+<td><a href="#s23">S23</a>、<a href="#s25">S25</a></td>
+</tr>
+<tr>
+<td>A06</td>
+<td>條件式行動</td>
+<td>向顧問核對資安硬體、法務服務及各預算科目能否編列</td>
+<td>待指定；原稿僅提出再向顧問討論</td>
+<td>未指定</td>
+<td>取得正式須知與實際服務報價後核對</td>
+<td>條件式方案／明確提及</td>
+<td>待確認</td>
+<td><a href="#s20">S20</a>、<a href="#s22">S22</a>、<a href="#s23">S23</a></td>
+</tr>
+<tr>
+<td>A07</td>
+<td>條件式行動</td>
+<td>若核定且採用擬議架構，再辦理顧問聘用及提報答詢分工</td>
+<td>待指定；候選顧問與提報人均未正式確認</td>
+<td>核定後／審查前；精確期限未指定</td>
+<td>核定、聘用資格、合作及答詢安排確認</td>
+<td>條件式方案／明確提及</td>
+<td>待確認</td>
+<td><a href="#s15">S15</a>、<a href="#s18">S18</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ai_1">AI整理建議</h3>
+<p>以下是整理者依缺口提出的下一步，未取得會中承諾；責任者待指定、期限未指定。</p>
+<table>
+<thead>
+<tr>
+<th>編號</th>
+<th>類型</th>
+<th>事項</th>
+<th>責任者</th>
+<th>時程</th>
+<th>前提</th>
+<th>內容性質／證據</th>
+<th>狀態</th>
+<th>依據</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI01</td>
+<td>AI建議</td>
+<td>建立功能優先序、來源資料與驗收條件的對照清單</td>
+<td>待指定</td>
+<td>未指定</td>
+<td>整理者建議；不是會中正式交辦</td>
+<td>AI整理建議／AI補充</td>
+<td>待評估</td>
+<td><a href="#s04">S04</a>、<a href="#s09">S09</a>、<a href="#s30">S30</a></td>
+</tr>
+<tr>
+<td>AI02</td>
+<td>AI建議</td>
+<td>另列目標預算、可核銷支出、實際現金流與配合款差異</td>
+<td>待指定</td>
+<td>未指定</td>
+<td>為釐清「自籌900萬」與「本來就要花／不太出錢」的說法</td>
+<td>AI整理建議／AI補充</td>
+<td>待評估</td>
+<td><a href="#s02">S02</a>、<a href="#s16">S16</a>、<a href="#s29">S29</a></td>
+</tr>
+<tr>
+<td>AI03</td>
+<td>AI建議</td>
+<td>就資料權限、離職停權、紀錄範圍及外部專業內容使用權補完整需求</td>
+<td>待指定</td>
+<td>未指定</td>
+<td>會中已提權限疑慮，但此完整需求清單屬整理者延伸</td>
+<td>AI整理建議／AI補充</td>
+<td>待評估</td>
+<td><a href="#s07">S07</a>、<a href="#s19">S19</a>、<a href="#s27">S27</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_18">四、原始逐字稿</h2>
+<p>原始文字無時間或說話者標籤，以下只增加內容段落及錨點，保留轉寫原字，不進行姓名、數字、語句的靜默修正。S01～S30合併後等於來源全文，並非30場會議。字元起訖見備份核對資料；音訊時間與說話者辨識不適用本輪文字來源。</p>
+<p><a id="s01"></a></p>
+<h3 id="s01">S01｜開場錄音工具閒談</h3>
+<p>可以啊我也是我也是就不用買那一隻了等你學會 AI就不用用那一隻了我們笨啊沒有不行沒有那個方便那個方便那個真的有沒有改天交流真的那一刻可以不用了我沒你今天好性感好來來了</p>
+<p><a id="s02"></a></p>
+<h3 id="s02">S02｜補助規模、截止與執行目標</h3>
+<p>所以就是最高補助 900，那因為因為政府就是補助 50%嘛所以等於是我們如果說確定要合作的話就是我們一起出 900，然後政府補助 900總共 1800的計劃這樣啊這個計劃他特地要求要兩家以上的企業然後呢這個截止的日期就是這個 12月 7號所以剩不到一個月這是有點不可能的任務啊但是那個我撰寫的團隊外用傳賀啊所以隻要我們今天 OK點頭答應就開始啟動程序這樣那我我們的經驗之前我幫那個就是合成的子公司保龍也是一個月然後他就拿到 300萬全雷打他沒有被扣任何一塊錢哦是所以那個團隊他們寫計劃蠻厲害的對所以我們可以期待這樣然後呃拿到計劃之後呢就是執行到明年的 10月 15號所以大概是八個月的時間哦大概八個月因為審查然後具體執行完畢最後結案大概是八八個月的時間大概是這樣是八個月對對對差不多。是指 KPI就達成對 KPI達成然後他的 KPI達成是要落地 ，然後真的有有市場要賣賣出東西這樣</p>
+<p><a id="s03"></a></p>
+<h3 id="s03">S03｜擬議合作分工</h3>
+<p>好那基本上團隊就是之前跟兩位有報告過基本上那個 AAI技術落地的部分交給研發科技。然後總勝建設這邊就是這個場域嘛那那個那個建築師這邊就是他的 nowhow因為其實那個 S他準備了很多他自己平常都是用 AI在做事的啊但 A好後麵也會講</p>
+<p><a id="s04"></a></p>
+<h3 id="s04">S04｜痛點、流程整合與範圍聚焦</h3>
+<p>好我們先講這個痛點好了那這個是我大概列出來就是很多文件的處理啦然後那個契約的審任啦然後需要這個專業的判斷還有這個可能要跨單位協作那這件事情過去可能在營造或是在建築這一塊可能都是會耗費蠻多人力。那未來我們就會用 AI來來做這件事情好那我這邊要講就是說我們其實現在一般人啊其實我我上禮拜也跟 Shar也是在聊一般人大概就是用 ChatGPT那個那個叫我們可以把它叫做提升個人的工作效率那但是真的要改變一個產業的時候其實就是要讓他進到流程裏麵他進到流程就是可能有些是結合 ERP有些結合他們原本的這些這些作業的係統工具那讓 AI進入到裏麵才可以真正的去把產這個產值把它拉起來好那所以等於是說我們做的不是個人使用這一塊我們做的是這一塊那我之前的經驗甚至我發現那個計劃審查的審查委員他們還不知道這一塊。他們還以為我們是用 ChadeGPE在做事情對所以那個就因為 AI其實也紅紅三年而已所以其實還是很多人不知道好那我們未來就知道做這個企業性的這一塊把 AI進入到我們的流程裏麵那我們就是要把它做商品化所以等於是把現在的這個個人的這個經驗呢把它結合變成企業級的能力等於是我們做出來的東西就是應用到整個那個銀建跟建築的這個產業所以我們到時候可能就是呃會把這個計劃的主題就是把它定位在這個 AI跟營造或者是建築然後它的一個一個一個平臺那上麵可能會有很多功能可能有繪圖的契約審查的然後這個財務的或者是甚至像呃有專案管理的這些通通可以把它整合進去好那寫計劃因為我們隻有大概八個月的執行期間那我們就不會把那個目標放得太大所以可能像林總這邊他可能建築營造房眾他可能都都最這些領域都都有耕耘那我們到時候我們可以討論看是把它聚焦在哪一塊或是兩塊也不要太大因為講真的才 900萬做太多也也不好人家還怕我們收拾收受不了尾所以我們到時候再透過一些討論我們來聚焦我們的方向。</p>
+<p><a id="s05"></a></p>
+<h3 id="s05bim">S05｜既有BIM案例與外部合作自述</h3>
+<p>那這個我們做的就要比現在的還好因為我大概去聊過就是呃之前林總好像有分享就是您在中南部的朋友他們好像也有在做中部他是就是臺中臺中市政府所有的這個設幾個 20個這樣二十幾個反正就是 20都是由他們已經已經已經就是用他們自己的信號他們是做做什麼病病 BIN病的 AI嗎病的 AI把時間走擺進來就是你從從這個開檔之後 ，然後你就先 keyn嘛那你你 condrutiong就是跟我的就時間走就拉上來之後他所就是全市都可以管理 OK我知道他利用病模型去做維護營運的這件事情從營造到成這個對我來講是簡單的簡單的那我分享一下就是我現在龍工正在跟我要簽 MOU龍工啊工程明年我會他們整個 2027年的內訓課程一整年度的所有的工程師我也我會幫他們上課就是 AI導入營造業的事情那我待會我可能會簡單講一下就是說我現在在營造業有一些產品就是背標工程管理專業管理啦的事情他們有興趣要跟我合作</p>
+<p><a id="s06"></a></p>
+<h3 id="s06agent">S06｜專案管理Agent與儀表板</h3>
+<p>那我的意思說這個迴到剛剛我們談這個議題其實林總可以思考說如果是專業管理以建設公司新建的整個營運那那個 idea就是說怎麼樣讓 AI導入這個建築專業管理是所有這個 team是有效率的那怎麼樣有效率手機就是可以變成個人的 AIAgent你可以問他隨時隨地問他他這個案子專案的任何狀況他的 graffic資訊全部都跑出來然後要怎麼解決怎麼開開會可能就是用會有一個我們設計一個 deshbal然後大家就是針對問題直接誰要負責說明誰要負責檢討那就不用事像以前以往那種方式就是紙本啊還沒有效率嘛他會幫你每個禮拜 update最新的東西要討論的內容那我覺得這個是我幾個代行專案跟營造場合作發現這個都是呃有效率跟風險控製等等這些事情如果透過 AI的整合變成是一個新的專案管理的模式那我覺得所有的人不不管是不是就不用不一定要在這個這個這個場域了不同的地方就可以隨時開會那就很有效率嘛那甚至一種你在呃空閑的時候要問好幾個專案每個專案的問題他就是你的 Agen你的課程中 Agen你就可以問沒有人 A片來聊你因為資訊就很透明嘛那那那還有就是呃除此之外剛剛剛剛講到營造廠被標那是他們的痛點啦。那那個待會可以再分享不好意思沒關係就就大家這樣就有想到什麼就討論什麼對</p>
+<p><a id="s07"></a></p>
+<h3 id="s07app">S07｜現有APP、知識庫與權限疑慮</h3>
+<p>那基本上我認為剛剛聽到他是用病這個模型因為病那個是那個比較遙遠啊很遙遠對我想到的是現在總是有做自己的 APP，就是做全麵的專業管理但他並沒有 AIA全加入假設說像像那個你先在講的像先生講的如果它可以融合 AI到這個 APP的時候那等於說我今天要對照比如說我們現在案子就 70所以很淩亂學量很多人員非常多那我可以從中間覺得要我再補充一下長龍剛林總事長林肯麗也找我談我說你的那個長龍剛的鋼構的原物料啊塑料庫存啊專案透過 AI捲董事長他太多事情他一問馬上就跑出來。然後甚至他們不然後他們的資料部現在我剛才經用 rad就是資料檢索把它繪整成一個公司的資料庫以後所有資訊人不在或者是新新人來離開救人離開這些都透過這個來教育因為建案並不會很多很多但電梯子非常多他不覺得他會發揮這個就是那個林董他們那個蔬菜有沒有就是用 Agent在管控那個對我覺得重點是資訊透明這一塊因為沒有人。因因為現在就是 agent你把它塞到任何地方他他就會有空人或許會有更好的解決方對我剛剛被另外補充就是說常常剛剛我剛他建議啊說你們公司這麼大規模新人救人的交接透過這個 AI局教育訓練。新人來不用找就沒有所謂的人老沒有教他救人走離開通就留在公司那專業工程師的所有的 knowhow也會透過這個收取對然後我們把變成落地端的 rig的資訊檢索係統這個就是公司長遠的核心競爭力任何公司都要比這個以後都比這個不管在拿標或者是做自己的案子這些 dolegenowhow那個就是某高級工程師離開了他才不走這個東西躲在留在公司我們從這公司裏麵撈相關的所有這個的相關的資訊風險分析評估那董事長這邊就可以知道說哦原來這個案子要很小心什麼什麼然後透過每個人的這個這個就是 anounce大家就知道說這個案子要特別註意什麼風險就可以慢慢的往下下。利潤才會鎖住對跟向前交一題哦如果這個人員離開了他擁有 APP就是他曾經登錄下載他如果在外麵是不是就有出現外洩的問題。這個是外洩可能可以透過落地端的工程師的討論把這個東西鎖在公司它有權限我們用權限來控管。就進來要登陸大家離開之後就是他有他有 key嘛等於說他在外麵他也可以登錄啊。這個就可以透過那個研發科技跟他們檢討我們因為等於是說我們假設這個東西未來是變成一個雲端的 SARS那大家在使用上麵就會有那個權限管控那誰能夠接觸到什麼資料接觸到什麼權限然後或者說他在外麵誰不能用這就是他一定手機是本人嘛以外的人不能使所以所以剛剛我提到說董事長總經理跟專業工程師他可能問的問題大概等級會取分所以他基本上在那個範圍內都是個可被控管的。我優化是會很好而且而且像剛剛你們看到那個 Line的那個機器人有沒有他其實還有做一件事他在背後在聽大家在講什麼那因為平常我們較討論事情都在 LINE上麵討論那些事情就會全部被 LINE的機器人記錄下來 ，然後就可以開始整理 ，然後就變成了我們的 AI的知識庫。我們就不用擔心資深的人萬一離開公司我們會損失被他就是等於知識都集中在他身上他如果走了我們就損失了對我平常就可以把他累積下來所以這個是等於是在加強我們自己的那個企業的能力啊強化我們自己的競爭力才好</p>
+<p><a id="s08"></a></p>
+<h3 id="s08kpib2b">S08｜申請時機、KPI與B2B方向</h3>
+<p>所以呃我們做的就可能要跟現在市場上的甚至現在市場上可能也沒有做到這麼的豐富的功能啦所以我們隻要講出它的差異性基本上過鍵的幾率就很大然後再來就是說因為這一個剛剛註意到的是 12月 7號就要解止基本上很多企業他如果平常沒在準備沒他可能題目聯想都沒想他不可能來來競競爭這一個那就算有他想要在短時間之內弄出一個像樣的東西也也很難所以我們等於是沖刺這一個時間點有我們過件的幾率會比較大他們又有 KPI我聽說會那麼晚是因為預算被卡住了啊預算就是說通知說可以開始用了哦好那他們就趕快找人家來辦說明會 ，然後說請大家趕快申請所以他們如果比如說今年這個一億沒有把它發完他們會被檢查所以隻要有投我認為應該都都有機會所以我們來從此一下好那這個是我把那個像他的的一些提出的一些構想我把它整理一下所以到時候真的大家可以可以再分分頭去集資廣益那重點是什麼重點就是寫政府的計劃呢他都會要求這個補助錢跟補助後就是你你有開發之前跟開發之後的那個具體 KPI所以我們要能夠把它量化啊所以我這邊就大概先列了一些隻是一個構想而已就大家可能在想一下就是因為你們對工程營造比較專業所以你們要想一下說是不是真的可以透過比如說節省時間或是增加增加效率或是或是提提高這個這個市場的這個應用性市佔率等等好那那這些能夠列出具體的指標那到時候說服審查委員就會比較容易一些好。那再來就是呃我們呢不是不要把那個這個計劃當成隻是改改善一家公司我們可能把它再拉高一點因為我們看的是整個市場所以我們是要開發一套工具然後 B2B就是讓全全國的營造商或是這個建建設公司都可以來用所以我們可能未來呢可以用 SARS訂閱的方式好一家一家公司可能一家說中間要做電梯升間就可以用車呃都都可以 ，反正我們就開發一套工具給大家用這樣市場才會大嘿所以我們就可以透過先內部驗證 ，然後再再試水溫然後再才把它延伸出去那那這樣子我相信現在看到的應該市場上應該沒有這一塊所以我們早切入那早享受這個 AI的皇帝這樣。</p>
+<p><a id="s09"></a></p>
+<h3 id="s09bim">S09｜設計工作流程自述與BIM測試</h3>
+<p>好那在撰寫上也有補充一下我現在有開發出來一個係統就是譬如說我們室內生器好可能我們這個大家都知道我一張平麵圖給我 ，我已經 A吧平麵圖轉成 3D碼 3D我再把我的風格套進來就會有 3D風格的東西然後 3D風格模型我檢查模型如果都很正確呎吋各個方麵都很正確我會導入讓它生成完整的施工圖五六十頁的試驗設計施工圖在施工圖跟模型我會讓它生成報價單數量跟價格再來就是我透過這個模型做 3D動畫渲染 3D照片都是同一個工作流隻有一張平麵圖我就在搞定剛剛這個事情然後一個晚上結束。那這個事情我覺得就可以考慮放在我們的這個這個裏麵那這個好處是什麼衍生出來的東西可能可以跟剛剛講的那個建築不管是懂就比如說評估國籍地之後拍一張照片可以生成設計圖然後去完之後就直接拆這張那這個就是可能商姆就可以在大家研究一下。我隻取這個例子說試設計這塊我已經 OK了那我現在做的是建築的病我現在正在測試啊然後到建築的病我要做整套的建造送神圖。事務所就受賄了整套建造送神土並建好以後我們要送建造的那整套的送塵土用病來處理然後也可以變標呆也可以變就是剛剛講那些東西一樣的一樣就是一樣化啦意思是一樣的那所以對意思是一樣那對建設公司來講的好處可能就是說好我們再往往上走一塊基地拿到了怎麼評估它的最佳效益還有它的風險跟蓋的那個整個事情土地拿到一樣工作就攤開來就一樣照做這個就是可能為一個未來的 SARS的服務給政券公司或者是給事務所或者是給司電設計公司的一個賺錢的工具啦大概可以從這方向來思考。</p>
+<p><a id="s10"></a></p>
+<h3 id="s10">S10｜個人技能轉為軟體產品的理由</h3>
+<p>剛剛 Shan他講的哦就是他發軟體之後軟體可以夠用做沒有這也是我上禮拜跟他聊的就是他用用 AI他就像那個武0高手他一個人用很厲害然後他就是也可以訓練比如說訓練我們公司幾個人他比較願意學習的訓練完之後他們就會很厲害。那但是如果我們要把它市場化的時候不可能什麼案子都因為他們一天就 24小時所以我們一定要把它變成產品對啊這個就是由研發科技來把它變成它把它寫成語言成寫成語言然後 input這些元素在語言裏麵跑完之後put</p>
+<p><a id="s11"></a></p>
+<h3 id="s11">S11｜蔬菜、送菜與公司既有業務閒談</h3>
+<p>請教一下原研發科技除了除了李董在弄他的不過他踩真的超好對啊來之後念念不忘三天就完了我明天把你送來好不好我敢真的好的沒問題我明天送來我亂錄一下這也可以亂錄一下你亂錄一下對不起那我亂錄一下電那個證據了是我的一餐哦我的一餐這樣子我的鍋子大這麼大我一餐要吃那我生菜這樣吃的我的一餐那難怪身材有會吃好厲害厲害我很喜歡吃生菜所以點菜啦我知道我待會開完會我還要再去他那邊啦。他的東西超屌的人家一包子果是售價賣多少錢按功課一公 150公克嘛他賣多少就賣 150百50塊嗎是自己人就沒那麼多啊他他對外販售好像那一包應該哎沒有但因為他都 to be他他幾乎沒有在賣銷個人消費所以說如果今天他賣 to B他一下子 150公克賣多少錢我記得應該是 60還是 70 6070對對比超傷還是便宜便宜很多一包如果在全年全年全年好像沒有到純水超好那真的非常而且不用農藥嘛不用沒有農藥口感很好口我明天下午去北投三個 ，我會順便繞來這邊我來送菜。為什麼為什麼為什麼他不他他不跟全聯合作不跟全那個家人合他以前就是比較保守 ，他不想要做那麼大是我們加入之後開始學姐我們要做大一點我們開始慫恿他把它弄大是我們所以所以研發科技線是除了學姐在學姐在做做青菜這部分之外。 PCB嘛就是軟硬闆 ，然後蔬菜嘛 ，然後現在在搞 AI啊還有反正我們不要讓他退休叫他一直做什麼都做好多對對所以現在研發科技要切入另外一塊對我講話經對對對對剛好這個吃 AI紅利這樣哦我都要說什麼你說一句我都不公佈跟凹鋪</p>
+<p><a id="s12"></a></p>
+<h3 id="s12">S12｜可規模化服務與缺工造價經驗</h3>
+<p>哦對沒有就是武林高手 ，然後他可以訓練就是我們個人的技能用 AI的技能提升 ，然後用他那一套工作流就可以就可以弄得非常的厲害。但是要變軟體才可以放在市場上被銷售然後變現因為我們不可能去顧到每一個這個消費者或者是客戶啊我們就要把它弄好 ，然後大家就用你就無腦的用啊反正大家省時間方便願意掏錢大概用 AI你大概可以省很多個員工真的這是真的沒錯吧真的確實對啊我剛剛講的室內設計那一塊我跟幾個朋友就是那種好單幫的室內設計師聊啊他說哇他們根本現在請人請不到畫圖的然後呢然後不然就跑來跑去然後如果這個係統可以用他們受費很多啊他們隻要把工地發包做好就好了。其實現在真的最未來的時代最重最重要就是施工的人啊也沒有施工什麼都去你你講我快把水我我我我 111年的建造那時候我我抱著這個標案我們全整個案子我發包給營造廠他給我我大概就要發包 18萬到我真的定下來當然遇到大大漲幅的就 SARS COVID的那一段時間大漲幅的時候我是 113年簽的約 114年 114年簽的正式的約 130年抵達 110年正式時空拆教我簽多少錢我發包你照我的基地不到基地大概隻有 100米左右去年是前年前年底差不多 28了我發 34萬真的啊我但是我連續幣我連續幣抓得深了然後我我有坐地闆改良裝我現在發三四萬五0我所有的朋友跟他講說你你你你一天鞦鞦拜託節幹小節那我看小現在 100平上下的 100平以內的沒有 42沒有人會接臺北市。所以我說其實我同一個營造廠啊我他當時接我的時候水電水電切包切出去也是我們的好朋友的水電切包切出去那半小三的接三萬8500你知道現在一瓶水這樣接多少錢嗎水電一盃電就水電鋼球刷這樣才退購八萬公水煙像貴滿穀我們趕快來做水檢真的接水那地方真的是差做做水利就已經對你至少有 1000匹對不對 1000平就 8500萬了對啊做工程。真的我是覺得我們要不要去做工看來爽看哇這是很誇張所以我說其實未來這些真的是這是這是個利器做出來之後這就是誰要來做</p>
+<p><a id="s13"></a></p>
+<h3 id="s13">S13｜營造機器人及個人新創方向</h3>
+<p>我不方向聽眾講到這個議題啊我現在的那個明年我我自己會有新創公司做 AI G問做什麼 AI顧問新公司那我拉那個我臺大學弟他是他也是博士了他是上海衛健集團的合夥創始人他是幹嘛的呢就是做營造機器人的研發的現在已經剛在想著現在已經已經導入臺灣臺灣已經賣了很多營造廠就是噴漆的泥做的跟一波的機器人人很快中國很多了他現在因為去紅化所以他把他引進來以後把殼整個都成核心而已其他都是臺灣落地的包括那個都是一樣那那我要錶達的是說政府現在還不重視這個因為他覺得他要保障人的工作權一直開放這個紅利政策 for這個營造機器人會會會被人家罵啦。可是這個已經勢不可擋了沒有人啊你剛講那個那沒人都是沒人這臺機器人呢呢隻要配兩個人一個叫做操作手一個叫做師傅他就是師傅過品質操作手過機器那你買三臺就可以 24小時輪班坐。而且現在極端氣候其實這個這個是很好的所以趕工就是從這樣子趕那當然因為他臺灣的工地也是所以受限於這個管理嘛就是空氣亂所以可能隻有你一座噴漆跟 iposy目前是比較 popular啊其他的可能慢慢再看但是我講的就是營造機器的趨勢包括那個營營那個叫做機器狗巡檢啊安檢啊或無人機的巡檢這都是趨勢啊。所以所以 Shon其實對於對於 AI進入到實體當中其實你你也也有開始設有這個方的 source對對對我我我我是想說我個人啊跟大來分享就是想要成立一個新創公司做專門做營造業建築業有這樣的一個服務顧問啊或者是剛剛講 AI導務的服務那當然這服務裏麵會有產品嘛那營造機器我有打算放在這個當做一個環節這樣是對</p>
+<p><a id="s14"></a></p>
+<h3 id="s14ai">S14｜人口、AI競爭與社會事件旁支</h3>
+<p>好對不起我們一直沒有分享分享我們一直亂錄都讓方伯沒有把這個沒有聊而已聊就是今天就大家聊啊對啊那我要亂錄一下我要人的錄來越強現在大學關的還不夠多那個出生人數後麵還有一波那個還沒到還沒到底哦還有一波急殺單單機是 4萬我是 42萬我記得我考試的時候 42萬現在出生人口倍滿我看多分機再更少以後小朋友可能沒有實力可以念多練功力的因為失業到高嘛真的隨便考個公益的有可能是這樣真的有考然後我再亂錄一件事 ，你知道嗎 ？現在就是要能夠吃到 AI紅利 ，然後要把 AI AI可以發揚光大哪一代人就是我們這一代。因為要用 AI一定要有經驗你年輕人弄不來啦。對他們沒經驗他也看不到到底他可以有什麼功能隻有我們對所以我們來切這一塊是剛剛好現在不是那個 gro跟 ChackPD跟 Chamnan不在在在他們在在討論做是要限縮 AI的發展嘛是不是他們這三個公司啊我所知道是這樣不不不太可能因為他們隻要一說大陸就追上來了不不太可能說像他們現在這次選舉完也說什麼要把資料中心把它就傳出來做資料中心不蓋啦不能能因為你不蓋他媽中國人爽翻他我一個國家幫他打全球球不可能因為現在他現在都 AI等於是他是一個武器的戰略對他等同核彈哦他等同核彈哦而且現在而且現在全球都在怕中國因為他怕他全球他他所有的電廠蓋最多一夜夜電線錢你說在新疆那個什麼那個什麼天眼有沒有因為 A的然後不知道大家有沒有註意到最近有很多那個治安的新聞。什麼前上禮拜不是永豐銀行有沒有 400多個人錢就不見很多國家都很多國家我講都是 AI搞的都是 AI所以現在哪個國家你隻能用 AI防 AI哎臺灣這一塊完全沒做到啊你說大陸大陸起來如果中國他哎那個美國沒有再繼續發展他的 AI防禦不了中國的 AI他爽死了中國爽死所以不可能停下來啦所以一定一定是繼續往下走而且現在川普主政這兩年不會讓他停的。川普是支持 AI的發展啦也也也必須要支持啊因為誰掌握 AI誰就掌握全世界真的很誇張真的不騙他最後就被 AI掌握了對真的真的毀滅了好那那我們就繼續的好</p>
+<p><a id="s15"></a></p>
+<h3 id="s15">S15｜素材、顧問會議、聘用與提報</h3>
+<p>好那那就是說呃我們後續啦就是要開始來把這個大家開始盤點手邊的東西就是呃我們要提供素材給那個寫作的那個顧問公司那如果今天大家聊的不錯的話我我也想說看是這禮拜或是可能這禮拜我們要找一個時間跟顧問公司那邊可能線上 meeting一次然後他會把需要準備什麼再明確的跟我們講然後大家拉 LIE的群組開始分後準備這樣來才能來得及在 12月初把它弄出去好那這個就昨天給大家就參考就好了好那後續的話呢主要應該是就是因為文件上麵就是總證件設加研發科技那那個 Shon他這邊就是變成用顧問的角色來來參與這個計劃好那應該是就看是不是就掛在林總這邊然後到時候反正案子過了才開始拼用嘛那這個就從案子裏麵去去編這個顧問的費用這樣子好那就等於是分工大家就清楚那但是還有一個一件事情就是說計劃會有一個提報要去跟審查委員說我們打算怎麼做那審查委員委員會有問題那我們就要做做迴應這樣子。那我就想說如果這個計劃這個我們這個復仇者聯盟成立之後是不是邀請您當盟主這樣子。我覺得雪雪應該比較適合有學姐她是種菜好了不是因為你要迴迴答營造的東西啊啊但是不用擔心應該是說那個流程大概整個報道大概是半個小時內會結束。那就是廠商提報大概也可能 15分鐘。那委員會提問題但是之前他會先給題目了他就是把他的題目就寫成文字先給我們那我們就要開始準備這樣所以到時候呢可能您您就起個頭 ，然後後麵就可能遇到這個 AI的問題就就那個 Shan還有那個研發的工程師他們來迴應啊這個營造的部分您能迴答就是你迴答那反正我們要整個展現就是我們是專業的我們是整合性很好的我們進部分我覺得這個東西分工學都沒什麼太大問題那我現在我現在我其實我現在比較主業是在幫忙老公一蓋電梯那其實他的整個 deteal東西真的好多好多確實這我們自己有在我們自己有自己的一個 APP啦但是我想講就是說其實專業的部分我沒太大意見沒有太大的問題金流怎麼走我想聽金流的部分就是我們怎麼支出怎麼 OKOK這個後麵我有準備對那我這邊再繼續往下一下</p>
+<p><a id="s16"></a></p>
+<h3 id="s16">S16｜人事預算與設備折舊取捨</h3>
+<p>我看好呃好這邊大概是整個那個計劃執行的那個好那我們今天呢就是先把那個預算大概會編什麼東西我們先確認下來大概啦大概知道一下 ，然後可能大家還要思考那出資比例這個就等那個於董那邊對再來協調好那基本上人力因為他這個計劃他主要就是著重在研發跟市場對那所以人力這一塊我覺得就是也是剛好因為我們本來就要養就要付錢請員工所以就把某些員工的錢把它報到裏麵來。那這樣等於我們就省錢了好所以我覺得計劃最主要是讓企業能夠得到這樣子的獲利那技術的話就是技術工具就是呃我覺得也還好因為它裏麵有編一個就是大家可以去買 token的費用好買 token不是買買伺服器因為政府計劃他就這樣他補助你一年那機器的壽命五年他等於是你花了假設花了 500萬買一臺機器他隻補補貼你 100萬他剩下 400你要要才要出所以原則上這個計劃我不鼓勵大家會去買包含買電腦也是所以我們就把它用在軟的東西上麵買 token或是人事費這樣子就我們才能夠實職得到最大的獲利這樣</p>
+<p><a id="s17"></a></p>
+<h3 id="s17ai">S17｜個人AI訂閱與使用經驗</h3>
+<p>好啊 Token的話其實好像也也沒有就一個月 3003000 3000好像我覺得 Token可以到時候你就挑幾個這個中子教官然後他參與這個計劃之後呢把他們好好練一練。然後有 token費用他們就就拼命用 AIAI一定要用才會進步啦。當然對啊通常就是老闆願意花錢給員工他才會去用不然自己一個月要掏 3000很少人這樣。 6000吧 600000接吧你所以你有開啊開始了哦開始了開始了你總是買 GPT的 CloudGPTClulud應該是 cloud他都有我自己是買 cloud200美啊肯定的嘛對啊我比較散我是要 GPT20枚不是因為我是寫報告我們是一樣的不是有因為因為我們是重度使用者辦法啊我是會精打細算所以其實你如果跟我討論說哪個 AI他的這個 CP值高我可以迴答這一塊因為我不是那種閉著眼睛就開始一直用的那這個後麵大家再來討論</p>
+<p><a id="s18"></a></p>
+<h3 id="s18">S18｜場域驗證及員工投保討論</h3>
+<p>好然後再來就是場域驗證那個包含就是我們可以去參加展覽增加曝光。然後再來就是說我們可能可以去跟人家商就是去請人家提供場域給我們用啊他要收費錢也可以編裏麵所以大概會花的大概是這些啊這個是我大概預編出來隻要大家可以看簡單看一下研發人事類就是基本上就是工程師還有這個參與的人哈那而且他參與是要直接參與哦所以我們的什麼會計啦或者是這個這個呃行政數務人員這個是不不行的。所以到時候你如果要參與再進來你可能那個直顯要換一下就是不要讓委員有其他疑問意見這樣子。我本身沒有掛在重生也可以嗎你哦他一定要是我們有投老勞健保的員工。對啊 ，要掛在總要掛在總身啊不然就要變成外掛像像像這樣外掛進來這樣</p>
+<p><a id="s19"></a></p>
+<h3 id="s19agent">S19｜採購法專業Agent提議</h3>
+<p>對我甚至我還在想說我們後麵在討論那個我們的軟體的功能的時候 ，因為我看到您上次有講到一個是採購法的部分。呃 ，我們比較少做政府的生意哦如果要做政府的生意就是要懂採購房嘛那當好汪博是這一塊的專家其實我跟他講了好久了我我們我們這個團隊有有一個蠻大的優勢就是國內大概懂採購法的最專業大概就是我們這個團隊我不騙你真的真的真的他是鬼我們有一個汪博他是就是他小輸了一他哥哥哥比比了半天就有發現我靠那小叔小叔一天汪博他現在也是那個 Michael的顧問就是幫他推軍工的然後他以前在國防部就是隻要國防部有大大小小軍購的案子採購上麵的任何的問題都是他出麵解決的所以我們我覺得可以善用他這個專業 ，我們把採購的這個 AIagent專業的 agent我們可以納其實是是對我就可以迴答各種採購的問題啊理解解那我們就不用再去找其他的顧問了我們 Age就可以迴答這些問題。在找王博對啊我在想說如果我們的就是到時候盤點說我們這個這個 SARS的這個功能有哪幾項我覺得採購法可以或許可以擺進來啦。</p>
+<p><a id="s20"></a></p>
+<h3 id="s20">S20｜撰寫、核銷與成功費用</h3>
+<p>好 ，然後再來就是呃這個專案管理咨詢呢這個就是說呃我們最後要要有人寫那個結案報告 ，然後要核銷那些發票啊那個很煩人很繁瑣所以呃我們配合的那一個團隊他們有在做這件事情然後到時候我們看他收費怎麼樣那也可以把它編進來。然後幫我們寫計劃他要就是他們事錢不收錢 ，但是如果成功之後他們是收一成啊這我比較過的他前是 1890一層就是比如說我們拿 900萬那他就是一層就是 90萬啊這個我比價過就是大概低於市麵上的行情了因為大概一般市麵上大概是兩層到三層很貴啊他們這這個就隻收一層好 ，所以我我我我們到時候就可以跟他討論說是不是通邊人在這邊給他們這樣</p>
+<p><a id="s21"></a></p>
+<h3 id="s21">S21｜算力預抓額度</h3>
+<p>然後在 AI算利就是買 toke的費用啦大概不太可能去買到 GPU啊這個呃他計劃是說可以編到 15%270萬那是應該是用不了那麼多好所以我這邊就是我這個都是預抓我沒有沒有就大家還要在西部討論</p>
+<p><a id="s22"></a></p>
+<h3 id="s22">S22｜資安驗證及費用科目</h3>
+<p>私安跟那個這個檢測跟驗證的費用這個就一定要做他的現在政府的補助計劃都要求如果有開發 AI一定要做自然認證那我們也可以趁這次我們就把這個東西把它做好以後再推廣的時候沒問題甚至我們可能做到那個挨手的 27001對隻要過的那一個我們就可以做政府的生意我們可以把它賣到政府去然後如果可以做那些這個等於是我們的呃兩家公司內部的這個資安的這個硬體那這個到時候我我們再跟那個計劃顧問再討論看看他是不能做這一塊那後麵就是可以編那個申請專利的費用然後參展的費用那拆旅費這個可能比較少因為我們大家都在臺北好大概是這這些項目。</p>
+<p><a id="s23"></a></p>
+<h3 id="s23">S23｜成果權利選項與法務服務</h3>
+<p>我想請教專利是掛在總盛跟研研發可以合掛掛就是共同持有還有加 shan這樣子我們可以共同持有或者是你如果成立應該在新創未來啦那我們就可以把它把它放在一起或者是用授權的方式等等這個都都是後麵後麵再談這重點是前麵大家有合為這裏麵需不需要加法律顧問法就是律師的一些法律跟財務可以因為有一些什麼專利啊或者是什麼怕別的東西有沖突可能要稍微小心一點也是拉力跟財務中可以可以可以這個這個到時候我們就來商討就是內部我們大概編哪些費用然後再來聘請那些那但是法律顧問可能不會直接出現在這個名單裏麵我我覺得有一有一個方式啊比如說我舉例比如說我們就有一個專案管理咨詢那這一筆呢我們就算好之後這一筆就圍給那一個團隊那一家公司由他們幫我們聘法法律服務然後來服務我們這這這都是彈性的做法理解</p>
+<p><a id="s24"></a></p>
+<h3 id="s24">S24｜補助目標與核定折減風險</h3>
+<p>好 OK那大家就記得就是政府 9改0我們 900號這是我們的目標如果全雷打的話就是這樣啊但是一般大概打八摺或是打七摺不一定啊如果申請的人少啊 ，他們又有 KPI的壓力啊可能就全部給我。全對就不小心選了他我們有一次經驗的全雷打這樣真的好。</p>
+<p><a id="s25"></a></p>
+<h3 id="s25">S25｜合作意向、成果分配及個人經歷</h3>
+<p>那這這一頁主要是告訴大家就是說這個反正我們大概會出的錢大概就本來就要出嘛所以利用這個機會我們就把我們這個平臺把它建構起來那以後大家就享受這個 AI紅利好那這個後續就是要再談那個球麵的權利怎麼去做分配啦因為包含專利啊還有這個這個呃呃就是授權看大家怎麼怎麼來用這個後麵再來討論好那所以今天主要就是確定那個計劃的方向分工剛剛講的預算結構那這個權力成果呢就大家在思考一下好那我們下次再約時間好大概大概是這樣大概這樣子非常清楚非常快速對也是 AI幫忙做的我沒 AI我也是現在我做我沒有手腳費用就其實就是我的強項是因為我本來就是要大量的寫東西嘛論文已經寫到就深升等到副教授也是要寫好多東西呢你現在教的哪你在哪一間主要是在哪間我離開國防大學專任之後我現在就在兼任我在文化大學跟國防那邊我還是有兼任。但是就就不用再發錶文章了發錶文章很累。今天不用發錶不用發錶專天有發錶壓力六年六年內要生的我升到副教授我就覺得靠天啊我還是出來跟大家玩好了比較好玩比較跟各位請教不敢其實我覺得真的就是我們這樣認識很多年就是真的都還蠻好的多年但是大家就是交流就是我覺得這個交流是很寶貴的真的很寶貴包括你剛剛剛講的汪博下次你要碰麵我覺得他在他在就是在在饑合審議這部分我覺得他是那個那個 sense真的是太強大了比 AI還強啊。對因為他那個那個經驗無可取代。對不過他經驗要很保貴要留在 AI的對他說他的他們的那個那個那個這個這個這個總司令要就決掉什麼東西幹光我一定要到現場不坐到現場他就是一個上校還是中校而已嘛那時候少校他少少校就要坐在現場陪江陪幾個上開會我也我當兵的時候我曾經跟 17顆星星開過會了就全爆所以所以其實我覺得他們都真的我覺得這是都是國家級的人才那我們怎麼樣大家的而且最最重要的是大家的 key很還不錯那有這個默契大家怎麼可以整合在一起我覺得這是這是好的發展。我是有跟他講我說我們大家認識這麼久了 ，平常好像就吃吃喝喝啊不我們我們沒有在吃吃喝我說大家就平常可能在咖啡喝酒聊聊天啊打打屁啊好像還沒有認真坐下來一起做一件事情我覺得這是一個契機啦因為上上禮拜那個人家跟我分享說有這個計劃我馬上就開始動腦筋想說怎麼怎麼找到人來煮這個哎後來剛好你也出現了就這麼剛好哦他就那個 Michael就說哎你跟跟那個 Shan接觸認識一下子啊我就發現你的東西跟那個林總的東西哎好像可以結合起來啊在家裏麵發哎那不就大家可以真的一起來來做這樣子</p>
+<p><a id="s26"></a></p>
+<h3 id="s26">S26｜商業模式與競爭壁壘提問</h3>
+<p>我最後提想花 5分鐘請教一下因為拍攝 12點接著有會議我就簡單先請教下在您的認識當中假設我們這個計劃可以到真的是成功了那你認為說我我認我我站在一個商業的理想上還是要討論一下後麵的商謀那啊這個 SARS服務是怎麼樣的開發展然後呃這個這個我們我們的 clin可能可能就是建設公司或營造廠嘛對不對或者是你剛室內設計業者嘛那呃這他們的他們的我我我們的護城河是什麼假設這邊真的是很真的坐得起來那我們的我們的 unit的這個護城河是什麼我怎麼樣可以開始針對這件事情我的我們的這個 invect進出去之後我們才有辦法可以享受這個所謂 AI紅利我想聽聽我這個問題比較直接我就跟跟 Michel請講一下跟 Jon指講一下</p>
+<p><a id="s27"></a></p>
+<h3 id="s27">S27｜知識封裝與持續更新主張</h3>
+<p>護城河我覺得護城河是說第一個我們要透過研發科技的這個寫程式的能力把它鎖住變成是剛剛講的就是說 inpute。比如說我今天我這個 sat你賣給你那你在用試驗設計完理的時候你就出我們會告訴你出入哪一東西然後他進來最後的這個裏麵跑跑完之後產出這些東西那一般的人他第一個他沒有這個這一包嘛這一包是我們的 nowhow嘛那如果他自己這樣玩他會去 try花很多時間才會可能也許是跟這個差不多但是問題來了。就是呃這裏麵有一些 knowhow是我們會告訴使用者說你有一些差異的時候可能要怎麼做那那那個都是我們的經驗嘛經驗跟這個技能包在這個包裹在這裏麵讓研發科去寫成程式語言然後 user來進來用這第一個護成了第二個就是說那個持續更新就是有新的東西或者是新的那個我們就持續更新那使用者他一段時間就會收到就像我們用模型或更新嘛對新的模型那這個就是我就要賣這方麵的服務來有更新的東西就 Update給他他就覺得一直用新的東西新的技術新的這些這些這個事情</p>
+<p><a id="s28"></a></p>
+<h3 id="s28">S28｜產學、學校及數位行銷方向</h3>
+<p>那至於市場的部分我覺得其實這個 maketing部分大家可以研究一下比如說室內設計的或者是營造廠那營造廠我很熟很多像容工中工那個幾個大的都是熟那那還有就是說我覺得這個商魔啊怎麼推這個可以打研究看是不是用什麼樣的方式來來行銷那那像我自己現在是中華科技大學的校會顧問也是講師電子器的那我們就是從學校跟營造業合作產學合作輪工開始那這幾個接觸以後他們願意跟學校像我們這樣導入 AI的這個就順便把我們的東西帶進來了。是這樣就是就是踩決合作在加軟體其實就是一個很好的途徑嘛那這就是我剛剛想的就是我有想過這樣的一個推進去學校推進學校然後從學校來推產業透過產業合作我們我們輸出 nowhow教育也把軟體 suS帶進來他們就可以接受了這是我的初步想法啦那當然建築世界我們也也可以推嘛聖下設計師同樣的邏輯從學校看怎麼跟他們來來來包裹我我我分分享一下啦 ，我看這件事情就是說因為現在用 AI基本上會用的就會用不會用大家就是聊聊天而已好那那見識過 AI可以幫我們省下時間的他隻要他隻要用過一次一個弔雷啊因為迴不去了他就迴不去了因為他真的很很節省時間那而且可以就是增加公司的效率降低成本所以這些用用用用的就迴不去了。那我覺得這這種東西一定要搶搶先在前麵我們搶先在前麵做了之後後麵的人看到他。可能用專利來綁住他那那保護他那後麵的人看到讓他第一個他隻能學到殼因為重點是裏麵的那個 nowhow因為用貨 AI比較進階的就知道那個裏麵的什麼 skio什麼那個 prime那這些東西就專業在這邊啊加上其他可能我們在包含那個採購法或是這個這個法規然後財務的東西也進去一樣都是用 AI，但是我們用了就會比較厲害那個效果就會比較好啊有了東西之後後麵就是開始加強行銷啊行銷就是看怎麼讓他曝光那這個我們我們也有一些經驗就是怎麼怎麼去做數位的行銷</p>
+<p><a id="s29"></a></p>
+<h3 id="s29">S29｜人脈資源自述與樂觀判斷</h3>
+<p>那後麵推廣的話就是學校嘛那當然那個如如盧副校長可以做好用他的圖子圖尊就賣出來已經可以擺 30多了劉劉副校長 60大壽的時候我幫他辦的那時候他找來的這些業界這些大咖的學生 30桌我評估盧副校長應該可以高高到 60桌應該是因為他還年輕他太他太快串起來了他才大到年幾歲對啊對啊很重有一個改天再介紹那個學校化大學副校長就 Michel的老師他很年輕然後現在已經全世界的前 0.5%的科學家了排名前 0.很厲害很厲害那天吃完飯講說我們已經交換 line我都不好意再繼續跟他買我很害怕說那個林總我們要不要帶你聊聊天你趕快你趕快敗入門下就等於就跟賣ichel是同一條大家就是師兄弟這樣是因為那個是一個連結而且很少有老師就是說把底下的博士班這個帶的這麼成功就大家很有那個密切的連接性這是對啊等於推廣那一塊那就文化大學是現現成的中華大學現成因為那個都很多業界人士所以隻要上課時候隨便講一講帶一下有這個東西大家就會詢問度就很高了所以我覺得市場性跟功能性其實應該都沒什麼大問題然後再風險也低嘛因為政府出錢幫助我們研發嘛我們基本上也不太出什麼錢。對隻是一開始這個月辛苦一點。可能我比較辛苦一點要跟他資料要會診這樣子大概是這樣</p>
+<p><a id="s30"></a></p>
+<h3 id="s30">S30｜合作、出資與功能的後續確認</h3>
+<p>好那我想今天初步了解這個架構私下有想到一些什麼問題的話我先跟方然後我如果可以的話就是進就我會盡快盡快做個確認看怎麼樣的這個討論有些細節的東西我再給我方伯請教一大概分兩塊啦就是說跟呂董這邊的合作跟那個那個呃出資的比例這個我們討論那要朝哪個功能去做我們我們可能另外討論並進然後因為我們這邊討論完計劃才可以趕快寫啊寫的過程我們就趕快把那個出資的部分把它確認一下來啊所以這兩這幾天我可能會頻繁的跟大家解打擾這樣子也這麼好不錯啊我今天這樣應該大家就這個第一次認識見麵合作共識應該有效率就不不留你們吃飯謝謝謝謝謝謝謝謝謝謝謝謝謝謝謝謝謝謝謝謝謝謝</p>
+      </article>
+    </main>
+  </div>
+  <script>
+    (() => {
+      const details = document.getElementById("outline-details");
+      const outline = document.getElementById("document-outline");
+      const mobile = window.matchMedia("(max-width: 900px)");
+      const links = Array.from(outline.querySelectorAll('a[href^="#"]'));
+      const linkByHeading = new Map();
+      const headings = [];
+
+      const syncOutline = (event) => {
+        details.open = !event.matches;
+      };
+
+      syncOutline(mobile);
+      mobile.addEventListener("change", syncOutline);
+
+      for (const link of links) {
+        const heading = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+        if (!heading) continue;
+        headings.push(heading);
+        linkByHeading.set(heading, link);
+        link.addEventListener("click", () => {
+          if (mobile.matches) details.open = false;
+        });
+      }
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+          const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+          if (visible.length === 0) return;
+          for (const link of links) link.removeAttribute("aria-current");
+          linkByHeading.get(visible[0].target)?.setAttribute("aria-current", "location");
+        }, { rootMargin: "-8% 0px -78% 0px", threshold: 0 });
+
+        for (const heading of headings) observer.observe(heading);
+      }
+    })();
+  </script>
+</body>
+</html>
