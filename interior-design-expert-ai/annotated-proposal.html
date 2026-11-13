@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>室內設計與裝修工程｜專家 AI 協作平台</title>
+<meta content="妍發科技、總盛建設、建築師 Sean、採購法專家汪博及其他專家，共同規劃室內設計與裝修工程專家AI協作平台。產品情境、實務痛點、專家判讀、一期範圍與合作討論。" name="description"/>
+<meta content="室內設計與裝修工程｜專家 AI 協作平台" property="og:title"/>
+<meta content="從室內設計與裝修切入，將專家實務經驗連到可編輯設計、工項成本與採購法及工程契約判讀。合作夥伴討論說明。" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="zh_TW" property="og:locale"/>
+<meta content="#174f78" name="theme-color"/>
+<style>:root {
+  --base: 18px;
+  --ink: #172631;
+  --muted: #405364;
+  --blue: #174f78;
+  --green: #176353;
+  --line: #cbdbe5;
+  --page: #f3f7fa;
+  --shell: 1360px;
+}
+* { box-sizing: border-box; }
+html { font-size: var(--base); scroll-behavior: smooth; scroll-padding-top: 104px; }
+body { margin: 0; color: var(--ink); background: var(--page); font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; line-height: 1.85; -webkit-font-smoothing: antialiased; }
+a { color: var(--blue); text-underline-offset: .22em; }
+button, select { font: inherit; }
+button, summary, select { cursor: pointer; }
+button, a, summary, select { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+h1, h2, h3, p, li, td, th, a, span { overflow-wrap: anywhere; }
+h1, h2, h3, p { margin-top: 0; }
+::selection { background: #cae6de; color: #153c34; }
+:focus-visible { outline: 3px solid #196e86; outline-offset: 4px; }
+.container { max-width: var(--shell); padding: 0 32px; margin: auto; }
+.skip-link { position: fixed; top: -100px; left: 20px; z-index: 100; background: white; padding: 12px 20px; }
+.skip-link:focus { top: 12px; }
+.topbar { position: sticky; top: 0; z-index: 30; background: #fff; border-bottom: 1px solid var(--line); }
+.topbar-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 26px; }
+.brand { display: flex; align-items: center; gap: 13px; color: var(--blue); text-decoration: none; font-weight: 800; line-height: 1.45; }
+.brand-mark { width: 30px; height: 34px; flex: 0 0 30px; border: 2px solid var(--blue); border-radius: 2px; position: relative; }
+.brand-mark::before { content: ""; position: absolute; width: 20px; height: 14px; left: 8px; top: 8px; border-left: 2px solid var(--green); border-top: 2px solid var(--green); }
+.brand span { font-size: 17px; }
+.top-links { display: flex; gap: 27px; }
+.top-links a { display: inline-flex; align-items: center; min-height: 48px; color: var(--muted); font-size: 16px; font-weight: 650; text-decoration: none; }
+.top-links a:hover { color: var(--green); }
+.document-status { font-size: 16px; color: var(--muted); white-space: nowrap; }
+.document-layout { display: grid; grid-template-columns: 202px minmax(0, 1fr); gap: 34px; align-items: start; padding-top: 34px; padding-bottom: 64px; }
+.document-content { min-width: 0; }
+.side-nav { position: sticky; top: 108px; align-self: start; max-height: calc(100dvh - 132px); overflow: auto; padding: 13px 0; background: white; border: 1px solid var(--line); border-radius: 9px; }
+.side-nav p { font-size: 16px; color: var(--muted); font-weight: 750; padding: 0 17px; margin-bottom: 10px; }
+.side-nav a { display: block; min-height: 48px; margin: 3px 0; padding: 10px 14px; border-left: 3px solid transparent; color: var(--muted); font-size: 16px; line-height: 1.6; text-decoration: none; font-weight: 650; }
+.side-nav a:hover { background: #f1f6fa; color: #154b75; }
+.side-nav a[aria-current] { background: #e0edf8; color: #154b75; border-left-color: #154b75; }
+.side-nav a:nth-of-type(3n)[aria-current] { background: #def0e7; color: #175841; border-left-color: #175841; }
+.project-summary { background: white; border: 1px solid var(--line); border-top: 4px solid var(--blue); border-radius: 10px; padding: 30px; }
+.summary-label { font-size: 18px; font-weight: 750; color: var(--green); margin-bottom: 11px; }
+h1 { font-size: clamp(29px, 2.7vw, 38px); line-height: 1.45; letter-spacing: -.025em; margin-bottom: 17px; }
+.summary-intro { font-size: 1.08rem; line-height: 1.9; margin-bottom: 24px; }
+.summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.summary-item { background: #edf4fb; border-left: 4px solid #235b87; border-radius: 5px; padding: 18px 20px; }
+.summary-item:nth-child(even) { background: #eaf5ee; border-left-color: #23664b; }
+.summary-item h2 { color: #174f78; font-size: 1.1rem; line-height: 1.55; margin-bottom: 9px; }
+.summary-item:nth-child(even) h2 { color: #18543e; }
+.summary-item p { font-size: 1rem; line-height: 1.9; margin: 0; }
+.summary-status { font-size: 16px; color: var(--muted); margin: 21px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
+.reading-panel { padding-top: 40px; }
+.reading-heading h2 { font-size: 1.6rem; margin-bottom: 8px; line-height: 1.5; }
+.reading-heading p { color: var(--muted); margin-bottom: 0; }
+.reading-tools { display: flex; align-items: center; gap: 12px; margin: 22px 0 25px; }
+.font-control { display: flex; gap: 10px; align-items: center; color: var(--muted); font-size: 16px; }
+.font-control select { color: var(--blue); border: 1px solid #9fbacb; border-radius: 6px; background: white; font-size: 16px; min-height: 44px; padding: 8px 27px 8px 12px; }
+.expand-button { font-size: 16px; min-height: 44px; padding: 8px 17px; border: 1px solid #9fbacb; border-radius: 6px; color: var(--blue); background: white; margin-left: auto; }
+.expand-button:hover { background: #e0edf8; }
+.topic-group { --accent: #174f78; --tint: #edf4fc; --selected: #d6e7f7; --edge: #9fbdd8; margin-bottom: 30px; }
+#part-2, #part-5 { --accent: #215e45; --tint: #edf6ee; --selected: #d8eddd; --edge: #9fc7aa; }
+#part-3, #part-6 { --accent: #155b68; --tint: #ecf6f7; --selected: #d5e9ed; --edge: #9ac4cd; }
+#part-4 { --accent: #2b4f7e; --tint: #edf2fb; --selected: #dce5f5; --edge: #a7bcda; }
+.group-heading { padding: 23px 25px; border-radius: 9px 9px 0 0; background: var(--accent); }
+.group-heading h2 { color: #fff; font-size: 1.36rem; margin-bottom: 7px; line-height: 1.5; }
+.group-heading p { color: #fff; font-size: .94rem; margin: 0; line-height: 1.8; }
+.chapters { border: 1px solid var(--edge); border-top: 0; border-radius: 0 0 9px 9px; background: white; overflow: clip; }
+.chapter { border-bottom: 1px solid var(--edge); }
+.chapter:last-child { border-bottom: 0; }
+.chapter summary { list-style: none; display: flex; align-items: center; gap: 17px; padding: 22px 24px; background: white; border-left: 4px solid transparent; }
+.chapter summary::-webkit-details-marker { display: none; }
+.chapter summary:hover { background: var(--tint); }
+.chapter[open] { background: var(--tint); }
+.chapter[open] summary { background: var(--selected); border-left-color: var(--accent); border-bottom: 1px solid var(--edge); }
+.chapter h3 { color: var(--ink); font-size: 1.1rem; line-height: 1.65; font-weight: 750; flex: 1; margin: 0; }
+.chapter[open] summary h3 { color: var(--accent); }
+.chapter-state { flex: 0 0 auto; min-width: 40px; color: var(--accent); font-size: 16px; font-weight: 650; }
+.chapter-state::before { content: "展開 ＋"; }
+.chapter[open] .chapter-state::before { content: "收合 −"; }
+.reading-body { padding: 26px 26px 12px; margin: 0 16px 17px; background: var(--tint); border-left: 4px solid var(--edge); }
+.reading-body p { margin: 0 0 1.4em; }
+.reading-body p, .reading-body li { font-size: 1rem; line-height: 1.95; }
+.reading-body strong { font-weight: 750; }
+.reading-body p > strong:first-child { color: var(--accent); }
+.reading-body h3 { color: var(--accent); font-size: 1.2rem; margin: 25px 0 15px; }
+.reading-body ul, .reading-body ol { padding-left: 1.4em; margin: 0 0 1.5em; }
+.reading-body li { padding-left: 4px; margin-bottom: 13px; }
+.reading-body a { font-weight: 600; }
+.reading-body hr { border: 0; height: 1px; background: var(--edge); margin: 28px 0; }
+.reading-body table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: 25px 0 30px; font-size: .94rem; line-height: 1.9; background: white; }
+.reading-body th { color: var(--accent); background: var(--selected); font-weight: 750; text-align: left; }
+.reading-body td, .reading-body th { border: 1px solid var(--edge); padding: 14px 12px; vertical-align: top; overflow-wrap: anywhere; }
+.reading-body td:first-child { font-weight: 650; color: var(--accent); }
+.reading-body tbody tr:nth-child(even) { background: #f8fafc; }
+.footer { padding: 28px 0; border-top: 1px solid var(--line); background: #e5edf3; }
+.footer strong { color: var(--blue); font-size: 17px; }
+.footer p { font-size: 16px; margin-bottom: 5px; color: var(--muted); }
+@media (max-width: 1100px) {
+  .document-status { display: none; }
+  .top-links { gap: 20px; }
+  .document-layout { grid-template-columns: 184px minmax(0, 1fr); gap: 24px; }
+  .project-summary { padding: 24px; }
+}
+@media (max-width: 900px) {
+  html { scroll-padding-top: 140px; }
+  .document-layout { display: block; padding-top: 0; }
+  .side-nav { display: flex; position: sticky; top: 76px; z-index: 20; flex-wrap: nowrap; gap: 5px; padding: 6px; margin: 0 -6px 22px; border-radius: 0 0 7px 7px; max-height: none; overflow-x: auto; background: #fff; }
+  .side-nav p { display: none; }
+  .side-nav a { flex: 0 0 auto; white-space: nowrap; padding: 8px 12px; min-height: 44px; border-left: 0; border-bottom: 3px solid transparent; margin: 0; }
+  .side-nav a[aria-current] { border-bottom-color: #154b75; }
+  .side-nav a:nth-of-type(3n)[aria-current] { border-bottom-color: #175841; }
+}
+@media (max-width: 700px) {
+  .container { padding-left: 18px; padding-right: 18px; }
+  .topbar-inner { min-height: 68px; gap: 15px; }
+  .brand span { font-size: 16px; }
+  .top-links a { display: none; }
+  .top-links a[href="#contents"] { display: inline-flex; font-size: 16px; white-space: nowrap; }
+  .side-nav { top: 68px; }
+  .project-summary { padding: 22px 18px; }
+  h1 { font-size: 29px; }
+  .summary-intro { font-size: 1rem; }
+  .summary-grid { grid-template-columns: 1fr; gap: 14px; }
+  .summary-item { padding: 17px 18px; }
+  .summary-item h2 { font-size: 1.1rem; }
+  .group-heading { padding: 20px; }
+  .group-heading h2 { font-size: 1.24rem; }
+  .chapter summary { padding: 18px 16px; gap: 12px; }
+  .chapter h3 { font-size: 1.06rem; }
+  .chapter-state { min-width: 32px; }
+  .chapter-state::before { content: "展開"; }
+  .chapter[open] .chapter-state::before { content: "收合"; }
+  .reading-body { padding: 22px 15px 8px; margin: 0 9px 12px; border-left-width: 3px; }
+  .reading-body table, .reading-body tbody { display: block; }
+  .reading-body thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .reading-body tbody tr { display: block; margin-bottom: 18px; border: 1px solid var(--edge); border-radius: 6px; overflow: hidden; background: #fff; }
+  .reading-body tbody tr:nth-child(even) { background: #fff; }
+  .reading-body td { display: block; width: 100%; border: 0; border-bottom: 1px solid var(--edge); padding: 14px; }
+  .reading-body td:last-child { border-bottom: 0; }
+  .reading-body td:first-child { background: var(--selected); color: var(--accent); }
+  .reading-body td::before { content: attr(data-label); display: block; font-weight: 750; color: var(--accent); margin-bottom: 7px; }
+}
+@media (max-width: 360px) {
+  .container { padding-left: 14px; padding-right: 14px; }
+  .brand-mark { display: none; }
+  .project-summary { padding: 20px 15px; }
+  .reading-body { padding-left: 11px; padding-right: 11px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  html { font-size: 11pt; }
+  body { background: white; color: black; }
+  .topbar, .side-nav, .reading-tools, .skip-link { display: none !important; }
+  .container { max-width: none; padding: 0; }
+  .document-layout { display: block; padding: 0; }
+  .project-summary { padding: 0 0 20px; border: 0; }
+  h1 { font-size: 24pt; }
+  .summary-grid { display: block; }
+  .summary-item { border: 0; background: white; padding: 8px 0; }
+  .summary-item p, .reading-body p, .reading-body li { font-size: 11pt; line-height: 1.7; }
+  .group-heading { border: 1px solid #555; background: #fff; }
+  .group-heading h2, .group-heading p { color: #000; }
+  .chapter summary { padding: 15px 10px; break-after: avoid; }
+  .chapter-state { display: none; }
+  .reading-body { display: block !important; background: white; padding: 15px 10px; margin: 0; }
+  .reading-body table, .reading-body tbody { display: table; font-size: 10pt; }
+  .reading-body tbody { display: table-row-group; }
+  .reading-body thead { display: table-header-group; position: static; width: auto; height: auto; clip-path: none; }
+  .reading-body tr { display: table-row; }
+  .reading-body td, .reading-body th { display: table-cell; padding: 7px; }
+  .reading-body td::before { display: none; }
+  .footer { background: white; }
+}
+</style>
+<style>.revision, .revision *, .revision a { color: #b00020 !important; } .revision { border-left: 4px solid #b00020; padding: 10px 16px; margin: 18px 0; background: #fff7f7; } .revision table { background:white; } .revision th, .revision td { border-color:#e7b3bb; }</style></head>
+<body>
+<a class="skip-link" href="#contents">跳至完整說明</a>
+<header class="topbar">
+<div class="container topbar-inner">
+<a class="brand" href="#overview"><i aria-hidden="true" class="brand-mark"></i><span>室內設計與裝修工程<br/>專家 AI 協作平台</span></a>
+<nav aria-label="主要導覽" class="top-links">
+<a href="#overview">專案摘要</a><a href="#contents">詳細說明</a><a href="#part-6">合作重點</a>
+</nav>
+<span class="document-status">合作討論稿</span>
+</div>
+</header>
+<main class="document-layout container" id="main-content">
+<nav aria-label="內容導覽" class="side-nav">
+<p>閱讀導航</p>
+<a class="summary-link" href="#overview">專案摘要</a>
+<a href="#part-1">題目與市場痛點</a>
+<a href="#part-2">解決方案與情境</a>
+<a href="#part-3">產品特色與優勢</a>
+<a href="#part-4">市場與預期效益</a>
+<a href="#part-5">一期研發範圍</a>
+<a href="#part-6">合作與待確認事項</a>
+</nav>
+<div class="document-content">
+<section aria-labelledby="page-title" class="project-summary" id="overview">
+<header class="summary-heading">
+<p class="summary-label">專案摘要</p>
+<h1 id="page-title">室內設計與裝修工程<br/>專家 AI 協作平台</h1>
+<p class="summary-intro">規劃開發一套供室內設計、裝修統包與工程團隊使用的專業 AI 工具，將專家判讀、可編輯設計、工項成本及契約確認，連到同一案件的實際工作。</p>
+</header>
+<div class="summary-grid">
+<article class="summary-item"><h2>要開發什麼題目</h2><p>以室內設計與裝修為入口，協助接案、讀圖、設計、估價、變更與交付。各階段可獨立使用，也能將成果交給下一階段承接。</p></article>
+<article class="summary-item"><h2>市場正在面對什麼痛點</h2><p>需求、圖說、契約與明細分散，改圖後工項、成本及確認資料未同步；法規與契約又需個案判讀，容易增加重工、漏項及安全與履約問題。</p></article>
+<article class="summary-item"><h2>我們提出的解決方案</h2><p>以同一案件、空間與設計版本關聯文件、設計元件、工項及證據。AI 配合設計與核算工具分析修改影響，讓成本與適用要求回饋方案調整。</p></article>
+<article class="summary-item"><h2>產品特色與專業優勢</h2><p>結合建築師 Sean、採購法專家汪博及其他專家，把有來源、適用條件、例外、缺件及覆核方法的情境判讀，連到可編輯設計與工程成本。</p></article>
+<article class="summary-item"><h2>預期帶來的工作改善</h2><p>候選目標為判讀總工時減少30%、變更綜合評估減少25%、漏改與補件返工減少20%。需同時維持成果品質，百分比待首案量測驗證。</p></article>
+<article class="summary-item"><h2>目標市場與商業效益</h2><p>優先研究台灣室內設計公司、裝修統包與室內工程團隊，提升設計、估價及交付效率。先以試用與按案付費驗證需求，再評估訂閱及企業導入。</p></article>
+</div>
+<p class="revision"><strong>紅字為本次校正：</strong>以五套具付費商用版本、具國際使用或職缺證據的常見軟體為比較基礎；非台灣使用率前五名排名。建議以既有軟體協作為優先方向，實際介接與可編輯程度須以版本、授權及首案測試確認。</p><p class="summary-status">妍發科技 × 總盛建設 × 專業夥伴共同規劃。功能、一期範圍與效益目標供討論，目前尚無確定案例及效益實證。</p>
+</section>
+<section aria-labelledby="details-title" class="reading-panel" id="contents">
+<header class="reading-heading"><div><h2 id="details-title">逐項說明</h2><p>依六個主題閱讀，點選標題可就地展開，各章可同時保留。</p></div></header>
+<div class="reading-tools">
+<label class="font-control" for="font-size">閱讀字級<select id="font-size"><option value="normal">標準</option><option value="large">大字</option><option value="xlarge">特大</option></select></label>
+<button aria-controls="discussion-chapters" aria-expanded="false" class="expand-button" id="expand-all" type="button">展開全文</button>
+</div>
+<div id="discussion-chapters"><section aria-labelledby="part-1-heading" class="topic-group" id="part-1">
+<header class="group-heading"><h2 id="part-1-heading">開發題目與市場痛點</h2><p>從室內設計與裝修工作的資訊落差、變更負擔與專業判讀需求出發。</p></header>
+<div class="chapters"><details class="chapter" id="chapter-01" open="">
+<summary><h3>我們共同要開發什麼</h3><span aria-hidden="true" class="chapter-state"></span></summary>
+<div class="reading-body"><p>本案建議開發一套以室內設計與裝修工程為市場入口的專業AI工具，讓設計公司、裝修統包及相關工程團隊，在接案、讀圖、設計、估價、施工變更與交付時，能取得有工程依據的分析、可編輯的設計成果，以及適用契約與安全要求下的處理建議。</p>
+<p>產品的核心，是將建築師 Sean、採購法專家汪博及其他專家對圖說、工程條件、採購法及工程契約責任的分析方法，轉換成AI可以執行、團隊可以驗證、客戶可以反覆使用的工作能力。AI配合繪圖、模型、算量、成本及流程工具，協助使用者完成實際任務，並將成果交給下一階段使用。</p>
+<p><strong>一句話說明：讓室內設計與裝修團隊，在接案、設計、估價及變更時，同時掌握「怎麼設計、代價多少、哪些要求要確認、下一步怎麼處理」。</strong></p>
+<p>以室內設計為入口，是為了結合總盛對此市場的推廣信心與合作網絡，建立明確的客戶及應用場景。產品的專業深度則延伸至同一案件需要的建築圖說、工項成本、契約判讀與安全要求，使設計能承接工程條件，也能形成後續施作與交付的依據。</p>
+<p>這個範圍有共同主線：各項能力處理同一案件中的設計與工程決策。市場推廣可從一個高頻任務開始，使用者不必從投標一路用到驗收，才享有產品價值。</p>
+</div>
+</details>
+<details class="chapter" id="chapter-02">
+<summary><h3>為什麼市場需要這個工具</h3><span aria-hidden="true" class="chapter-state"></span></summary>
+<div class="reading-body"><p>室內設計與裝修的工作，包含理解需求、確認現況、建立方案、選材設備、核算工項、協調變更及整理交付資料。當案件適用政府採購法時，還需處理該案適用的招標、契約與程序要求。</p>
+<p>這些工作橫跨不同角色。設計師關心配置與機能，估價人員關心範圍及數量，工程人員關心能否施作，業主關心預算與交付；契約與法規的要求則可能影響每個人的決定。團隊需要把彼此的資訊及判斷接起來，才能完成一次選材、改圖或變更。</p>
+<p>本案優先研究的市場痛點有五項，實際發生頻率與影響仍須由案件及訪談驗證：</p>
+<p><strong>第一，需求與文件分散，接案時未必掌握完整工作範圍。</strong> 同一要求可能分散在需求書、圖面、契約、規格及工程明細。業者需要知道哪些已明確、哪些矛盾、哪些還需要設計或估價人員確認，才能提出合理方案及報價。適用政府採購法的案件，投標疑義還可能牽涉資格、規格與履約條件；若未在接案或投標前辨識，可能形成報價漏項、承作條件誤解或後續違約與爭議風險。</p>
+<p><strong>第二，設計方案與工程條件之間需要反覆轉譯。</strong> 建築圖、現場丈量、設備條件及室內方案可能使用不同版本。設計圖上看似成立的安排，仍需核對現況、材料、安裝界面及可取得的工程資料。例如隔間、開口、設備位置或用途調整，可能涉及建築法規、消防、主要構造或使用條件；未及時辨識，就可能到後續階段才發現需補查、修正或重新確認，增加返工、建築與安全風險。具體涉及哪些要求，仍依個案資料與專業判讀確認。</p>
+<p><strong>第三，設計修改會牽動工項、成本及確認事項。</strong> 增加一組收納、移動設備或更換材料，可能影響其他工程。若只改圖或只重算產品價格，容易漏掉施工工作、相關文件或重新確認的需求。例如新增櫃體可能影響通行或設備操作，材料替代可能涉及耐燃、性能或契約指定要求；為降低預算而改方案，也需確認必要工項與措施是否完整。影響未被一起檢討，可能造成成本失準、品質與安全疑慮，或與已確認圖說、契約要求不一致。</p>
+<p><strong>第四，法規與契約問題需要情境判讀。</strong> 找到條文或摘出契約，仍須知道此案的角色、事實、階段及文件關係。例如投標疑義涉及採購法與契約的哪些條件、原範圍是否包含某工項、替代品需要什麼證據、現況差異可能如何影響責任，都需要實務經驗。人工逐一查找及跨專業確認可能耗時，也可能因文件、事實或版本遺漏而判斷不完整；若引用真實條文卻套錯情境，仍可能誤判責任、遺漏必要確認，或提出與安全、履約條件不一致的處理方式。這正是建築師 Sean、採購法專家汪博及其他專家的分析方法值得產品化的原因：讓系統協助蒐集與核對事實、辨識爭點及提出有依據的選項。人工流程與AI流程都需要驗證，不預設其中一方必然較可靠。</p>
+<p><strong>第五，交付資料難以對應到正確版本。</strong> 材料文件、照片、會議及確認紀錄若沒有連到空間、設備與工項，下一位接手者往往需要重新查找、補問及比對。若交付資料仍對應舊版，或材料性能、安全相關要求與變更確認缺乏可核對證據，就可能難以證明交付內容符合目前要求，增加驗收、請款、責任釐清與後續使用的風險。有附件不代表內容及版本正確，也不能因此直接判定實體安全或不安全。</p>
+<p>本案要驗證的市場缺口，是中小型設計與裝修團隊能否以可負擔的導入及維護成本，完成上述跨專業任務。這個缺口不能只靠競品功能表推定，必須同時檢查現行工具組合的作業負擔、客戶採用理由與付費意願。</p>
+<div class="revision"><h4>市場校正｜既有工具已是工作流程的一部分</h4><p>設計公司通常同時使用繪圖、建模、BIM與影像軟體；本案需先確認使用者已購買的工具、檔案格式、資料交接與重新輸入成本。法國室內設計師協會會員調查共63人，平均使用4套軟體；SketchUp 60%、AutoCAD 44%、Archicad 33%、Photoshop 33%。此為該樣本的多選使用率，並非台灣市場占有率。</p><p>美國 O*NET 2025 室內設計職缺中，AutoCAD 24%、Revit 22%、SketchUp Pro 18%、Photoshop 10%；代表職缺提及率，不能解釋為實際使用率，也不可直接與法國調查百分比混算或排序。</p></div></div>
+</details></div>
+</section>
+<section aria-labelledby="part-2-heading" class="topic-group" id="part-2">
+<header class="group-heading"><h2 id="part-2-heading">解決方案與應用情境</h2><p>各階段可以獨立使用，也能承接同一案件的條件與成果。</p></header>
+<div class="chapters"><details class="chapter" id="chapter-03">
+<summary><h3>產品如何運作：各階段可獨立使用，成果可以承接</h3><span aria-hidden="true" class="chapter-state"></span></summary>
+<div class="reading-body"><p>產品以同一案件為工作對象，關聯空間、需求、圖說版本、設計元件、工程工項、數量成本及確認證據。依當前工作提供任務，不要求使用者先建完所有資料。</p>
+<p>一位設計師可以先使用配置與預算比較；統包商可以從變更或材料替代開始；承接政府裝修的團隊可以先整理招標、契約及規格問題。當其他階段加入時，承接已確認資料及未決事項，減少重建。</p>
+<table aria-label="產品如何運作：各階段可獨立使用，成果可以承接對照表">
+<thead>
+<tr>
+<th scope="col">階段</th>
+<th scope="col">主要痛點</th>
+<th scope="col">預計提供的AI與軟體協助</th>
+<th scope="col">本階段成果及後續價值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="階段">接案、需求與標案評估</td>
+<td data-label="主要痛點">文件分散，範圍與要求不清，可能遺漏投標資格、報價及履約問題</td>
+<td data-label="預計提供的AI與軟體協助">整理要求、辨識矛盾與缺件、提出澄清問題及設計／估價待辦；適用政府案另加入採購法情境分析，提示可能的違約或責任問題</td>
+<td data-label="本階段成果及後續價值">有來源的需求與條件清單、待澄清問題及承作評估資料，供設計與詢價承接</td>
+</tr>
+<tr>
+<td data-label="階段">建築圖說與現況銜接</td>
+<td data-label="主要痛點">底圖與現況、圖面與設備資料可能不同，變動涉及的建築或安全條件不易及時掌握</td>
+<td data-label="預計提供的AI與軟體協助">關聯圖號、空間及版本，提出跨文件差異，對可靠資料做選定界面檢查，提示變動可能涉及的建築法規與安全待核事項</td>
+<td data-label="本階段成果及後續價值">經確認的設計條件、問題定位及尚待補查事項，避免室內設計沿用錯誤基礎</td>
+</tr>
+<tr>
+<td data-label="階段">室內設計與方案比較</td>
+<td data-label="主要痛點">機能、動線、選材及預算互相牽動，修改可能漏核材料、消防或使用安全條件</td>
+<td data-label="預計提供的AI與軟體協助">建立及修改可編輯的多空間方案，檢查選定機能與尺寸條件，連同材料、消防等已確認要求提出可比較替代方案</td>
+<td data-label="本階段成果及後續價值">可繼續編輯的設計、方案取捨及材料設備明細，可交由估價與工程人員接手</td>
+</tr>
+<tr>
+<td data-label="階段">工項數量、成本與發包準備</td>
+<td data-label="主要痛點">圖上物件需轉成施作工項，改圖後可能漏列必要工作或措施，使成本及施作範圍失準</td>
+<td data-label="預計提供的AI與軟體協助">將元件連到限定工項及計量來源，比較材料、人工等已知成本，核對已確認的必要工項，列出缺價與假設</td>
+<td data-label="本階段成果及後續價值">有依據的工項及成本比較，並能把超預算、漏項或資料不足問題回饋設計修正</td>
+</tr>
+<tr>
+<td data-label="階段">施工協作與設計變更</td>
+<td data-label="主要痛點">現況、缺料或需求改變，牽動圖面、費用、安全條件及責任，未一起檢討可能與核定或契約要求不一致</td>
+<td data-label="預計提供的AI與軟體協助">辨識變更影響，修正可編輯方案及受影響明細，分析採購法適用及個案契約問題，提示安全與履約待核事項，整理處理選項與證據</td>
+<td data-label="本階段成果及後續價值">同版設計與成本差異、待確認變更資料、需補件及後續工作；原確認基準保留</td>
+</tr>
+<tr>
+<td data-label="階段">驗收與交付資料整備</td>
+<td data-label="主要痛點">確認、材料及檢驗資料分散或版本錯置，可能增加驗收、請款及責任釐清風險</td>
+<td data-label="預計提供的AI與軟體協助">比對已確認規格、設計及變更，整理應備與已提供資料，定位安全／性能證據、變更確認及其他缺件與待覆核事項</td>
+<td data-label="本階段成果及後續價值">可追溯至設備與工項的交付資料包，供正式確認與後續使用維護承接</td>
+</tr>
+</tbody>
+</table>
+<p>各階段並非固定直線。設計與工程可反覆協作，標案也可能出現在不同時點。若同一工程存在多個採購案或契約，須保留各自範圍、金額與權責，不能為追求連動而混為一份契約。</p>
+<p>沒有可靠幾何資料時，系統不能僅憑PDF文字宣稱完成精確設計；沒有價格、適用文件或確認事實時，應列為待補。各階段可先完成資料足夠的任務，再引導使用者補齊後續需要。</p>
+<div class="revision"><h4>工作流程校正｜優先承接既有設計成果</h4><p>一期建議由使用者提供既有圖說、模型、匯出清單與契約資料；系統先以有來源的問題清單、變更紀錄及工項／成本對照表協助決策，再由設計師在原有軟體修改並回傳新版。支援哪些格式、屬性保留程度與版本對照，須以實際樣本測試，不能預設可直接雙向同步或自動改寫原生檔。</p></div></div>
+</details>
+<details class="chapter" id="chapter-04">
+<summary><h3>一個完整情境：改設計時，同時看見代價與處理要求</h3><span aria-hidden="true" class="chapter-state"></span></summary>
+<div class="reading-body"><p>以辦公空間整修作說明。這是產品驗證用假設，尚非已取得案例。</p>
+<p>業主希望增加收納、調整工作位置並更換設備，同時保留部分家具與既有條件，預算也有上限。現行團隊需要分別確認底圖、重畫方案、詢價、調整工項，再回查契約、規格與先前確認紀錄。</p>
+<p>本產品預計以同一件修改完成以下工作：</p>
+<ol>
+<li><strong>確認基礎：</strong> 找到相關空間、圖說、規格與版本，區分已確認條件、矛盾及未知。</li>
+<li><strong>形成設計：</strong> 建立可編輯修正版，維持指定保留條件，檢查選定家具操作、通行及設備界面。</li>
+<li><strong>比較工程代價：</strong> 找出受影響工項與數量，依有來源資料比較成本，明示缺價。</li>
+<li><strong>執行專業判讀：</strong> 辨識是否涉及指定材料、原範圍、採購法、工程契約及安全條件，分析必要事實與證據，提示可能的違約、責任或施作問題。</li>
+<li><strong>回饋修改：</strong> 若成本、規格或已確認要求無法同時成立，提出調整配置、替換元件或其他取捨，並說明理由。</li>
+<li><strong>整理確認與交付：</strong> 人員選擇及核定後，形成相同版本的設計、工項成本與確認資料，保留前版基準。</li>
+</ol>
+<p>民間案件使用實際契約與業主確認要求；政府案件才依確認的適用條件加入採購法專用分析。使用者也可以只採其中一個任務，例如方案比較或材料替代，而不使用整條流程。</p>
+<div class="revision"><p><strong>同案操作補充：</strong>設計師在 AutoCAD 或 SketchUp 依既有流程修改；系統比較雙版本及可取得的元件資料，列出受影響項目、數量依據、缺價和需覆核事項，供設計師及估價人員確認。模型缺乏屬性或格式不相容時，改以人工補充，不將示意圖視為精確算量。</p></div></div>
+</details></div>
+</section>
+<section aria-labelledby="part-3-heading" class="topic-group" id="part-3">
+<header class="group-heading"><h2 id="part-3-heading">產品特色與專業優勢</h2><p>將資深專家的判讀方法、來源與覆核要求轉為可驗證的產品能力。</p></header>
+<div class="chapters"><details class="chapter" id="chapter-05">
+<summary><h3>最重要的研發核心：資深專家的個案判讀能力</h3><span aria-hidden="true" class="chapter-state"></span></summary>
+<div class="reading-body"><p>市場已有AI問答與文件摘要。團隊更值得投入的能力，是讓AI在明確情境中承接資深專家的分析工作：辨識爭點及關鍵事實、解讀契約與適用要求、分析責任與處理選項，並主動找出資訊不足與需要覆核的地方。</p>
+<p>以「圖面未標示的工作是否屬原契約範圍」為例，需要核對契約、其他圖說、明細、澄清及指示紀錄；「材料相近是否能替代」則要同時分析性能證據、個案規格與確認過程。這些問題會影響設計、報價、責任與交付，不能只以關鍵字或一段條文作結論。</p>
+<p>本案由建築師 Sean、採購法專家汪博及其他專家共同建立專業情境與測試基準，建議以<strong>選定情境下達到可驗證的資深專家等級分析品質</strong>為研發目標。要讓系統實際完成分析，不能把所有問題都轉交專家；同時，AI的分析成果不直接取得簽約、簽證、核定或裁決權。</p>
+<p>團隊將透過下列方式，把人的專業轉成可持續使用的能力：</p>
+<ul>
+<li><strong>情境與案例：</strong> 取得合法使用的案件，建立事實、時間軸、關鍵文件、合理解釋、處理選項與專家覆核基準。</li>
+<li><strong>判斷方法：</strong> 整理適用及排除條件、例外、常見誤判、應補事實，以及哪些條件改變就必須改變分析。</li>
+<li><strong>AI與工具：</strong> 結合有效來源、檢索、規則、必要的模型調校及工程核算，讓分析可重複執行並連回設計與工項。</li>
+<li><strong>測試與更新：</strong> 以未參與方法調整的案件驗證品質，保留歧見與條件式結論，持續修正錯誤及過期依據。</li>
+</ul>
+<p>專業訓練不預設只有模型微調。應用什麼模型與技術，應由測試決定；真正要證明的是專業方法讓結果更可靠、能完成更多工作，並降低專家覆核負擔。</p>
+</div>
+</details>
+<details class="chapter" id="chapter-06">
+<summary><h3>專業AI判讀的應用賣點：安全與風險辨識</h3><span aria-hidden="true" class="chapter-state"></span></summary>
+<div class="reading-body"><p>安全與風險問題會出現在接案、讀圖、設計、變更與交付的個別痛點中，因此應在各階段說清楚其發生原因、可能影響及處理方式。對產品而言，辨識這些問題是專業AI判讀能力的一項應用賣點；整體主軸仍是室內設計與裝修協作，不將安全與風險另立為核心痛點。</p>
+<p>例如隔間、開口或設備位置改動，可能需要核對建築與安全條件；裝修選材可能牽涉材料及消防要求；投標疑義與施工變更，則可能需要採購法、工程契約及責任分析。系統要協助指出受影響內容、適用依據、缺件及處理選項，再回到設計、成本與確認工作，讓使用者在作決定時取得較完整的資訊。</p>
+<p>建物使用安全可研究選定的防火避難、材料、分間牆、消防界面、無障礙與使用條件；施工安全則關注施工方式、危險及措施。兩者需依案件、資料與相應專業分開定義，不把一項檢查擴大成全案安全認定。</p>
+<p>政府採購法亦有明確的安全連結。《政府採購法》第70條之1將工程規劃設計的施工危險分析、安衛圖說規範及費用，承接至招標文件。這支持本案研究設計、成本、採購法與施工要求如何連動。<a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=70-1&amp;pcode=A0030057" rel="noopener noreferrer" target="_blank">官方條文</a></p>
+<p>在產品中，一個問題應能顯示來源版本、適用條件、對應位置或元件、已知事實、檢查結果、缺件、修正選項及覆核責任。若規則更新，需知道哪些既有判斷應重核；若資料不足，則引導補件，不輸出成「符合」。</p>
+<p>安全功能由具備相應資料、專家及測試基準的項目開始。現有專家參與不代表消防、結構、機電與職安所有領域均已齊備；完整專業計算、簽證或主管機關許可，不列為本說明已具備能力。工程圖、成本及投標資料的存取保護，也須作為平台本身的資安工作另行驗證。</p>
+</div>
+</details>
+<details class="chapter" id="chapter-07">
+<summary><h3>與市場工具的差異：以台灣專業判讀完成同一個工程任務</h3><span aria-hidden="true" class="chapter-state"></span></summary>
+<div class="reading-body"><p>市場已有可編輯AI設計、模型數量報表、安全規則檢查及契約AI。本案應建立在這個競爭現實上，找到特定客群更有價值的工作方式。</p>
+<table aria-label="與市場工具的差異：以台灣專業判讀完成同一個工程任務對照表">
+<thead>
+<tr>
+<th scope="col">市場能力與代表</th>
+<th scope="col">已查得的官方描述</th>
+<th scope="col">本案要建立及驗證的差異</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="市場能力與代表">AI設計：Planner 5D</td>
+<td data-label="已查得的官方描述">可由對話建立及修改可編輯3D專案</td>
+<td data-label="本案要建立及驗證的差異">將實際工程條件、工項成本及契約判讀共同帶入方案修改，量測完整任務品質與負擔</td>
+</tr>
+<tr>
+<td data-label="市場能力與代表">模型報表：SketchUp</td>
+<td data-label="已查得的官方描述">可由元件屬性產生數量、材料等報表</td>
+<td data-label="本案要建立及驗證的差異">處理選定在地工項的計量及成本依據，並追蹤修改對設計、確認與交付資料的影響</td>
+</tr>
+<tr>
+<td data-label="市場能力與代表">模型規則檢核：Solibri</td>
+<td data-label="已查得的官方描述">規則清單包含無障礙、防火等模型檢查</td>
+<td data-label="本案要建立及驗證的差異">將選定要求與案件事實、修正方案、工程代價及專業覆核連成可完成的任務</td>
+</tr>
+<tr>
+<td data-label="市場能力與代表">工程契約AI：Document Crunch</td>
+<td data-label="已查得的官方描述">專家編製的責任、風險與變更分析，並有Procore整合</td>
+<td data-label="本案要建立及驗證的差異">建立台灣採購法與工程契約的情境、來源與專家判讀，再連到室內設計與裝修工項</td>
+</tr>
+</tbody>
+</table>
+<p>來源：<a href="https://planner5d.com/ai" rel="noopener noreferrer" target="_blank">Planner 5D</a>、<a href="https://help.sketchup.com/en/sketchup/generating-attribute-report" rel="noopener noreferrer" target="_blank">SketchUp</a>、<a href="https://help.solibri.com/hc/en-us/articles/1500006958582-How-to-Choose-the-Appropriate-Rule" rel="noopener noreferrer" target="_blank">Solibri</a>、<a href="https://help.documentcrunch.com/articles/9523686967-using-skills-in-crunch-ai" rel="noopener noreferrer" target="_blank">Document Crunch專業工作</a>、<a href="https://help.documentcrunch.com/articles/7690032758-procore-integration" rel="noopener noreferrer" target="_blank">Procore整合</a>。上述為官方功能說明，尚未進行帳號實測。</p>
+<p>Document Crunch的台灣政府採購法、函釋／範本維護及台灣案例判讀能力，目前未取得足以確認的官方證據，繁中文件能力也尚未確證；這不等於其一定不支援，仍需廠商說明與同案測試。本案可強調在地專業，但不能以對手未公開資訊直接宣稱市場唯一。</p>
+<p>我們想建立的優勢有四項：</p>
+<p><strong>一、以室內設計及裝修的日常工作為入口。</strong> 讓客戶先從接案文件、方案修改、成本比較或變更分析中的一項開始，逐步增加使用，而不要求一次替換所有工具。</p>
+<p><strong>二、讓台灣專家判讀參與實際決策。</strong> 專業分析能指向設計與工項，說清楚哪些需要修正、補證據或重新確認，避免與設計及工程作業分離。</p>
+<p><strong>三、讓一次修改形成共同成果。</strong> 圖面、工項、成本與確認資料使用一致版本，減少人工跨工具重整及漏改；價值需以完整作業時間與錯誤量測證明。</p>
+<p><strong>四、持續累積專業資產。</strong> 合法案例、專業標註、情境規則、測試基準及更新經驗，可以隨使用深化，形成較難快速複製的能力。這是預計建立的競爭門檻，目前尚未宣稱已完成。</p>
+<div class="revision"><h4>五套常見付費商用軟體｜比較與提案校正</h4><p>以下五套依國際室內設計師調查及職缺證據，兼顧繪圖、建模、BIM與表現用途選作比較，<strong>不是有證據支持的台灣使用率前五名，也不代表五者在同一調查中依序排名</strong>。SketchUp Pro、AutoCAD、Revit、Archicad、Photoshop 均有付費商用版本；授權與功能依版本而異。</p><table><thead><tr><th>軟體與證據</th><th>既有用途與能力</th><th>本案應補強或驗證</th></tr></thead><tbody><tr><td>SketchUp Pro<br/>法國 60%；美國職缺 18%</td><td>3D建模、空間與家具方案；可依元件屬性產生報表。</td><td>研究模型屬性與在地工項對照、版本差異及成本假設；先測匯出資料品質，API／擴充功能另行驗證。</td></tr><tr><td>AutoCAD<br/>法國 44%；美國職缺 24%</td><td>2D圖面、尺寸、圖層與施工圖文件。</td><td>研究圖層、圖號及圖面版本與工項的對照；DWG 支援、辨識準確度及授權需實測。</td></tr><tr><td>Archicad<br/>法國 33%</td><td>BIM 建模、圖說與多專業協作。</td><td>中長期研究模型資料與變更紀錄承接；優先確認客戶需求與可取得格式，勿假設完整讀寫。</td></tr><tr><td>Photoshop<br/>法國 33%；美國職缺 10%</td><td>效果圖後製、材質氛圍與提案視覺。</td><td>作為方案溝通素材及附件管理；圖片不等於工程模型，不能單靠影像直接精準算量。</td></tr><tr><td>Revit<br/>美國職缺 22%</td><td>BIM 模型、元件屬性、圖說及跨專業協作。</td><td>中長期評估模型屬性、數量與變更追溯；官方提供 .NET API，實際導入仍需版本、授權與案例測試。</td></tr></tbody></table><p>法國資料來源：<a href="https://unaid.fr/logiciels-architecture-interieure/">UNAID 會員調查</a>；美國資料來源：<a href="https://www.onetonline.org/link/demand/27-1025.00">O*NET／Lightcast 2025 室內設計職缺資料</a>。用途與介接參考：<a href="https://help.sketchup.com/en/sketchup/generating-attribute-report">SketchUp 報表</a>、<a href="https://developer.sketchup.com/">SketchUp 開發者文件</a>、<a href="https://aps.autodesk.com/developer/overview/revit-api">Autodesk Revit API</a>。來源性質與時間不同，不宜合併排名。</p><p><strong>定位校正：</strong>本案應以既有工具組合作為基準，驗證台灣專家判讀、在地工項成本、跨文件證據與變更確認的額外價值；不宣稱上述軟體完全沒有 AI、算量、外掛或協作能力，也不宣稱本案已完成與任何廠商的整合。</p></div></div>
+</details></div>
+</section>
+<section aria-labelledby="part-4-heading" class="topic-group" id="part-4">
+<header class="group-heading"><h2 id="part-4-heading">目標市場與預期效益</h2><p>確認使用者、付費者及商業模式，以工時、品質與採用結果驗證。</p></header>
+<div class="chapters"><details class="chapter" id="chapter-09">
+<summary><h3>目標市場與商業化方式</h3><span aria-hidden="true" class="chapter-state"></span></summary>
+<div class="reading-body"><p>第一層目標為台灣室內設計公司、裝修統包及承接室內工程的團隊。其購買理由是減少接案、設計、估價及變更協調負擔，提高交付品質。付費決策者候選為負責人、設計主管或工程主管，日常使用者為設計、估價與專案人員。</p>
+<p>其中，承接政府辦公空間、學校、宿舍或其他公有室內整修的業者，是可研究的專業市場：其需求較可能同時涉及設計工程、採購法、工程契約及證據處理。這些是市場情境候選，目前尚無確定案例或客戶承諾。</p>
+<p>民間住宅及商業空間也可使用共同的設計、成本與契約核心，依其實際要求運作。政府採購法專用規則僅在確認適用的案件啟用，避免讓不需要的流程增加操作負擔。建築師、工程顧問與公部門管理端，可視已驗證能力再評估拓展。</p>
+<p>商業模式可先測試按案或按任務服務，確認客戶願為哪些成果付費；對重複使用的企業，再評估訂閱、用量或必要的導入及專業覆核服務。價格需涵蓋資料整理、運算授權、覆核與維護成本，不能以大量未計價人工支撐看似便宜的產品。</p>
+<p>總盛的市場信心與資源，是推動客戶驗證的重要條件；正式商轉仍需以試用、採用及交易證據確認。市場規模也應從符合案件條件的客群、可接觸公司及使用頻率估算，不以所有工程金額或全部標案數直接當作可取得營收。</p>
+<div class="revision"><p><strong>商業驗證補充：</strong>訪談台灣室內設計與裝修公司，記錄軟體版本、付費席次、住宅／商空案件、日常交換格式、外掛及成本，並確認誰願為跨工具協作付費。先依首批樣本實際使用情況決定首要支援工具，不以海外數據推定台灣排名或付費意願。</p></div></div>
+</details>
+<details class="chapter" id="chapter-10">
+<summary><h3>預期效益、候選量化目標與驗證方式</h3><span aria-hidden="true" class="chapter-state"></span></summary>
+<div class="reading-body"><p>為便於合作夥伴討論，目前先提出以下候選目標。<strong>目前改善前基準全部待量測，改善後亦未實測；百分比是供先導驗證及資源評估的討論值，不是已有成效、正式驗收承諾或經證實可達的預測。</strong> 表內算例全是假設，不能放入計畫書作真實現況。</p>
+<table aria-label="預期效益、候選量化目標與驗證方式對照表">
+<thead>
+<tr>
+<th scope="col">改善項目</th>
+<th scope="col">比較對象及量測範圍</th>
+<th scope="col">候選目標</th>
+<th scope="col">純算式示例，非實際基準</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="改善項目">法規與契約個案判讀工時</td>
+<td data-label="比較對象及量測範圍">同一任務，與現行人工流程比較；含資料整理、專家判讀、覆核及改錯</td>
+<td data-label="候選目標">總工時減少30%</td>
+<td data-label="純算式示例，非實際基準">假設10人時降至7人時，減少3人時；3÷10＝30%</td>
+</tr>
+<tr>
+<td data-label="改善項目">設計變更綜合評估工時</td>
+<td data-label="比較對象及量測範圍">同樣輸入及交付範圍，與現行設計／估價／確認流程比較；含可編輯修圖、工項成本及要求檢核</td>
+<td data-label="候選目標">總工時減少25%</td>
+<td data-label="純算式示例，非實際基準">假設8人時降至6人時，減少2人時；2÷8＝25%</td>
+</tr>
+<tr>
+<td data-label="改善項目">漏改及補件造成的返工工時</td>
+<td data-label="比較對象及量測範圍">固定案件範圍與觀察期間，量測因資料漏改、版本不一致或應備資料缺漏而增加的修正工作</td>
+<td data-label="候選目標">返工工時減少20%</td>
+<td data-label="純算式示例，非實際基準">假設10人時降至8人時，減少2人時；2÷10＝20%</td>
+</tr>
+<tr>
+<td data-label="改善項目">專業AI分析的重大誤判</td>
+<td data-label="比較對象及量測範圍">與使用相同來源、同等模型／工具條件但未加入本團隊專業方法的AI基準比較；由專家預先定義重大誤判及評分單位</td>
+<td data-label="候選目標">重大誤判率相對降低30%</td>
+<td data-label="純算式示例，非實際基準">假設基準20%降至14%，降低6個百分點，相對減少30%；非保證實際法律或安全風險降低30%</td>
+</tr>
+</tbody>
+</table>
+<p>選擇以上指標，是因其能連到本案擬改善的實際工作與先導量測。30%、25%、20%目前尚無本案實證支撐，不宜宣稱為保守估計或業界標準。首案應記錄資料查找、事實分析、設計／成本操作、覆核與改錯的工時構成，再依自動化可處理範圍及實測結果調整目標。若節省的操作時間被資料建置或覆核抵銷，必須計入，不能只報AI回應速度。</p>
+<p>每項正式查核須先確定案件與事件數、測試條件、基準、專業品質要求、完成定義與責任人。工時減少須同時維持事先約定的設計與判讀品質；缺少成果、少做檢查或把任務轉給專家不算改善。返工工時與變更工時可能重疊，不能直接相加為總節省。</p>
+<p>重大誤判率以「預先定義評分單位中，出現重大錯誤的單位數÷可評單位總數」計算，分別統計安全／法規、責任、金額與程序問題；仍須同時列出實際完成率、該答而拒答、資料不足的正確處理、問題漏判及專家覆核工時，防止一律拒答造成假性低錯誤。對照須控制模型版本、提供資料與可用工具，並以未參與方法調整的案件及具歧見裁定方式的專家評分執行。若基準重大誤判為0，不計相對降低比例，改列絕對事件與品質結果。</p>
+<p>除上述候選百分比，仍需追蹤可編輯成果是否能在目標軟體開啟／修改、工項數量成本是否可獨立對帳、交付資料來源及版本是否一致，以及客戶採用、付費與每案服務成本。這些是產品與商業成立的條件，不能由省時百分比代替。</p>
+<p>安全與風險的效益，先以「相關問題是否提早被辨識、分析是否正確、是否形成修正及覆核」驗證。<strong>現階段不設定事故率、違約率、爭議率或實際損失金額降低百分比。</strong> 這些結果受施工、決策及多種外部條件影響，也尚無足夠案例與期間支持；應把AI判讀品質與真實事故／違約結果分開。</p>
+<div class="revision"><p><strong>比較基準補充：</strong>以同一案件、同一輸入資料及交付品質，比較「業者既有付費軟體＋現行人工／外掛流程」與「既有工具＋本案系統」。計入轉檔、檢查、補建模型、人工改圖、覆核及授權成本；量測可開啟率、主要圖層／元件屬性保留率、版本差異辨識正確率、人工修正工時及付費意願。未完成資料交換測試前，不承諾自動同步或可編輯率數值。</p></div></div>
+</details></div>
+</section>
+<section aria-labelledby="part-5-heading" class="topic-group" id="part-5">
+<header class="group-heading"><h2 id="part-5-heading">一期範圍與研發方向</h2><p>從一類室內整修案件與代表性任務起步，確認可交付的成果。</p></header>
+<div class="chapters"><details class="chapter" id="chapter-11">
+<summary><h3>一期如何收斂，才有完整成果又能控制工作範圍</h3><span aria-hidden="true" class="chapter-state"></span></summary>
+<div class="reading-body"><p>建議一期以一類可取得完整資料的室內整修案件為主，完成「需求／規格→可編輯方案→工項成本→專家判讀→修改與確認→同版成果」。同時允許客戶從其中一個階段導入，驗證獨立任務及跨階段承接兩種價值。</p>
+<table aria-label="一期如何收斂，才有完整成果又能控制工作範圍對照表">
+<thead>
+<tr>
+<th scope="col">一期能力建議</th>
+<th scope="col">具體要完成的工作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="一期能力建議">案件與條件建檔</td>
+<td data-label="具體要完成的工作">限定文件與表格的需求、圖號／版本、規格及來源關聯，保留矛盾與未知</td>
+</tr>
+<tr>
+<td data-label="一期能力建議">可編輯多空間設計</td>
+<td data-label="具體要完成的工作">支援約定室內範圍的家具、櫃體、設備及選定材料修改，保留確認條件</td>
+</tr>
+<tr>
+<td data-label="一期能力建議">工項與成本回饋</td>
+<td data-label="具體要完成的工作">選定工項、可核對的計量及單價來源，方案與修改差異，缺價明示</td>
+</tr>
+<tr>
+<td data-label="一期能力建議">專家判讀情境</td>
+<td data-label="具體要完成的工作">優先研究規格差異、材料替代、範圍／設計變更及交付缺件，具體界定可完成的分析</td>
+</tr>
+<tr>
+<td data-label="一期能力建議">選定安全檢核</td>
+<td data-label="具體要完成的工作">從有資料、專家與測試基準的少數項目起步，列清適用條件與未覆蓋部分</td>
+</tr>
+<tr>
+<td data-label="一期能力建議">版本及共同交付</td>
+<td data-label="具體要完成的工作">一次修改能更新相關設計、明細及待確認資料，保護原基準並追溯來源</td>
+</tr>
+</tbody>
+</table>
+<p>建築圖說在一期作為室內設計與工程條件的來源，並完成選定關聯及檢核。是否支援建築原模型修改，需另看接口與專業安排；不默認重造完整建築、結構、機電設計或全面施工管理系統。</p>
+<p>標案搜尋、自動備標、完整估驗請款、展延求償、全工地排程及其他專業領域，保留後續產品評估。這些內容各有獨立資料及責任需求，應由首批客群的高頻問題決定是否增加。正式一期功能、格式、專家投入、驗收門檻及預算，仍由各方共同確認。</p>
+<div class="revision"><h4>一期實作優先順序校正</h4><ol><li>先以台灣首批合作公司訪談決定 AutoCAD 或 SketchUp 其中一條優先工作流，取得合法授權的真實測試資料。</li><li>第一階段以約定版本的圖說／模型匯出資料、PDF、表格及人工確認建立變更清單與可追溯成本；檔案格式與讀取範圍以原廠授權及技術測試為準。</li><li>原生檔直接讀寫、外掛、雙向同步與自動生成可編輯圖面列為可行性研究，只有通過驗證與各方確認後才納入正式交付。</li><li>Revit、Archicad 的 BIM 擴充，以及 Photoshop 素材管理，依客戶需求、介面與預算評估後續階段；不視為一期全部完成。</li></ol></div></div>
+</details>
+<details class="chapter" id="chapter-12">
+<summary><h3>與研發補助目標的關係</h3><span aria-hidden="true" class="chapter-state"></span></summary>
+<div class="reading-body"><p>本案評估以116年度深科技驅動中小企業跨域創新計畫的「代理式AI與領域應用」為主軸。官方重視任務拆解、工具調用、跨系統協作與應用落地，並同時評估商模、市場、技術、執行及成員合作。<a href="https://sbir.sme.gov.tw/cross/info" rel="noopener noreferrer" target="_blank">官方計畫簡介</a>、<a href="https://sbir.sme.gov.tw/download/home/116%E5%B9%B4%E5%BA%A6%E6%B7%B1%E7%A7%91%E6%8A%80%E9%A9%85%E5%8B%95%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%E8%B7%A8%E5%9F%9F%E5%89%B5%E6%96%B0%E8%A8%88%E7%95%AB-%E7%94%B3%E8%AB%8B%E9%A0%88%E7%9F%A5WCenJV.pdf" rel="noopener noreferrer" target="_blank">官方須知</a></p>
+<p>題目是否具有說服力，應由實質研發問題、跨域互補及可驗證市場成果判斷。不能僅因稱為室內設計就認定不適合，也不能藉擴大到所有建築功能來提高表面廣度。</p>
+<p>本案可聚焦說明三項研發問題：專家判讀如何轉為可執行AI任務；圖說、規格與契約條件如何對應設計元件及工項；一次修改如何形成一致的設計、成本與確認成果。這些問題能把技術、專業與市場資源接成同一項合作工作。</p>
+<p>補助是降低共同研發風險的工具，產品仍需以客戶採用及長期營運成立。聯盟資格、預算與正式成果指標另按官方規定確認；本說明不作送件資格或必能通過的判定。</p>
+<div class="revision"><p><strong>研發課題校正：</strong>聚焦異質圖說與既有工具之資料對應、版本變更與在地工項連結、以及具來源的專家判讀；證明跨工具協作增量，不能僅把一般模型生成、常見繪圖或既有報表包裝成獨有研發成果。</p></div></div>
+</details></div>
+</section>
+<section aria-labelledby="part-6-heading" class="topic-group" id="part-6">
+<header class="group-heading"><h2 id="part-6-heading">合作分工與待確認事項</h2><p>由各方共同確認首案、專家投入、權利、費用與營運安排。</p></header>
+<div class="chapters"><details class="chapter" id="chapter-08">
+<summary><h3>為什麼這個團隊適合合作</h3><span aria-hidden="true" class="chapter-state"></span></summary>
+<div class="reading-body"><p>本案需要技術、設計工程、採購法實務與市場四種能力共同投入。任何一方單獨提供知識或軟體，都難以完成專業判讀、工程操作及商業驗證的全部工作。</p>
+<table aria-label="為什麼這個團隊適合合作對照表">
+<thead>
+<tr>
+<th scope="col">合作角色</th>
+<th scope="col">預計帶來的核心價值</th>
+<th scope="col">建議形成的工作成果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="合作角色">妍發科技</td>
+<td data-label="預計帶來的核心價值">AI、軟體架構、資料處理、工具整合與產品化</td>
+<td data-label="建議形成的工作成果">可操作的任務流程、文件與物件關聯、工具核算、版本及權限、測試與維運機制</td>
+</tr>
+<tr>
+<td data-label="合作角色">總盛建設</td>
+<td data-label="預計帶來的核心價值">產業需求、市場資源、客戶接觸及場域協調</td>
+<td data-label="建議形成的工作成果">代表客群與實際痛點、可授權資料／案例、使用回饋、試營運及推廣驗證</td>
+</tr>
+<tr>
+<td data-label="合作角色">建築師 Sean 與其他設計工程專家</td>
+<td data-label="預計帶來的核心價值">建築與圖說判讀、設計流程、工程界面及專業檢核</td>
+<td data-label="建議形成的工作成果">需求情境、物件／工項關係、可編輯成果要求、規則與驗證基準</td>
+</tr>
+<tr>
+<td data-label="合作角色">汪博（採購法專家）</td>
+<td data-label="預計帶來的核心價值">台灣採購法、工程契約、責任及處理程序的實務判讀</td>
+<td data-label="建議形成的工作成果">情境與案例分析、適用／排除條件、證據及覆核要求、專業測試基準</td>
+</tr>
+<tr>
+<td data-label="合作角色">專案統籌</td>
+<td data-label="預計帶來的核心價值">商業定位、跨方協調、資源與產品範圍整合</td>
+<td data-label="建議形成的工作成果">共同產品目標、優先順序、商模與驗證規劃、決策及交接紀錄</td>
+</tr>
+<tr>
+<td data-label="合作角色">受託申請與專案管理服務團隊</td>
+<td data-label="預計帶來的核心價值">補助文件、進度與經費管理、成果及結案服務</td>
+<td data-label="建議形成的工作成果">依約提供申請與執行管理成果；不取代研發、專業判讀或市場驗證</td>
+</tr>
+</tbody>
+</table>
+<p>上述為合作價值與建議交付，不等於正式指派。團隊專家包含建築師 Sean、採購法專家汪博，以及其他室內設計、工程估價與相關領域專家。Sean預定擔任總盛專業顧問，聘任內容仍依後續協議；汪博及其他專家的正式投入、工作與費用待確認。個別技術、財務及聯繫人員的任務，也應由相關公司確認。</p>
+<p>規劃由妍發與總盛組成研發聯盟，主導公司、資格、投入比例、費用、自籌及收益尚須正式確認。受託申請與專案管理服務團隊不是正式研發聯盟成員。專家知識、案例使用及研發成果的權利與後續營運責任，則需以協議釐清。</p>
+<p>合作應以逐步形成產品資產為目標：市場與專家提供可驗證需求及判斷，技術團隊形成可用系統，再由使用與銷售回饋修正，讓每次投入可以被重複使用，而非每個案件重新做一次顧問服務。</p>
+</div>
+</details>
+<details class="chapter" id="chapter-13">
+<summary><h3>接下來合作夥伴要共同確認什麼</h3><span aria-hidden="true" class="chapter-state"></span></summary>
+<div class="reading-body"><p>第一，選定最先服務的客群與一類案件，說清楚誰使用、誰決定採購、最先願意付費的任務是什麼。</p>
+<p>第二，盤點可合法使用的圖說、契約、現況、工項成本及變更資料，取得一件可驗證共同流程的首案。目前尚無確定案例，這是把產品構想推進為研發工作的優先條件。</p>
+<p>第三，由建築師 Sean、採購法專家汪博及相關專家定義一種代表性的判讀任務及標準答案範圍，列出正常、例外與不足資料情況，讓技術團隊能做先導測試。</p>
+<p>第四，確認一期哪些設計可編輯、哪些圖說只作來源／檢核、哪些工項可核算、哪些安全要求有基準，據此安排資源及驗收。</p>
+<p>第五，將各方投入、交付、權利、費用與後續營運推廣寫入合作安排，讓產品化與市場驗證都有負責者。正式人員及經費指派另行確認。</p>
+<p>共同目標是以一個明確的室內設計與裝修市場入口，逐步建立可銷售的專家AI產品。各方的投入能在同一案件任務上被看見：總盛協助找到需要解決的工作與客戶，專家提供可靠判斷，妍發將其變成可使用的系統，再以真實採用及效果決定下一步擴充。</p>
+<hr/>
+<p>資料與狀態說明：合作背景及角色依團隊提供的2026-11-13資料撰寫，預定安排與未確認事項已分列。量化值為候選目標及假設算例，尚無實測基準或成效。競品及補助內容依可讀官方頁與須知查核；尚未進行競品登入、產品／案例測試、專家個案覆核、客戶訪談、資格審核或商業效益量測。本文為合作討論稿，不取代正式規格及合作協議。</p>
+<div class="revision"><p><strong>新增待確認：</strong>首批受訪公司使用的五套候選軟體與版本、付費席次與格式；可授權樣本及專家覆核資料；第一個受測工作流與可量測成果；第三方 API、檔案格式與商用授權費用；是否需原生編輯及其驗收條件。</p></div></div>
+</details></div>
+</section></div>
+</section>
+</div>
+</main>
+<footer class="footer"><div class="container footer-inner"><div>
+<strong>妍發科技 × 總盛建設 × 專業夥伴</strong>
+<p>資料基準 2026年11月13日。建築師 Sean、採購法專家汪博及其他專家共同參與規劃。</p>
+<p>量化百分比為候選目標與假設算例，實際基準與成效尚待量測。</p>
+</div></div></footer>
+<script>(function () {
+  'use strict';
+
+  const chapters = Array.from(document.querySelectorAll('.chapter'));
+  const groups = Array.from(document.querySelectorAll('.project-summary, .topic-group'));
+  const sideLinks = Array.from(document.querySelectorAll('.side-nav a'));
+  const fontSelect = document.getElementById('font-size');
+  const expandButton = document.getElementById('expand-all');
+  const fontKey = 'interior-expert-ai-font';
+  const sizes = { normal: 18, large: 21, xlarge: 24 };
+  let printState = [];
+
+  function setFont(value) {
+    const selected = sizes[value] ? value : 'normal';
+    document.documentElement.style.setProperty('--base', sizes[selected] + 'px');
+    fontSelect.value = selected;
+    try {
+      localStorage.setItem(fontKey, selected);
+    } catch (_) {
+      // The reader can still change type size when browser storage is blocked.
+    }
+  }
+
+  let preference = 'normal';
+  try {
+    preference = localStorage.getItem(fontKey) || 'normal';
+  } catch (_) {
+    preference = 'normal';
+  }
+  setFont(preference);
+  fontSelect.addEventListener('change', function () {
+    setFont(fontSelect.value);
+  });
+
+  function updateExpandButton() {
+    const allOpen = chapters.every(chapter => chapter.open);
+    expandButton.textContent = allOpen ? '收合全文' : '展開全文';
+    expandButton.setAttribute('aria-expanded', String(allOpen));
+  }
+
+  expandButton.addEventListener('click', function () {
+    const shouldOpen = !chapters.every(chapter => chapter.open);
+    chapters.forEach(chapter => { chapter.open = shouldOpen; });
+    updateExpandButton();
+  });
+  chapters.forEach(chapter => chapter.addEventListener('toggle', updateExpandButton));
+
+  function revealHash() {
+    const aliases = { contents: 'contents', review: 'part-6', orientation: 'overview' };
+    const hash = location.hash.slice(1);
+    const target = document.getElementById(aliases[hash] || hash);
+    if (!target) return;
+    if (target.matches('.chapter')) target.open = true;
+    requestAnimationFrame(function () {
+      target.scrollIntoView({ block: 'start', behavior: 'instant' });
+    });
+  }
+  window.addEventListener('hashchange', revealHash);
+  if (location.hash) revealHash();
+
+  let scheduled = false;
+  function updateActiveGroup() {
+    let active = groups[0];
+    for (const group of groups) {
+      if (group.getBoundingClientRect().top <= (window.innerWidth <= 900 ? 185 : 140)) active = group;
+    }
+    sideLinks.forEach(function (link) {
+      if (link.hash === '#' + active.id) {
+        link.setAttribute('aria-current', 'location');
+        if (window.innerWidth <= 900) {
+          const navigation = link.parentElement;
+          const item = link.getBoundingClientRect();
+          const frame = navigation.getBoundingClientRect();
+          if (item.left < frame.left) navigation.scrollLeft += item.left - frame.left;
+          if (item.right > frame.right) navigation.scrollLeft += item.right - frame.right;
+        }
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+    scheduled = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!scheduled) {
+      scheduled = true;
+      requestAnimationFrame(updateActiveGroup);
+    }
+  }, { passive: true });
+  updateActiveGroup();
+
+  window.addEventListener('beforeprint', function () {
+    printState = chapters.map(chapter => chapter.open);
+    chapters.forEach(chapter => { chapter.open = true; });
+  });
+  window.addEventListener('afterprint', function () {
+    chapters.forEach((chapter, index) => { chapter.open = printState[index]; });
+    updateExpandButton();
+  });
+})();
+</script>
+</body>
+</html>
