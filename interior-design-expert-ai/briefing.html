@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>室內設計工程 AI｜合作重點簡報</title>
+  <meta name="description" content="9頁合作討論簡報。聚焦室內設計與裝修工程AI的題目、痛點、產品價值、一期範圍、合作分工與共同決定事項。">
+  <meta property="og:title" content="室內設計工程 AI｜合作重點簡報">
+  <meta property="og:description" content="從產品方向、首批客群到一期範圍與各方投入，協助合作夥伴對齊重點。">
+  <meta property="og:type" content="website">
+  <style>:root { --ink:#182b39; --muted:#40596b; --blue:#174f78; --green:#1b6655; --line:#c8d9e4; --wash:#eff5f9; }
+* { box-sizing:border-box; }
+html,body { margin:0; color:var(--ink); background:#eaf0f5; font-family:"Microsoft JhengHei","PingFang TC",sans-serif; }
+body { overflow:hidden; }
+a { color:var(--blue); text-underline-offset:4px; }
+button,select { font:inherit; cursor:pointer; }
+button,a,select { touch-action:manipulation; }
+:focus-visible { outline:3px solid #187f87; outline-offset:4px; }
+.app-header { height:68px; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:0 26px; background:#fff; border-bottom:1px solid var(--line); }
+.app-title { font-size:18px; font-weight:750; color:var(--blue); }
+.app-header a { font-size:16px; text-decoration:none; padding:12px 0; }
+.topic-nav { position:fixed; left:20px; top:90px; bottom:90px; width:182px; overflow:auto; }
+.topic-nav p { font-size:16px; color:var(--muted); padding:0 12px; margin:0 0 12px; }
+.topic-nav a { display:flex; gap:11px; align-items:center; min-height:49px; margin:5px 0; padding:11px 12px; border-left:3px solid transparent; font-size:16px; color:var(--muted); text-decoration:none; border-radius:0 5px 5px 0; line-height:1.5; }
+.topic-nav a span { color:var(--blue); font-size:16px; font-variant-numeric:tabular-nums; }
+.topic-nav a:hover { background:#f6f9fc; }
+.topic-nav a[aria-current] { background:#d9ece5; color:#154c3e; border-color:var(--green); font-weight:750; }
+.stage-frame { position:fixed; top:86px; left:222px; right:22px; bottom:90px; }
+deck-stage { display:block; width:100%; height:100%; }
+.control-bar { position:fixed; left:0; right:0; bottom:0; height:68px; background:#fff; border-top:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; gap:20px; padding:0 26px; z-index:30; }
+.control-bar button { min-height:44px; padding:9px 16px; border:1px solid #a8c1d2; border-radius:6px; color:var(--blue); background:#fff; font-size:16px; }
+.control-bar button:disabled { opacity:.42; cursor:default; }
+.page-controls { display:flex; gap:10px; align-items:center; }
+.page-counter { min-width:68px; text-align:center; font-size:16px; font-variant-numeric:tabular-nums; color:var(--muted); }
+.keyboard-hint { font-size:16px; color:var(--muted); margin:0; }
+.feedback { position:fixed; left:50%; bottom:80px; transform:translateX(-50%); background:#174f78; color:#fff; padding:10px 16px; border-radius:6px; font-size:16px; z-index:40; }
+.feedback:empty { display:none; }
+.mobile-picker { display:none; }
+body.presenting .app-header,body.presenting .topic-nav { display:none; }
+body.presenting .stage-frame { top:15px; left:18px; right:18px; }
+.slide { width:1280px; height:720px; position:relative; padding:48px 56px; color:var(--ink); background:#fff; overflow:hidden; }
+.slide p { margin:0; line-height:1.65; font-size:27px; }
+.slide .eyebrow { color:var(--green); font-size:23px; font-weight:750; margin-bottom:14px; }
+h1,h2,h3 { margin:0; line-height:1.45; font-weight:750; overflow-wrap:anywhere; }
+h1 { font-size:54px; letter-spacing:-1px; }
+h2 { font-size:43px; letter-spacing:-.8px; }
+h3 { font-size:29px; }
+.slide-intro { margin-top:16px!important; color:var(--muted); }
+.three-columns { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+.four-columns { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; }
+.three-columns article,.four-columns article { min-width:0; }
+.cover { background:#fff; }
+.cover-content { position:relative; z-index:2; width:770px; }
+.cover .lead { margin-top:24px; font-size:29px; line-height:1.8; }
+.cover-topics { display:flex; gap:0; margin-top:32px; }
+.cover-topics span { padding:5px 21px; font-size:23px; color:var(--blue); border-left:1px solid #adc6d6; }
+.cover-topics span:first-child { padding-left:0; border-left:0; }
+.cover-partners { margin-top:42px; padding-top:22px; border-top:2px solid var(--line); }
+.cover-partners p { font-size:24px; color:var(--muted); margin-bottom:4px; }
+.cover-partners p:first-child { color:var(--green); font-weight:750; }
+.cover-graphic { position:absolute; width:366px; height:470px; top:140px; right:36px; background:linear-gradient(90deg,#eff5f9 1px,transparent 1px),linear-gradient(#eff5f9 1px,transparent 1px); background-size:30px 30px; border-radius:50% 50% 10px 10px; }
+.graphic-hub { position:absolute; top:130px; left:62px; width:240px; padding:30px 10px; text-align:center; color:#fff; background:var(--blue); border-radius:12px; font-size:31px; font-weight:750; }
+.graphic-hub small { display:block; font-size:21px; margin-top:9px; font-weight:500; }
+.graphic-node { position:absolute; padding:16px 18px; font-size:24px; border:1px solid #86b7ab; background:#e7f2ed; color:#1b5747; border-radius:8px; }
+.node-design { top:26px; left:96px; }
+.node-cost { top:330px; left:10px; }
+.node-expert { top:330px; right:10px; }
+.graphic-hub::before { content:""; position:absolute; width:1px; height:48px; background:#80a8bc; left:50%; bottom:100%; }
+.graphic-hub::after { content:""; position:absolute; width:220px; height:42px; border:1px solid #80a8bc; border-bottom:0; left:10px; top:100%; }
+.pain-columns { margin-top:35px; }
+.pain-columns article { background:#eef4fa; padding:26px 25px; min-height:285px; border-top:5px solid var(--blue); }
+.pain-columns article:nth-child(2) { background:#edf5ef; border-color:var(--green); }
+.pain-columns article:nth-child(3) { background:#edf5f6; border-color:#20616b; }
+.slide .column-label { color:var(--blue); font-size:23px; margin-bottom:16px; }
+.pain-columns h3 { margin-bottom:16px; }
+.pain-columns p:last-child { font-size:26px; }
+.takeaway { margin-top:28px; padding:20px 24px; border-left:5px solid var(--green); background:#eff6f2; }
+.takeaway p { font-size:27px; }
+.workflow-input { display:flex; flex-direction:column; align-items:center; padding:16px; margin-top:25px; background:#edf4f9; border:1px solid #b9cfdf; }
+.workflow-input strong { font-size:29px; color:var(--blue); }
+.workflow-input span { font-size:23px; color:var(--muted); margin-top:5px; }
+.workflow-columns { margin-top:22px; }
+.workflow-columns article { padding:22px; border:1px solid #b8d1ce; background:#f1f7f4; }
+.workflow-columns h3 { color:var(--green); margin-bottom:13px; }
+.workflow-columns p { font-size:25px; }
+.workflow-feedback { margin-top:22px; padding:16px 20px; background:var(--blue); color:white; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.workflow-feedback span { font-size:24px; }
+.workflow-feedback strong { font-size:26px; }
+.slide .slide-note { font-size:22px; color:var(--muted); line-height:1.65; margin-top:23px; }
+.expert-flow { display:grid; grid-template-columns:1fr 45px 1fr 45px 1fr; gap:8px; align-items:center; margin-top:35px; }
+.expert-flow>div { padding:25px 20px; border:1px solid #a9c5d7; background:#edf4fa; text-align:center; }
+.expert-flow>div:nth-of-type(2) { color:white; background:var(--blue); }
+.expert-flow h3 { margin-bottom:12px; }
+.expert-flow p { font-size:25px; }
+.flow-arrow { color:var(--green); font-size:38px; text-align:center; }
+.example { margin-top:26px; padding:20px 24px; border-left:5px solid var(--green); background:#edf6f0; }
+.example strong { font-size:28px; color:var(--green); }
+.example p { font-size:25px; margin-top:7px; }
+.market-columns { margin-top:40px; }
+.market-columns article { min-height:238px; padding:26px 24px; border-top:5px solid var(--green); background:#edf5f0; }
+.market-columns article:nth-child(2) { border-color:var(--blue); background:#edf4fa; }
+.market-columns h3 { font-size:30px; margin-bottom:18px; color:var(--green); }
+.market-columns p { font-size:26px; }
+.market-path { display:flex; align-items:center; justify-content:space-around; padding:22px 15px; margin-top:30px; background:#f4f7f9; gap:10px; color:var(--blue); font-size:26px; }
+.scope-grid,.decision-grid { display:grid; grid-template-columns:1fr 1fr; gap:19px; margin-top:28px; }
+.scope-grid article { display:grid; grid-template-columns:160px 1fr; gap:18px; align-items:start; padding:22px; border:1px solid #b7cedd; background:#f0f5f9; }
+.scope-grid article:nth-child(even) { background:#eef5ef; border-color:#b3cdbd; }
+.scope-grid h3 { color:var(--blue); font-size:28px; }
+.scope-grid p { font-size:24px; }
+.responsibility-strip { display:flex; gap:24px; margin-top:25px; padding:17px 0; border-bottom:1px solid var(--line); border-top:1px solid var(--line); }
+.responsibility-strip p { flex:1; font-size:23px; }
+.responsibility-strip strong { display:inline-block; margin-right:13px; color:var(--green); }
+.partner-columns { margin-top:35px; }
+.partner-columns article { padding:22px 21px; background:#edf4fa; border-top:5px solid var(--blue); min-height:365px; }
+.partner-columns article:nth-child(even) { background:#edf5ef; border-color:var(--green); }
+.partner-columns h3 { font-size:29px; min-height:86px; color:var(--blue); }
+.partner-columns .role { font-size:23px; margin:17px 0 14px; font-weight:750; color:var(--green); }
+.partner-columns p:last-child { font-size:25px; }
+.metric-columns { margin-top:28px; }
+.metric-columns article { padding:22px 24px 27px; border-bottom:3px solid #a8c6d8; background:#eff5fa; }
+.metric-columns article:nth-child(2) { background:#edf5ef; border-color:#9bc4ad; }
+.slide .metric { color:var(--blue); font-size:86px; line-height:1.1; margin:0 0 21px; font-weight:750; }
+.metric span { font-size:43px; }
+.metric-columns h3 { font-size:27px; margin-bottom:10px; }
+.metric-columns p:last-child { font-size:23px; color:var(--muted); }
+.validation { display:flex; align-items:flex-start; gap:23px; margin-top:24px; padding:20px 0; border-bottom:1px solid var(--line); }
+.validation h3 { flex:0 0 200px; font-size:28px; color:var(--green); }
+.validation p { font-size:25px; }
+.decision-slide { background:#f6faf8; }
+.decision-grid article { min-height:174px; padding:22px 26px; background:#fff; border:1px solid #adc9bc; }
+.decision-grid h3 { color:var(--green); margin-bottom:10px; font-size:31px; }
+.decision-grid p { font-size:26px; }
+.decision-footer { display:flex; align-items:center; justify-content:space-between; margin-top:27px; gap:24px; }
+.decision-footer p { font-size:24px; color:var(--muted); max-width:900px; }
+.decision-footer a { font-size:23px; min-height:44px; padding:8px 0; }
+@media(max-width:900px) {
+  html { overflow:auto; }
+  body { overflow:visible; }
+  html { scroll-padding-top:128px; }
+  .app-header { position:sticky; top:0; z-index:40; height:64px; padding:0 16px; gap:15px; }
+  .app-title { font-size:16px; }
+  .app-header a { font-size:16px; white-space:nowrap; }
+  .topic-nav { display:none; }
+  .mobile-picker { display:flex; position:sticky; top:64px; z-index:30; align-items:center; gap:12px; padding:10px 16px; background:#f5f8fb; border-bottom:1px solid var(--line); font-size:16px; }
+  .mobile-picker select { min-height:44px; flex:1; min-width:0; border:1px solid #adc5d6; border-radius:5px; background:#fff; color:var(--blue); font-size:16px; padding:7px; }
+  .stage-frame,body.presenting .stage-frame { position:static; margin:18px 14px 30px; }
+  .control-bar { display:none; }
+  deck-stage { height:auto; }
+  .slide { width:100%; height:auto; min-height:0; padding:25px 21px; border:1px solid #c6d8e4; margin:0 0 20px; border-radius:7px; overflow:visible; }
+  .slide p { font-size:18px; }
+  .slide .eyebrow { font-size:17px; margin-bottom:12px; }
+  h1 { font-size:30px; letter-spacing:0; }
+  h2 { font-size:27px; letter-spacing:0; }
+  h3 { font-size:22px; }
+  .cover-content { width:auto; }
+  .cover .lead { font-size:20px; margin-top:20px; }
+  .cover .lead br { display:none; }
+  .cover-topics { margin-top:20px; flex-wrap:wrap; gap:8px 14px; }
+  .cover-topics span { font-size:17px; padding:0; border:0; }
+  .cover-partners { margin-top:22px; padding-top:17px; }
+  .cover-partners p { font-size:18px; }
+  .cover-graphic { display:none; }
+  .three-columns,.four-columns,.scope-grid,.decision-grid { grid-template-columns:1fr; gap:14px; margin-top:22px; }
+  .pain-columns article,.workflow-columns article,.market-columns article,.partner-columns article,.metric-columns article,.decision-grid article { min-height:0; padding:20px; }
+  .slide .column-label { font-size:17px; margin-bottom:10px; }
+  .pain-columns h3,.market-columns h3,.workflow-columns h3,.partner-columns h3,.metric-columns h3,.decision-grid h3 { font-size:22px; min-height:0; margin-bottom:12px; }
+  .pain-columns p:last-child,.workflow-columns p,.market-columns p,.partner-columns p:last-child,.metric-columns p:last-child,.decision-grid p { font-size:18px; }
+  .takeaway { margin-top:20px; padding:17px; }
+  .takeaway p { font-size:19px; }
+  .workflow-input { padding:17px; }
+  .workflow-input strong { font-size:21px; text-align:center; }
+  .workflow-input span { font-size:18px; text-align:center; }
+  .workflow-feedback { display:block; padding:17px; }
+  .workflow-feedback span { font-size:18px; display:block; margin-bottom:9px; }
+  .workflow-feedback strong { font-size:20px; }
+  .slide .slide-note { font-size:17px; margin-top:20px; }
+  .expert-flow { grid-template-columns:1fr; margin-top:23px; gap:8px; }
+  .expert-flow>div { padding:19px; }
+  .expert-flow h3 { font-size:23px; }
+  .expert-flow p { font-size:18px; }
+  .flow-arrow { font-size:25px; transform:rotate(90deg); }
+  .example { margin-top:20px; padding:18px; }
+  .example strong { font-size:21px; }
+  .example p { font-size:18px; }
+  .market-path { display:flex; flex-direction:column; gap:10px; font-size:20px; padding:20px 15px; }
+  .market-path span[aria-hidden] { transform:rotate(90deg); }
+  .scope-grid article { display:block; padding:18px; }
+  .scope-grid h3 { font-size:22px; margin-bottom:10px; }
+  .scope-grid p { font-size:18px; }
+  .responsibility-strip { display:block; margin-top:20px; }
+  .responsibility-strip p { font-size:18px; margin-bottom:13px; }
+  .partner-columns .role { font-size:19px; margin:10px 0; }
+  .slide .metric { font-size:65px; margin-bottom:13px; }
+  .metric span { font-size:32px; }
+  .validation { display:block; padding:17px 0; }
+  .validation h3 { font-size:22px; margin-bottom:10px; }
+  .validation p { font-size:18px; }
+  .decision-footer { display:block; margin-top:20px; }
+  .decision-footer p { font-size:18px; margin-bottom:16px; }
+  .decision-footer a { font-size:18px; }
+  .feedback { left:16px; right:16px; transform:none; bottom:18px; }
+}
+@media print {
+  html,body { overflow:visible; background:white; }
+  .app-header,.topic-nav,.mobile-picker,.control-bar,.feedback { display:none!important; }
+  .stage-frame { position:static; margin:0; }
+  deck-stage { height:auto; }
+  .slide { margin:0; border:0; border-radius:0; }
+}
+</style>
+  <style>@page { size:1280px 720px; margin:0; }</style>
+</head>
+<body>
+  <header class="app-header"><div class="app-title">室內設計工程 AI・合作重點簡報</div><a href="https://fci1007-design.github.io/construction-ai-subsidy-20261110/interior-design-expert-ai/" target="_blank" rel="noopener noreferrer">完整說明</a></header>
+  <nav class="topic-nav" aria-label="簡報頁次"><p>合作討論・9頁</p><a href="#slide-1"><span>01</span>題目與合作目的</a>
+<a href="#slide-2"><span>02</span>市場痛點</a>
+<a href="#slide-3"><span>03</span>產品如何協作</a>
+<a href="#slide-4"><span>04</span>專家能力與差異</a>
+<a href="#slide-5"><span>05</span>首批客群與市場</a>
+<a href="#slide-6"><span>06</span>一期範圍</a>
+<a href="#slide-7"><span>07</span>合作分工</a>
+<a href="#slide-8"><span>08</span>效益與驗證</a>
+<a href="#slide-9"><span>09</span>共同決定的事項</a></nav>
+  <label class="mobile-picker" for="mobile-topic">跳至主題<select id="mobile-topic"><option value="0">01 題目與合作目的</option>
+<option value="1">02 市場痛點</option>
+<option value="2">03 產品如何協作</option>
+<option value="3">04 專家能力與差異</option>
+<option value="4">05 首批客群與市場</option>
+<option value="5">06 一期範圍</option>
+<option value="6">07 合作分工</option>
+<option value="7">08 效益與驗證</option>
+<option value="8">09 共同決定的事項</option></select></label>
+  <main class="stage-frame" aria-label="合作重點簡報"><deck-stage><section class="slide cover" data-screen-label="題目與合作目的" id="slide-1">
+  <div class="cover-content">
+    <p class="eyebrow">116年度深科技跨域創新計畫・合作方向討論</p>
+    <h1>室內設計與裝修工程<br>專家 AI 協作平台</h1>
+    <p class="lead">從室內設計與裝修切入，讓專家判讀、<br>可編輯設計與工程成本，協助同一案件的決策。</p>
+    <div class="cover-topics"><span>共同題目</span><span>產品範圍</span><span>合作投入</span><span>首案驗證</span></div>
+    <div class="cover-partners"><p>妍發科技 × 總盛建設</p><p>建築師 Sean、採購法專家汪博及其他專家</p></div>
+  </div>
+  <div class="cover-graphic" aria-label="同一案件結合設計、成本與專家判讀的構想">
+    <div class="graphic-hub">同一案件<br><small>空間・設計版本</small></div>
+    <div class="graphic-node node-design">可編輯設計</div>
+    <div class="graphic-node node-cost">工項與成本</div>
+    <div class="graphic-node node-expert">專家判讀</div>
+  </div>
+</section>
+
+<section class="slide" data-screen-label="市場痛點" id="slide-2">
+  <p class="eyebrow">客戶的日常工作</p>
+  <h2>一次改設計，牽動三組工作</h2>
+  <p class="slide-intro">以辦公空間增加收納、移動設備為例，團隊需要反覆確認。</p>
+  <div class="three-columns pain-columns">
+    <article><p class="column-label">圖說與方案</p><h3>依據是否一致？</h3><p>需求、底圖、現況與設計版本分散，容易沿用錯誤條件。</p></article>
+    <article><p class="column-label">工項與成本</p><h3>改動要花多少？</h3><p>改圖後還要重整數量、詢價及施工工作，容易漏改、漏估。</p></article>
+    <article><p class="column-label">契約與適用要求</p><h3>哪些必須確認？</h3><p>材料、安全、責任與履約條件，需要具情境經驗的專業判讀。</p></article>
+  </div>
+  <div class="takeaway"><p>團隊需要同時看見修改內容、工程代價與處理要求，才能做決定。</p></div>
+</section>
+
+<section class="slide" data-screen-label="產品如何協作" id="slide-3">
+  <p class="eyebrow">預計開發的解決方案</p>
+  <h2>讓同一件修改，形成共同成果</h2>
+  <div class="workflow-input"><strong>需求・圖說現況・規格契約</strong><span>關聯同一案件、空間與設計版本</span></div>
+  <div class="three-columns workflow-columns">
+    <article><h3>形成可編輯方案</h3><p>配置、家具、櫃體、設備與選定材料，能繼續修改。</p></article>
+    <article><h3>核對工項與成本</h3><p>連動選定工項及數量，呈現成本差異、缺價與假設。</p></article>
+    <article><h3>執行專業判讀</h3><p>分析規格、契約及安全待核事項，提出依據與處理選項。</p></article>
+  </div>
+  <div class="workflow-feedback"><span>成本與適用要求回饋設計調整</span><strong>修改 → 確認 → 同版交付</strong></div>
+  <p class="slide-note">各階段可獨立使用，成果可承接。政府採購法專用規則依案件適用條件啟用。</p>
+</section>
+
+<section class="slide" data-screen-label="專家能力與差異" id="slide-4">
+  <p class="eyebrow">本案要建立的專業優勢</p>
+  <h2>把資深專家的判讀方法產品化</h2>
+  <div class="expert-flow">
+    <div><h3>專家方法</h3><p>案例、適用條件、<br>例外與常見誤判</p></div><span class="flow-arrow" aria-hidden="true">→</span>
+    <div><h3>AI 與工程工具</h3><p>關聯事實與來源，<br>執行分析與核算</p></div><span class="flow-arrow" aria-hidden="true">→</span>
+    <div><h3>可核對的選項</h3><p>說明理由、缺件、<br>設計影響與覆核需求</p></div>
+  </div>
+  <div class="example"><strong>例如「材料相近，能否替代？」</strong><p>一起核對性能證據、個案規格、契約條件及確認程序，將結果帶回設計與估價。</p></div>
+  <p class="slide-note">由建築師 Sean、採購法專家汪博及其他專家建立情境與基準。市場已有設計與契約 AI，本案在地判讀及整合差異仍需同案驗證。</p>
+</section>
+
+<section class="slide" data-screen-label="首批客群與市場" id="slide-5">
+  <p class="eyebrow">市場入口建議，待共同選定</p>
+  <h2>先找到願意為一項任務付費的客戶</h2>
+  <div class="three-columns market-columns">
+    <article><h3>室內設計公司</h3><p>從方案修改、預算比較與設計條件確認開始。</p></article>
+    <article><h3>裝修統包團隊</h3><p>從材料替代、工項成本與施工變更分析開始。</p></article>
+    <article><h3>政府室內整修業者</h3><p>結合設計工程、採購法、契約及應備證據的需求。</p></article>
+  </div>
+  <div class="market-path"><span>試用／按案驗證</span><span aria-hidden="true">→</span><span>確認付費任務</span><span aria-hidden="true">→</span><span>評估訂閱與企業導入</span></div>
+  <p class="slide-note">總盛協助接觸客戶與場域。目前尚無確定案例或付費證據，首批客群仍待選定。</p>
+</section>
+
+<section class="slide" data-screen-label="一期範圍" id="slide-6">
+  <p class="eyebrow">一期建議</p>
+  <h2>先以一類室內整修案件，完成一項變更</h2>
+  <div class="scope-grid">
+    <article><h3>需求與條件</h3><p>關聯圖說、規格、版本與來源，列明矛盾及缺件。</p></article>
+    <article><h3>可編輯設計</h3><p>約定多空間、元件與修改範圍，產出可接續使用的方案。</p></article>
+    <article><h3>工項與成本</h3><p>選定計量與單價依據，比較修改前後差異。</p></article>
+    <article><h3>判讀與確認</h3><p>選定材料替代、範圍變更等情境，保留理由與確認證據。</p></article>
+  </div>
+  <div class="responsibility-strip"><p><strong>AI</strong>執行資料關聯、分析、核算及修改建議。</p><p><strong>人員</strong>補齊事實、覆核、選擇與正式確認。</p></div>
+  <p class="slide-note">建築圖說承接室內設計所需條件。完整建築、結構、機電自動設計及其他工程管理功能，另依需求評估。</p>
+</section>
+
+<section class="slide" data-screen-label="合作分工" id="slide-7">
+  <p class="eyebrow">合作分工建議</p>
+  <h2>各方投入，要形成可重複使用的產品資產</h2>
+  <div class="four-columns partner-columns">
+    <article><h3>妍發科技</h3><p class="role">AI 與軟體產品化</p><p>文件關聯、工具整合、系統開發與測試維運。</p></article>
+    <article><h3>總盛建設</h3><p class="role">需求、場域與市場</p><p>首案資料、客戶接觸、試用與銷售驗證。</p></article>
+    <article><h3>建築師 Sean<br>及設計工程專家</h3><p class="role">圖說、設計與工項</p><p>可編輯成果、界面規則與專業驗證基準。</p></article>
+    <article><h3>汪博<br>採購法專家</h3><p class="role">採購法與契約判讀</p><p>適用條件、責任情境、證據及覆核標準。</p></article>
+  </div>
+  <p class="slide-note">團隊已有專家參與。正式任務、投入人月、費用、成果權利及後續營運分工，仍須協議。</p>
+</section>
+
+<section class="slide" data-screen-label="效益與驗證" id="slide-8">
+  <p class="eyebrow">候選效益，待首案量測</p>
+  <h2>用工作時間、成果品質與付費意願驗證</h2>
+  <div class="three-columns metric-columns">
+    <article><p class="metric">30<span>%</span></p><h3>判讀總工時減少</h3><p>法規與契約個案分析</p></article>
+    <article><p class="metric">25<span>%</span></p><h3>變更評估工時減少</h3><p>含設計、成本與要求檢核</p></article>
+    <article><p class="metric">20<span>%</span></p><h3>漏改／補件返工減少</h3><p>固定案件範圍與觀察期間</p></article>
+  </div>
+  <div class="validation"><h3>驗證時一起看</h3><p>設計能否編輯、成本能否對帳、判讀是否正確，以及客戶是否願意持續使用與付費。</p></div>
+  <p class="slide-note">以上全為討論目標，尚無本案實測。工時含資料準備、專家覆核與改錯，需維持成果品質，重疊工時不直接相加。</p>
+</section>
+
+<section class="slide decision-slide" data-screen-label="共同決定的事項" id="slide-9">
+  <p class="eyebrow">今天的合作討論</p>
+  <h2>先對齊這四件事，再安排一期資源</h2>
+  <div class="decision-grid">
+    <article><h3>先服務誰？</h3><p>選定第一類客群、使用者與願意付費的任務。</p></article>
+    <article><h3>用哪一案驗證？</h3><p>取得可授權的圖說、契約、工項成本與一次變更資料。</p></article>
+    <article><h3>一期交付什麼？</h3><p>約定設計範圍、可核算工項、判讀情境與品質標準。</p></article>
+    <article><h3>各方如何投入？</h3><p>確認負責人、人月、費用、成果權利與市場推廣安排。</p></article>
+  </div>
+  <div class="decision-footer"><p>會後依共識收斂工作與合作安排，推進研發計畫書。</p><a href="https://fci1007-design.github.io/construction-ai-subsidy-20261110/interior-design-expert-ai/" target="_blank" rel="noopener noreferrer">查閱完整規劃與依據</a></div>
+</section>
+</deck-stage></main>
+  <footer class="control-bar">
+    <p class="keyboard-hint">← → 翻頁・F 全螢幕</p>
+    <div class="page-controls"><button id="previous" type="button">上一頁</button><span class="page-counter" id="page-counter" role="status" aria-live="polite">1 / 9</span><button id="next" type="button">下一頁</button></div>
+    <button id="fullscreen" type="button">全螢幕簡報</button>
+  </footer>
+  <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+  <noscript><style>body{overflow:auto}.stage-frame{position:static;margin:20px}.topic-nav,.control-bar,.mobile-picker{display:none}.slide{width:100%;height:auto;margin-bottom:20px}</style><p>以下提供完整簡報內容，可向下閱讀。</p></noscript>
+  <script>// Adapted from huashu-design's deck_stage.js for accessible controls and mobile reading.
+class BriefingStage extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.index = 0;
+    this.slides = [];
+    this.storageKey = 'interior-ai-briefing-position';
+    this.mobile = window.matchMedia('(max-width: 900px)');
+  }
+
+  connectedCallback() {
+    this.slides = Array.from(this.querySelectorAll(':scope > section'));
+    this.shadowRoot.innerHTML = `
+      <style>
+        :host { display:block; position:relative; width:100%; height:100%; }
+        .canvas { position:absolute; width:1280px; height:720px; transform-origin:top left; background:white; box-shadow:0 12px 40px #153d5915; }
+        ::slotted(section) { display:none; position:absolute; inset:0; width:1280px; height:720px; }
+        ::slotted(section.active) { display:block; }
+        @media(max-width:900px) {
+          :host { height:auto; }
+          .canvas { position:static; width:100%; height:auto; transform:none!important; background:transparent; box-shadow:none; }
+          ::slotted(section) { display:block; position:relative; inset:auto; width:100%; height:auto; }
+        }
+        @media print {
+          :host { height:auto; }
+          .canvas { position:static; width:1280px; height:auto; transform:none!important; box-shadow:none; }
+          ::slotted(section) { display:block!important; position:relative; inset:auto; width:1280px; height:720px; break-after:page; }
+          ::slotted(section:last-child) { break-after:auto; }
+        }
+      </style>
+      <div class="canvas"><slot></slot></div>`;
+    try {
+      const saved = Number(localStorage.getItem(this.storageKey));
+      if (Number.isInteger(saved) && saved >= 0 && saved < this.slides.length) this.index = saved;
+    } catch (_) {
+      this.index = 0;
+    }
+    const match = /^#slide-(\d+)$/.exec(location.hash);
+    if (match) this.index = Math.max(0, Math.min(this.slides.length - 1, Number(match[1]) - 1));
+    this.observer = new ResizeObserver(() => this.layout());
+    this.observer.observe(this);
+    this.mobile.addEventListener('change', () => this.render());
+    window.addEventListener('hashchange', () => {
+      const target = /^#slide-(\d+)$/.exec(location.hash);
+      if (target) this.goTo(Number(target[1]) - 1, true);
+    });
+    this.render();
+    if (this.mobile.matches && this.index > 0) this.goTo(this.index, true);
+  }
+
+  layout() {
+    const canvas = this.shadowRoot.querySelector('.canvas');
+    if (this.mobile.matches) {
+      canvas.style.transform = 'none';
+      return;
+    }
+    const scale = Math.min(this.clientWidth / 1280, this.clientHeight / 720);
+    const left = (this.clientWidth - 1280 * scale) / 2;
+    const top = (this.clientHeight - 720 * scale) / 2;
+    canvas.style.transform = `translate(${left}px, ${top}px) scale(${scale})`;
+  }
+
+  render() {
+    this.slides.forEach((slide, index) => {
+      const active = index === this.index;
+      slide.classList.toggle('active', active);
+      slide.inert = !this.mobile.matches && !active;
+      slide.setAttribute('aria-hidden', String(!this.mobile.matches && !active));
+    });
+    this.layout();
+    document.title = this.slides[this.index].dataset.screenLabel + '｜室內設計工程 AI 合作簡報';
+    this.dispatchEvent(new CustomEvent('slidechange', { detail: { index: this.index } }));
+  }
+
+  goTo(index, fromHash = false) {
+    if (!Number.isInteger(index) || index < 0 || index >= this.slides.length) return;
+    this.index = index;
+    try {
+      localStorage.setItem(this.storageKey, String(index));
+    } catch (_) {
+      // Navigation still works when browser storage is unavailable.
+    }
+    if (!fromHash) history.replaceState(null, '', '#slide-' + (index + 1));
+    this.render();
+    if (this.mobile.matches) {
+      requestAnimationFrame(() => {
+        const top = this.slides[index].getBoundingClientRect().top + window.scrollY - 128;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
+      });
+    }
+  }
+}
+customElements.define('deck-stage', BriefingStage);
+
+const stage = document.querySelector('deck-stage');
+const links = Array.from(document.querySelectorAll('.topic-nav a'));
+const previous = document.getElementById('previous');
+const next = document.getElementById('next');
+const picker = document.getElementById('mobile-topic');
+const counter = document.getElementById('page-counter');
+const fullscreen = document.getElementById('fullscreen');
+const feedback = document.getElementById('feedback');
+
+function updateControls() {
+  links.forEach((link, index) => {
+    if (index === stage.index) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
+  previous.disabled = stage.index === 0;
+  next.disabled = stage.index === stage.slides.length - 1;
+  picker.value = String(stage.index);
+  counter.textContent = (stage.index + 1) + ' / ' + stage.slides.length;
+}
+stage.addEventListener('slidechange', updateControls);
+updateControls();
+previous.addEventListener('click', () => stage.goTo(stage.index - 1));
+next.addEventListener('click', () => stage.goTo(stage.index + 1));
+picker.addEventListener('change', () => stage.goTo(Number(picker.value)));
+
+async function toggleFullscreen() {
+  try {
+    if (document.fullscreenElement) await document.exitFullscreen();
+    else await document.documentElement.requestFullscreen();
+    feedback.textContent = '';
+  } catch (_) {
+    feedback.textContent = '此瀏覽器未能啟用全螢幕，請使用瀏覽器的全螢幕功能。';
+  }
+}
+fullscreen.addEventListener('click', toggleFullscreen);
+document.addEventListener('fullscreenchange', () => {
+  const active = Boolean(document.fullscreenElement);
+  document.body.classList.toggle('presenting', active);
+  fullscreen.textContent = active ? '離開全螢幕' : '全螢幕簡報';
+  stage.layout();
+});
+document.addEventListener('keydown', event => {
+  if (event.ctrlKey || event.metaKey || event.altKey) return;
+  if (event.target.closest('input, select, textarea, [contenteditable="true"]')) return;
+  const actions = {
+    ArrowRight: () => stage.goTo(stage.index + 1),
+    PageDown: () => stage.goTo(stage.index + 1),
+    ArrowLeft: () => stage.goTo(stage.index - 1),
+    PageUp: () => stage.goTo(stage.index - 1),
+    Home: () => stage.goTo(0),
+    End: () => stage.goTo(stage.slides.length - 1)
+  };
+  if (actions[event.key]) {
+    event.preventDefault();
+    actions[event.key]();
+  } else if (event.key === ' ' && !event.target.closest('button, a')) {
+    event.preventDefault();
+    stage.goTo(stage.index + 1);
+  } else if (event.key.toLowerCase() === 'f') {
+    event.preventDefault();
+    toggleFullscreen();
+  }
+});
+</script>
+</body>
+</html>
